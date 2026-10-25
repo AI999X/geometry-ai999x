@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "geometry-ai999x: an offline, verified geometry solver"
+authors:
+  - family-names: Farabi
+    given-names: Ibnul Jaif
+    affiliation: AI999X
+version: 1.0.0
+license: Apache-2.0
+url: "https://huggingface.co/AI999X/geometry-ai999x"
+repository-code: "https://huggingface.co/AI999X/geometry-ai999x"
+keywords:
+  - geometry
+  - computational-geometry
+  - coordinate-geometry
+  - conic-sections
+  - polyhedra
+  - spherical-geometry
+  - convex-hull
+  - curvature
+  - ai999x
+  - offline
+  - cpu
+  - stem
