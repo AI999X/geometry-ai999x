@@ -178,6 +178,20 @@ def _occurrences(text: str, entries: list) -> list:
     return sorted(out, key=lambda o: o[0])
 
 
+def context_tags(terms: dict, low: str) -> set:
+    """The context tags the (lower-cased) wording produces. An entry may name `unless_tag` (a tag or a list): its tag is
+    not produced by that phrase when the wording also produces one of those tags. "pendulum" inside "double pendulum"
+    must not make the SIMPLE pendulum's relations applicable: the more specific wording contradicts their assumption
+    (a point mass on one light string)."""
+    hits = [c for c in terms.get("context", []) if _word(c["phrase"]).search(low)]
+    found = {c["tag"] for c in hits}
+
+    def blocked(c):
+        u = c.get("unless_tag") or ()
+        return bool(set([u] if isinstance(u, str) else u) & found)
+    return {c["tag"] for c in hits if not blocked(c)}
+
+
 def _symbol_uses(text: str, terms: dict, spans: list, tags: set) -> tuple:
     """A pack's declared symbols written as NOTATION: `zeta=0.5`, `I 0.01 kg*m^2`, `b?`. Matched case-sensitively and
     never inside a measurement; a symbol that is also an English word (`"word": true`, e.g. "a") counts as a given
@@ -347,10 +361,10 @@ def compile_problem(question: str, pack: Pack) -> Problem:
             unit, spelled, end = found
             measures.append((m.start(), end, value, unit, spelled))
 
-    labels = _occurrences(text, terms.get("labels", []))
+    labels = _occurrences(text, pack.reading_labels())
     claimed: set = set()
     givens: list = []
-    pre_tags = {c["tag"] for c in terms.get("context", []) if _word(c["phrase"]).search(low)}
+    pre_tags = context_tags(terms, low)
     sym_given, sym_asked = _symbol_uses(text, terms, [(a, b) for a, b, *_ in measures], pre_tags)
 
     # 2. a bare number is accepted only as a labelled pure number (a coefficient); otherwise we refuse
@@ -428,6 +442,9 @@ def compile_problem(question: str, pack: Pack) -> Problem:
                 k.replace("_", " ") for k in kinds) + "; say which.", code="ambiguous_quantity")
         kind = entry["kind"] if entry else kinds[0]
         role = entry.get("role", "plain") if entry else "plain"
+        if (kind, role) == ("temperature", "plain") and "temperature_difference" in pack.kinds and \
+                re.search(r"\bby\s*$", text[max(0, s - 14):s].lower()):
+            kind = "temperature_difference"                # "the temperature rises by 30 K": a change, not a state
         si = to_si(value, unit, difference=pack.kinds[kind].difference)
         exact = None
         if unit.pi_factor is not None:
@@ -439,8 +456,7 @@ def compile_problem(question: str, pack: Pack) -> Problem:
         givens.append(Given(len(givens), kind, role, si, text[s:e], exact=exact))
 
     # 4. context: tags, and facts the wording implies ("from rest")
-    tags = tuple(sorted({c["tag"] for c in terms.get("context", [])
-                         if _word(c["phrase"]).search(low)}))
+    tags = tuple(sorted(context_tags(terms, low)))
     kind_tags = terms.get("kind_tags", {})             # a stated quantity of some kinds is itself a context
     tags = tuple(sorted(set(tags) | {kind_tags[g.kind] for g in givens if g.kind in kind_tags}))
     for imp in terms.get("implied", []):

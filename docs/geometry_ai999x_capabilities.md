@@ -476,6 +476,10 @@ $$
 - **Assumes:** $3  \leq  n  \leq  1000$ (whole number); each single angle assumes a regular polygon
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Interior and exterior angles of the regular polygons with 3 to 20 sides, each computed by the package: the interior angle climbs towards 180° (triangle 60°, 20-gon 162°) while the exterior angle 360°/n falls; marked: n = 6, interior angle = 120°](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/regular-polygon-angles-stems.svg)
+
+*Interior and exterior angles of the regular polygons with 3 to 20 sides, each computed by the package: the interior angle climbs towards 180° (triangle 60°, 20-gon 162°) while the exterior angle 360°/n falls; marked: n = 6, interior angle = 120°.*
+
 ```python
 geometry_ai999x.solve('regular_polygon_angles', n=6)
 # -> interior_angle = 120, exterior_angle = 60, interior_sum = 720, diagonals = 9   (SOLVED)
@@ -849,6 +853,10 @@ $$
 - **Assumes:** at least 3 vertices, in order; simple polygon
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The L-shaped polygon 0 0, 6 0, 6 2, 2 2, 2 5, 0 5, with the interior angle at each vertex (sum 720°, 1 reflex), area 18 and perimeter 22; marked: the centroid x = 2](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/polygon-centroid-shape.svg)
+
+*The L-shaped polygon 0 0, 6 0, 6 2, 2 2, 2 5, 0 5, with the interior angle at each vertex (sum 720°, 1 reflex), area 18 and perimeter 22; marked: the centroid x = 2.33333, y = 1.83333 — all computed by the package. The centroid of a non-convex shape need not be its middle.*
+
 ```python
 geometry_ai999x.solve('polygon_centroid', points='0 0, 4 0, 4 2, 0 2')
 # -> cx = 2, cy = 1   (SOLVED)
@@ -935,6 +943,10 @@ $$
 - **Method:** intersection of the perpendicular bisectors, solved in coordinates relative to the first point
 - **Assumes:** exactly 3 points; not collinear
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The triangle with vertices 0 0, 4 0, 1 3: circumcircle (centre O = (2, 1), radius 2](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/triangle-circumcircle-shape.svg)
+
+*The triangle with vertices 0 0, 4 0, 1 3: circumcircle (centre O = (2, 1), radius 2.23607), incircle (centre I = (1.45982, 1.05218), radius 1.05218), orthocentre H = (1, 1) and centroid G = (1.66667, 1), each computed by the package; O, G and H lie on the Euler line.*
 
 ```python
 geometry_ai999x.solve('triangle_circumcircle', points='0 0, 4 0, 0 3')
@@ -1199,6 +1211,10 @@ $$
 - **Assumes:** angle in degrees, counterclockwise positive ('clockwise' in a question makes it negative); centre defaults to the origin
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The triangle (1, 1), (4, 1), (2, 3) and three images, each vertex mapped by the package: rotated 90° about the origin ((-1, 1), (-1, 4), (-3, 2)), reflected in the line x + y = 0 ((-1, -1), (-1, -4), (-3, -2)) and dilated about the origin by −0](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/rotate-point-shape.svg)
+
+*The triangle (1, 1), (4, 1), (2, 3) and three images, each vertex mapped by the package: rotated 90° about the origin ((-1, 1), (-1, 4), (-3, 2)), reflected in the line x + y = 0 ((-1, -1), (-1, -4), (-3, -2)) and dilated about the origin by −0.5 ((-0.5, -0.5), (-2, -0.5), (-1, -1.5)).*
+
 ```python
 geometry_ai999x.solve('rotate_point', px=3, py=4, angle=90)
 # -> x = -4, y = 3   (SOLVED)
@@ -1397,6 +1413,10 @@ $$
 - **Assumes:** $r > 0$; the point is not inside the circle (on the circle: length 0, both points at the point)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Tangents from P = (5, 0) to the circle of centre C = (0, 0) and radius 3: the package gives the touching points (1](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/tangent-from-point-shape.svg)
+
+*Tangents from P = (5, 0) to the circle of centre C = (0, 0) and radius 3: the package gives the touching points (1.8, -2.4) and (1.8, 2.4) and the tangent length 4. The circle on the diameter CP meets the circle at the same two points (its intersection, also computed by the package: (1.8, -2.4) and (1.8, 2.4)).*
+
 ```python
 geometry_ai999x.solve('tangent_from_point', cx=0, cy=0, r=3, px=5, py=0)
 # -> length = 4, x1 = 1.8, y1 = -2.4, x2 = 1.8, y2 = 2.4   (SOLVED)
@@ -1549,6 +1569,10 @@ $$
 - **Method:** Andrew's monotone chain with exact (rational) orientation tests; shoelace area
 - **Assumes:** at least 3 points, not all collinear, at most 5000; points on a hull edge between two vertices are not vertices; repeated points count once
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Ten points (0 0, 5 5, 1 1, 9 2, 6 6](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/convex-hull-shape.svg)
+
+*Ten points (0 0, 5 5, 1 1, 9 2, 6 6.5, 3 7, 7 3, 2 4, 8 6, 4 1.5), their convex hull as returned by the package — 5 vertices, area 38.25, perimeter 26.0614 — and the smallest circle enclosing them; marked: its centre x = 4.07895, y = 2.89474, radius 5.00173.*
 
 ```python
 geometry_ai999x.solve('convex_hull', points='0 0, 2 1, 4 0, 3 3, 1 2, 2 4')
