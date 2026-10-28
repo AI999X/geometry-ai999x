@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/geometry-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/geometry-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/geometry-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.2
 
 Field: **Mathematics & Statistics** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ geometry-ai999x is an offline, deterministic Python solver that answers geometry
 
 | Property | Value |
 |---|---|
-| Package | `geometry-ai999x` 1.0.1 (import `geometry_ai999x`) |
+| Package | `geometry-ai999x` 1.0.2 (import `geometry_ai999x`) |
 | Type | Deterministic neuro-symbolic geometry engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 76 certified procedures |
 | Knowledge pack | version 1.0.0 |
@@ -61,7 +61,7 @@ geometry.ask("Who created you?").message
 # -> geometry-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `geometry-ai999x "<question>"`, `geometry-ai999x --capabilities`. The outputs above were produced by running this exact code on geometry-ai999x 1.0.1.
+Command line: `geometry-ai999x "<question>"`, `geometry-ai999x --capabilities`. The outputs above were produced by running this exact code on geometry-ai999x 1.0.2.
 
 ## Find the right capability, and draw it
 
@@ -222,10 +222,10 @@ _Interior and exterior angles of the regular polygons with 3 to 20 sides, each c
 ## Citation
 
 ```bibtex
-@software{geometry_ai999x_1_0_1,
+@software{geometry_ai999x_1_0_2,
   title  = {geometry-ai999x: an offline, verified geometry solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.1},
+  year   = {2026}, version = {1.0.2},
   url    = {https://huggingface.co/AI999X/geometry-ai999x}
 }
 ```
