@@ -4,7 +4,7 @@
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/geometry-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/geometry-ai999x/)** · **[Guides](https://huggingface.co/AI999X/geometry-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/geometry-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
 
 Field: **Mathematics & Statistics** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -20,26 +20,13 @@ geometry-ai999x is an offline, deterministic Python solver that answers geometry
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Geometry desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
-| **Command line** (`geometry`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X Geometry desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-geometry-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-geometry-1.4.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
+| **Command line** (`geometry`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
 | **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/geometry-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install geometry-ai999x` |
 
-Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
-
-## Rust versions
-
-Geometry also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/geometry-ai999x/releases/tag/v1.0.3) and on the website.
-
-| Program | System | File | Size | Download | Use |
-|---|---|---|---|---|---|
-| Desktop app (Geometry) | Windows x86-64 | `ai999x-geometry-1.2.0-windows-x86_64.zip` | 7.7 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-geometry.exe` (no installer) |
-| Desktop app (Geometry) | Linux x86-64 | `ai999x-geometry-1.2.0-linux-x86_64.tar.gz` | 8.7 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-geometry` (X11 or Wayland desktop) |
-| Command line (`geometry`) | Windows x86-64 | `ai999x-geometry-cli-1.2.0-windows-x86_64.zip` | 3.5 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `geometry.exe ask "<question>"` or `geometry.exe solve <capability> name=value` |
-| Command line (`geometry`) | Linux x86-64 | `ai999x-geometry-cli-1.2.0-linux-x86_64.tar.gz` | 3.4 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./geometry ask "<question>"` or `./geometry solve <capability> name=value` |
-
-The command-line archive holds `geometry` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -50,11 +37,11 @@ Download **AI999X Geometry** for your system (above), unpack it and start it; ty
 Linux, from a terminal:
 
 ```bash
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-geometry-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-geometry-1.2.0-linux-x86_64.tar.gz
-./ai999x-geometry-1.2.0-linux-x86_64/ai999x-geometry
+tar xzf ai999x-geometry-1.4.0-linux-x86_64.tar.gz
+./ai999x-geometry-1.4.0-linux-x86_64/ai999x-geometry
 ```
 
 ### Command line
@@ -62,23 +49,23 @@ tar xzf ai999x-geometry-1.2.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 geometry --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 geometry --version
 ```
@@ -133,26 +120,6 @@ y2 = 4
   b = 1
   c = -1
   assumes: r > 0; a and b not both 0; tangency is decided exactly on the written values; points ordered by x, then y; absent points are empty
-```
-
-**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```console
-$ geometry figures triangle_circumcircle "points=[0, 0, 4, 0, 0, 3]" --out .
-[
-  {
-    "slug": "triangle-circumcircle-live-1",
-    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 3 varies",
-    "caption": "Circumradius as points[3] runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your points[3] = 4 gives radius = 2.5. Your inputs: points = (list).",
-    "file": "./triangle-circumcircle-live-1.svg"
-  },
-  {
-    "slug": "triangle-circumcircle-live-2",
-    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 6 varies",
-    "caption": "Circumradius as points[6] runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your points[6] = 3 gives radius = 2.5. Your inputs: points = (list).",
-    "file": "./triangle-circumcircle-live-2.svg"
-  }
-]
 ```
 
 **Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | geometry batch
@@ -318,7 +285,7 @@ _What this means:_ Given a set of distinct points in general position, this calc
 
 | Property | Value |
 |---|---|
-| Package | `geometry-ai999x` 1.0.3 (import `geometry_ai999x`) |
+| Package | `geometry-ai999x` 1.1.0 (import `geometry_ai999x`) |
 | Type | Deterministic neuro-symbolic geometry engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 76 certified procedures |
 | Knowledge pack | version 1.0.0 |
@@ -352,7 +319,7 @@ geometry.ask("Who created you?").message
 # -> geometry-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `geometry-ai999x "<question>"`; for the native program use `geometry` (above). The outputs above were produced by running this exact code on geometry-ai999x 1.0.3.
+The Python package also installs a Python command, `geometry-ai999x "<question>"`; for the native program use `geometry` (above). The outputs above were produced by running this exact code on geometry-ai999x 1.1.0.
 
 ## Find the right capability, and draw it
 
@@ -513,10 +480,10 @@ _Interior and exterior angles of the regular polygons with 3 to 20 sides, each c
 ## Citation
 
 ```bibtex
-@software{geometry_ai999x_1_0_3,
+@software{geometry_ai999x_1_1_0,
   title  = {geometry-ai999x: an offline, verified geometry solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.3},
+  year   = {2026}, version = {1.1.0},
   url    = {https://huggingface.co/AI999X/geometry-ai999x}
 }
 ```
