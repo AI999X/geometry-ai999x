@@ -1,4 +1,4 @@
-# geometry: the Geometry program — user guide
+# geometry: the Geometry program, user guide
 
 **geometry-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Geometry covers plane and solid geometry, coordinate geometry, conic sections, p
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Geometry | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-geometry-1.4.0-windows-x86_64.zip |
-| Desktop app: Geometry | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-geometry-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Geometry | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-windows-x86_64.zip |
+| Desktop app: Geometry | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Geometry in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geometry-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geometry.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Geometry in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geometry-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geometry.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-geometry-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-geometry-1.4.0-linux-x86_64.tar.gz
-./ai999x-geometry-1.4.0-linux-x86_64/ai999x-geometry
+tar xzf ai999x-geometry-1.5.0-linux-x86_64.tar.gz
+./ai999x-geometry-1.5.0-linux-x86_64/ai999x-geometry
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `geometry` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 geometry --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 geometry --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ geometry --version
-geometry-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+geometry-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
 ### 2.2 Ask in words
@@ -207,41 +207,7 @@ $ geometry solve circle_line_intersection cx=0.0 cy=0.0 r=5.0 a=-1.0 b=1.0
 NEEDS_INPUT: circle_line_intersection needs c (constant of the line). Example: solve('circle_line_intersection', cx=0, cy=0, r=5, a=1, b=-1, c=1).
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ geometry figures triangle_circumcircle "points=[0, 0, 4, 0, 0, 3]" --out .
-[
-  {
-    "slug": "triangle-circumcircle-points",
-    "title": "Circumcircle of a triangle",
-    "caption": "The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the returned circle has centre (2, 1.5) and radius 2.5. Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-points.svg"
-  },
-  {
-    "slug": "triangle-circumcircle-shape",
-    "title": "A triangle's circles and centres",
-    "caption": "The triangle 0 0, 4 0, 0 3: circumcircle (centre O = (2, 1.5), radius 2.5), incircle (centre I = (1, 1), radius 1), orthocentre H = (0, 0) and centroid G = (1.333, 1), each computed by the model; O, G and H lie on the Euler line (dashed). Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-shape.svg"
-  },
-  {
-    "slug": "triangle-circumcircle-live-1",
-    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 3 varies",
-    "caption": "Circumradius as points[3] runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your points[3] = 4 gives radius = 2.5. Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-live-1.svg"
-  },
-  {
-    "slug": "triangle-circumcircle-live-2",
-    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 6 varies",
-    "caption": "Circumradius as points[6] runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your points[6] = 3 gives radius = 2.5. Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-live-2.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | geometry batch
 
@@ -314,36 +280,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `geometry figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ geometry figures triangle_circumcircle "points=[0, 0, 4, 0, 0, 3]" --out .
-[
-  {
-    "slug": "triangle-circumcircle-points",
-    "title": "Circumcircle of a triangle",
-    "caption": "The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the returned circle has centre (2, 1.5) and radius 2.5. Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-points.svg"
-  },
-  {
-    "slug": "triangle-circumcircle-shape",
-    "title": "A triangle's circles and centres",
-    "caption": "The triangle 0 0, 4 0, 0 3: circumcircle (centre O = (2, 1.5), radius 2.5), incircle (centre I = (1, 1), radius 1), orthocentre H = (0, 0) and centroid G = (1.333, 1), each computed by the model; O, G and H lie on the Euler line (dashed). Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-shape.svg"
-  },
-  {
-    "slug": "triangle-circumcircle-live-1",
-    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 3 varies",
-    "caption": "Circumradius as points[3] runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your points[3] = 4 gives radius = 2.5. Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-live-1.svg"
-  },
-  {
-    "slug": "triangle-circumcircle-live-2",
-    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 6 varies",
-    "caption": "Circumradius as points[6] runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your points[6] = 3 gives radius = 2.5. Your inputs: points = (list).",
-    "file": ".\\triangle-circumcircle-live-2.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `geometry_ai999x.wasm` (https://www.ai999x.com/compute/rust/geometry_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -367,7 +303,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="convex_polygon_intersection"></a>
 
-#### Area of the intersection of two convex polygons — `convex_polygon_intersection`
+#### Area of the intersection of two convex polygons, `convex_polygon_intersection`
 
 The area common to two convex polygons given by their vertices.
 
@@ -377,9 +313,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `p` | in | first convex polygon's vertices in order | — |
-| `q` | in | second convex polygon's vertices in order | — |
-| `area` | out | area of the intersection (0 if they do not overlap) | — |
+| `p` | in | first convex polygon's vertices in order | - |
+| `q` | in | second convex polygon's vertices in order | - |
+| `area` | out | area of the intersection (0 if they do not overlap) | - |
 
 **Applies when:** both polygons simple and convex.
 
@@ -394,7 +330,7 @@ area = 1
 
 <a id="closest_pair"></a>
 
-#### Closest pair of points — `closest_pair`
+#### Closest pair of points: `closest_pair`
 
 The smallest distance between any two of a set of points in the plane.
 
@@ -404,8 +340,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the points: x1 y1, x2 y2, ... | — |
-| `distance` | out | smallest pairwise distance | — |
+| `points` | in | the points: x1 y1, x2 y2, ... | - |
+| `distance` | out | smallest pairwise distance | - |
 
 **Applies when:** at least 2 points, at most 2000; a repeated point gives distance 0.
 
@@ -420,7 +356,7 @@ distance = 1.414213562
 
 <a id="convex_hull"></a>
 
-#### Convex hull of points in the plane — `convex_hull`
+#### Convex hull of points in the plane: `convex_hull`
 
 The convex hull of a set of points: its vertices (counterclockwise), their number, its area and perimeter.
 
@@ -430,11 +366,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the points: x1 y1, x2 y2, ... | — |
-| `hull` | out | hull vertices [x, y], counterclockwise from the smallest x (then smallest y) | — |
-| `n_vertices` | out | number of hull vertices | — |
-| `area` | out | area of the hull | — |
-| `perimeter` | out | perimeter of the hull | — |
+| `points` | in | the points: x1 y1, x2 y2, ... | - |
+| `hull` | out | hull vertices [x, y], counterclockwise from the smallest x (then smallest y) | - |
+| `n_vertices` | out | number of hull vertices | - |
+| `area` | out | area of the hull | - |
+| `perimeter` | out | perimeter of the hull | - |
 
 **Applies when:** at least 3 points, not all collinear, at most 5000; points on a hull edge between two vertices are not vertices; repeated points count once.
 
@@ -452,7 +388,7 @@ perimeter = 13.04862718
 
 <a id="delaunay_voronoi_counts"></a>
 
-#### Delaunay triangulation and Voronoi diagram: counts — `delaunay_voronoi_counts`
+#### Delaunay triangulation and Voronoi diagram: counts, `delaunay_voronoi_counts`
 
 Numbers of Delaunay triangles and edges, hull vertices, Voronoi vertices and unbounded Voronoi cells of points in general position.
 
@@ -462,12 +398,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the points: x1 y1, x2 y2, ... (3 to 25) | — |
-| `triangles` | out | Delaunay triangles 2n - 2 - h | — |
-| `edges` | out | Delaunay edges 3n - 3 - h | — |
-| `hull_vertices` | out | h, vertices of the convex hull | — |
-| `voronoi_vertices` | out | Voronoi vertices (one per triangle) | — |
-| `unbounded_cells` | out | unbounded Voronoi cells (one per hull vertex) | — |
+| `points` | in | the points: x1 y1, x2 y2, ... (3 to 25) | - |
+| `triangles` | out | Delaunay triangles 2n - 2 - h | - |
+| `edges` | out | Delaunay edges 3n - 3 - h | - |
+| `hull_vertices` | out | h, vertices of the convex hull | - |
+| `voronoi_vertices` | out | Voronoi vertices (one per triangle) | - |
+| `unbounded_cells` | out | unbounded Voronoi cells (one per hull vertex) | - |
 
 **Applies when:** 3 to 25 distinct points; general position: no three collinear, no four concyclic (checked exactly).
 
@@ -486,7 +422,7 @@ unbounded_cells = 4
 
 <a id="point_segment_distance"></a>
 
-#### Distance from a point to a segment — `point_segment_distance`
+#### Distance from a point to a segment: `point_segment_distance`
 
 The shortest distance from a point to the segment AB and the closest point of the segment.
 
@@ -496,15 +432,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the point | — |
-| `py` | in | y of the point | — |
-| `x1` | in | x of A | — |
-| `y1` | in | y of A | — |
-| `x2` | in | x of B | — |
-| `y2` | in | y of B | — |
-| `distance` | out | shortest distance | — |
-| `qx` | out | x of the closest point | — |
-| `qy` | out | y of the closest point | — |
+| `px` | in | x of the point | - |
+| `py` | in | y of the point | - |
+| `x1` | in | x of A | - |
+| `y1` | in | y of A | - |
+| `x2` | in | x of B | - |
+| `y2` | in | y of B | - |
+| `distance` | out | shortest distance | - |
+| `qx` | out | x of the closest point | - |
+| `qy` | out | y of the closest point | - |
 
 **Applies when:** A != B.
 
@@ -527,7 +463,7 @@ qy = 0
 
 <a id="farthest_pair"></a>
 
-#### Farthest pair of points (diameter of a point set) — `farthest_pair`
+#### Farthest pair of points (diameter of a point set), `farthest_pair`
 
 The largest distance between any two of a set of points in the plane.
 
@@ -537,8 +473,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the points: x1 y1, x2 y2, ... | — |
-| `distance` | out | largest pairwise distance | — |
+| `points` | in | the points: x1 y1, x2 y2, ... | - |
+| `distance` | out | largest pairwise distance | - |
 
 **Applies when:** at least 2 points, at most 5000.
 
@@ -553,7 +489,7 @@ distance = 5
 
 <a id="hausdorff_distance"></a>
 
-#### Hausdorff distance between two point sets — `hausdorff_distance`
+#### Hausdorff distance between two point sets: `hausdorff_distance`
 
 The Hausdorff distance between two finite point sets and both directed distances.
 
@@ -563,11 +499,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | first set: x1 y1, x2 y2, ... | — |
-| `b` | in | second set | — |
-| `distance` | out | max of the two directed distances | — |
-| `from_a` | out | max over A of the distance to the nearest point of B | — |
-| `from_b` | out | max over B of the distance to the nearest point of A | — |
+| `a` | in | first set: x1 y1, x2 y2, ... | - |
+| `b` | in | second set | - |
+| `distance` | out | max of the two directed distances | - |
+| `from_a` | out | max over A of the distance to the nearest point of B | - |
+| `from_b` | out | max over B of the distance to the nearest point of A | - |
 
 **Applies when:** 1 to 1000 points per set.
 
@@ -584,7 +520,7 @@ from_b = 4.472135955
 
 <a id="segment_intersection"></a>
 
-#### Intersection of two line segments — `segment_intersection`
+#### Intersection of two line segments: `segment_intersection`
 
 Whether segments AB and CD meet, and where: at one point, along an overlap, or not at all.
 
@@ -594,10 +530,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the endpoints A, B, C, D: xA yA, xB yB, xC yC, xD yD | — |
-| `status` | out | point / overlap / none | — |
-| `x` | out | x of the common point (point only) | — |
-| `y` | out | y of the common point (point only) | — |
+| `points` | in | the endpoints A, B, C, D: xA yA, xB yB, xC yC, xD yD | - |
+| `status` | out | point / overlap / none | - |
+| `x` | out | x of the common point (point only) | - |
+| `y` | out | y of the common point (point only) | - |
 
 **Applies when:** each segment has distinct endpoints; decided exactly on the written coordinates (touching counts as meeting).
 
@@ -614,7 +550,7 @@ y = 2
 
 <a id="min_area_rectangle"></a>
 
-#### Minimum-area enclosing rectangle — `min_area_rectangle`
+#### Minimum-area enclosing rectangle: `min_area_rectangle`
 
 The area (and sides) of the smallest-area rectangle, in any orientation, enclosing the points.
 
@@ -624,10 +560,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the points: x1 y1, x2 y2, ... | — |
-| `area` | out | minimum area | — |
-| `width` | out | shorter side of that rectangle | — |
-| `length` | out | longer side | — |
+| `points` | in | the points: x1 y1, x2 y2, ... | - |
+| `area` | out | minimum area | - |
+| `width` | out | shorter side of that rectangle | - |
+| `length` | out | longer side | - |
 
 **Applies when:** at least 3 points, not all collinear; when two orientations tie in area, the sides of the first found are reported.
 
@@ -644,7 +580,7 @@ length = 2.828427125
 
 <a id="nearest_neighbor"></a>
 
-#### Nearest neighbour of a query point — `nearest_neighbor`
+#### Nearest neighbour of a query point: `nearest_neighbor`
 
 Which of a list of points is nearest to a query point, and how far it is.
 
@@ -654,13 +590,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the query point | — |
-| `py` | in | y of the query point | — |
-| `points` | in | the candidate points: x1 y1, x2 y2, ... | — |
-| `index` | out | position of the nearest point in the list (1 = first) | — |
-| `distance` | out | its distance | — |
-| `nx` | out | its x | — |
-| `ny` | out | its y | — |
+| `px` | in | x of the query point | - |
+| `py` | in | y of the query point | - |
+| `points` | in | the candidate points: x1 y1, x2 y2, ... | - |
+| `index` | out | position of the nearest point in the list (1 = first) | - |
+| `distance` | out | its distance | - |
+| `nx` | out | its x | - |
+| `ny` | out | its y | - |
 
 **Applies when:** ties go to the earliest point in the list.
 
@@ -680,7 +616,7 @@ ny = 3
 
 <a id="point_in_polygon"></a>
 
-#### Point in polygon test — `point_in_polygon`
+#### Point in polygon test: `point_in_polygon`
 
 Whether a point lies inside, outside or on the boundary of a simple polygon.
 
@@ -690,10 +626,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the point | — |
-| `py` | in | y of the point | — |
-| `points` | in | polygon vertices in order: x1 y1, x2 y2, ... | — |
-| `location` | out | inside / outside / boundary | — |
+| `px` | in | x of the point | - |
+| `py` | in | y of the point | - |
+| `points` | in | polygon vertices in order: x1 y1, x2 y2, ... | - |
+| `location` | out | inside / outside / boundary | - |
 
 **Applies when:** simple polygon with at least 3 vertices; decided exactly on the written coordinates.
 
@@ -710,7 +646,7 @@ location = inside
 
 <a id="min_enclosing_circle"></a>
 
-#### Smallest enclosing circle of points — `min_enclosing_circle`
+#### Smallest enclosing circle of points: `min_enclosing_circle`
 
 Centre and radius of the smallest circle that contains every given point.
 
@@ -720,10 +656,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the points: x1 y1, x2 y2, ... | — |
-| `cx` | out | x of the centre | — |
-| `cy` | out | y of the centre | — |
-| `radius` | out | radius | — |
+| `points` | in | the points: x1 y1, x2 y2, ... | - |
+| `cx` | out | x of the centre | - |
+| `cy` | out | y of the centre | - |
+| `radius` | out | radius | - |
 
 **Applies when:** 1 to 2000 points; the smallest enclosing circle is unique.
 
@@ -742,7 +678,7 @@ radius = 2
 
 <a id="conic_classify"></a>
 
-#### Classify a conic section from its general equation — `conic_classify`
+#### Classify a conic section from its general equation, `conic_classify`
 
 Whether A x^2 + B xy + C y^2 + D x + E y + F = 0 is a circle, ellipse, parabola, hyperbola, a degenerate conic or has no real points.
 
@@ -752,13 +688,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | coefficient of x^2 | — |
-| `B` | in | coefficient of xy | — |
-| `C` | in | coefficient of y^2 | — |
-| `D` | in | coefficient of x | — |
-| `E` | in | coefficient of y | — |
-| `F` | in | constant term | — |
-| `type` | out | circle / ellipse / parabola / hyperbola / degenerate / empty | — |
+| `A` | in | coefficient of x^2 | - |
+| `B` | in | coefficient of xy | - |
+| `C` | in | coefficient of y^2 | - |
+| `D` | in | coefficient of x | - |
+| `E` | in | coefficient of y | - |
+| `F` | in | constant term | - |
+| `type` | out | circle / ellipse / parabola / hyperbola / degenerate / empty | - |
 
 **Applies when:** A, B, C not all 0; exact on the written coefficients; 'degenerate' = a point, a pair of lines or a degenerate equation (zero 3x3 determinant); 'empty' = an ellipse with no real points.
 
@@ -779,7 +715,7 @@ type = ellipse
 
 <a id="ellipse_perimeter"></a>
 
-#### Perimeter of an ellipse (exact, by the complete elliptic integral) — `ellipse_perimeter`
+#### Perimeter of an ellipse (exact, by the complete elliptic integral), `ellipse_perimeter`
 
 The exact perimeter (circumference) and area of an ellipse with semi-axes a and b.
 
@@ -789,10 +725,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | one semi-axis | — |
-| `b` | in | the other semi-axis | — |
-| `perimeter` | out | 4 a E(e^2), a the larger semi-axis | — |
-| `area` | out | pi a b | — |
+| `a` | in | one semi-axis | - |
+| `b` | in | the other semi-axis | - |
+| `perimeter` | out | 4 a E(e^2), a the larger semi-axis | - |
+| `area` | out | pi a b | - |
 
 **Applies when:** a, b > 0; axis ratio at least 0.001.
 
@@ -812,7 +748,7 @@ area = 47.1238898
 
 <a id="angle_between_lines"></a>
 
-#### Angle between two lines — `angle_between_lines`
+#### Angle between two lines: `angle_between_lines`
 
 The acute (or right) angle between two lines given by equations.
 
@@ -822,13 +758,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a1` | in | coefficient of x in line 1 (a1 x + b1 y + c1 = 0) | — |
-| `b1` | in | coefficient of y in line 1 | — |
-| `c1` | in | constant of line 1 | — |
-| `a2` | in | coefficient of x in line 2 (a2 x + b2 y + c2 = 0) | — |
-| `b2` | in | coefficient of y in line 2 | — |
-| `c2` | in | constant of line 2 | — |
-| `angle` | out | angle between the lines, degrees, 0 to 90 | — |
+| `a1` | in | coefficient of x in line 1 (a1 x + b1 y + c1 = 0) | - |
+| `b1` | in | coefficient of y in line 1 | - |
+| `c1` | in | constant of line 1 | - |
+| `a2` | in | coefficient of x in line 2 (a2 x + b2 y + c2 = 0) | - |
+| `b2` | in | coefficient of y in line 2 | - |
+| `c2` | in | constant of line 2 | - |
+| `angle` | out | angle between the lines, degrees, 0 to 90 | - |
 
 **Applies when:** each line has a or b nonzero; the acute angle is reported (parallel lines: 0).
 
@@ -849,7 +785,7 @@ angle = 90
 
 <a id="barycentric_coordinates"></a>
 
-#### Barycentric coordinates of a point in a triangle — `barycentric_coordinates`
+#### Barycentric coordinates of a point in a triangle, `barycentric_coordinates`
 
 The barycentric coordinates (l1, l2, l3) of a point with respect to triangle ABC: P = l1 A + l2 B + l3 C, l1 + l2 + l3 = 1.
 
@@ -859,12 +795,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the point | — |
-| `py` | in | y of the point | — |
-| `points` | in | the triangle's vertices A, B, C | — |
-| `l1` | out | weight of A | — |
-| `l2` | out | weight of B | — |
-| `l3` | out | weight of C | — |
+| `px` | in | x of the point | - |
+| `py` | in | y of the point | - |
+| `points` | in | the triangle's vertices A, B, C | - |
+| `l1` | out | weight of A | - |
+| `l2` | out | weight of B | - |
+| `l3` | out | weight of C | - |
 
 **Applies when:** A, B, C not collinear; all weights positive exactly when P is inside.
 
@@ -883,7 +819,7 @@ l3 = 0.25
 
 <a id="triangle_circumcircle"></a>
 
-#### Circumcircle: the circle through three points — `triangle_circumcircle`
+#### Circumcircle: the circle through three points, `triangle_circumcircle`
 
 Circumcentre and circumradius of a triangle given by its vertices (the circle through three points).
 
@@ -893,10 +829,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the three points: x1 y1, x2 y2, x3 y3 | — |
-| `cx` | out | x of the circumcentre | — |
-| `cy` | out | y of the circumcentre | — |
-| `radius` | out | circumradius | — |
+| `points` | in | the three points: x1 y1, x2 y2, x3 y3 | - |
+| `cx` | out | x of the circumcentre | - |
+| `cy` | out | y of the circumcentre | - |
+| `radius` | out | circumradius | - |
 
 **Applies when:** exactly 3 points; not collinear.
 
@@ -913,7 +849,7 @@ radius = 2.5
 
 <a id="triangle_incircle"></a>
 
-#### Incircle of a triangle: incentre and inradius — `triangle_incircle`
+#### Incircle of a triangle: incentre and inradius, `triangle_incircle`
 
 Incentre and inradius of the triangle with the given vertices.
 
@@ -923,10 +859,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the vertices: xA yA, xB yB, xC yC | — |
-| `ix` | out | x of the incentre | — |
-| `iy` | out | y of the incentre | — |
-| `radius` | out | inradius | — |
+| `points` | in | the vertices: xA yA, xB yB, xC yC | - |
+| `ix` | out | x of the incentre | - |
+| `iy` | out | y of the incentre | - |
+| `radius` | out | inradius | - |
 
 **Applies when:** exactly 3 points; not collinear.
 
@@ -943,7 +879,7 @@ radius = 1
 
 <a id="circle_line_intersection"></a>
 
-#### Intersection of a circle and a line — `circle_line_intersection`
+#### Intersection of a circle and a line: `circle_line_intersection`
 
 The points where the line a x + b y + c = 0 meets the circle with centre (cx, cy) and radius r (0, 1 or 2 points).
 
@@ -953,17 +889,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `cx` | in | x of the centre | — |
-| `cy` | in | y of the centre | — |
-| `r` | in | radius | — |
-| `a` | in | coefficient of x of the line | — |
-| `b` | in | coefficient of y of the line | — |
-| `c` | in | constant of the line | — |
-| `count` | out | number of intersection points (0, 1 or 2) | — |
-| `x1` | out | x of the first point (ordered by x, then y) | — |
-| `y1` | out | y of the first point | — |
-| `x2` | out | x of the second point | — |
-| `y2` | out | y of the second point | — |
+| `cx` | in | x of the centre | - |
+| `cy` | in | y of the centre | - |
+| `r` | in | radius | - |
+| `a` | in | coefficient of x of the line | - |
+| `b` | in | coefficient of y of the line | - |
+| `c` | in | constant of the line | - |
+| `count` | out | number of intersection points (0, 1 or 2) | - |
+| `x1` | out | x of the first point (ordered by x, then y) | - |
+| `y1` | out | y of the first point | - |
+| `x2` | out | x of the second point | - |
+| `y2` | out | y of the second point | - |
 
 **Applies when:** r > 0; a and b not both 0; tangency is decided exactly on the written values; points ordered by x, then y; absent points are empty.
 
@@ -988,7 +924,7 @@ In the worked example, cx = 0, cy = 0, r = 5, a = -1, b = 1, c = -1 go through t
 
 <a id="circle_circle_intersection"></a>
 
-#### Intersection of two circles — `circle_circle_intersection`
+#### Intersection of two circles: `circle_circle_intersection`
 
 The points where two circles meet (0, 1 or 2 points).
 
@@ -998,17 +934,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x1` | in | x of the first centre | — |
-| `y1` | in | y of the first centre | — |
-| `r1` | in | first radius | — |
-| `x2` | in | x of the second centre | — |
-| `y2` | in | y of the second centre | — |
-| `r2` | in | second radius | — |
-| `count` | out | number of intersection points (0, 1 or 2) | — |
-| `x1` | out | x of the first point (ordered by x, then y) | — |
-| `y1` | out | y of the first point | — |
-| `x2` | out | x of the second point | — |
-| `y2` | out | y of the second point | — |
+| `x1` | in | x of the first centre | - |
+| `y1` | in | y of the first centre | - |
+| `r1` | in | first radius | - |
+| `x2` | in | x of the second centre | - |
+| `y2` | in | y of the second centre | - |
+| `r2` | in | second radius | - |
+| `count` | out | number of intersection points (0, 1 or 2) | - |
+| `x1` | out | x of the first point (ordered by x, then y) | - |
+| `y1` | out | y of the first point | - |
+| `x2` | out | x of the second point | - |
+| `y2` | out | y of the second point | - |
 
 **Applies when:** r1, r2 > 0; the circles are not identical; tangency decided exactly on the written values; points ordered by x, then y.
 
@@ -1033,7 +969,7 @@ y2 = 4
 
 <a id="line_intersection"></a>
 
-#### Intersection point of two lines — `line_intersection`
+#### Intersection point of two lines: `line_intersection`
 
 The point where two lines a1 x + b1 y + c1 = 0 and a2 x + b2 y + c2 = 0 meet.
 
@@ -1043,14 +979,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a1` | in | coefficient of x in line 1 (a1 x + b1 y + c1 = 0) | — |
-| `b1` | in | coefficient of y in line 1 | — |
-| `c1` | in | constant of line 1 | — |
-| `a2` | in | coefficient of x in line 2 (a2 x + b2 y + c2 = 0) | — |
-| `b2` | in | coefficient of y in line 2 | — |
-| `c2` | in | constant of line 2 | — |
-| `x` | out | x of the intersection | — |
-| `y` | out | y of the intersection | — |
+| `a1` | in | coefficient of x in line 1 (a1 x + b1 y + c1 = 0) | - |
+| `b1` | in | coefficient of y in line 1 | - |
+| `c1` | in | constant of line 1 | - |
+| `a2` | in | coefficient of x in line 2 (a2 x + b2 y + c2 = 0) | - |
+| `b2` | in | coefficient of y in line 2 | - |
+| `c2` | in | constant of line 2 | - |
+| `x` | out | x of the intersection | - |
+| `y` | out | y of the intersection | - |
 
 **Applies when:** each line has a or b nonzero; the lines are not parallel (exact test on the written coefficients).
 
@@ -1072,7 +1008,7 @@ y = 1
 
 <a id="polyline_length"></a>
 
-#### Length of a polyline (path through points) — `polyline_length`
+#### Length of a polyline (path through points), `polyline_length`
 
 The total length of the open path that visits the points in the order given.
 
@@ -1082,9 +1018,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the points in order: x1 y1, x2 y2, ... | — |
-| `length` | out | sum of the segment lengths | — |
-| `segments` | out | number of segments | — |
+| `points` | in | the points in order: x1 y1, x2 y2, ... | - |
+| `length` | out | sum of the segment lengths | - |
+| `segments` | out | number of segments | - |
 
 **Applies when:** at least 2 points; the path is open (not closed back to the start).
 
@@ -1100,7 +1036,7 @@ segments = 2
 
 <a id="triangle_orthocenter"></a>
 
-#### Orthocentre of a triangle — `triangle_orthocenter`
+#### Orthocentre of a triangle: `triangle_orthocenter`
 
 The orthocentre (common point of the three altitudes) of the triangle with the given vertices.
 
@@ -1110,9 +1046,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the vertices: xA yA, xB yB, xC yC | — |
-| `hx` | out | x of the orthocentre | — |
-| `hy` | out | y of the orthocentre | — |
+| `points` | in | the vertices: xA yA, xB yB, xC yC | - |
+| `hx` | out | x of the orthocentre | - |
+| `hy` | out | y of the orthocentre | - |
 
 **Applies when:** exactly 3 points; not collinear.
 
@@ -1128,7 +1064,7 @@ hy = 1
 
 <a id="tangent_from_point"></a>
 
-#### Tangents from a point to a circle — `tangent_from_point`
+#### Tangents from a point to a circle: `tangent_from_point`
 
 The tangent length from an external point to a circle and the two points of tangency.
 
@@ -1138,16 +1074,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `cx` | in | x of the centre | — |
-| `cy` | in | y of the centre | — |
-| `r` | in | radius | — |
-| `px` | in | x of the external point | — |
-| `py` | in | y of the external point | — |
-| `length` | out | tangent length sqrt(d^2 - r^2) | — |
-| `x1` | out | x of the first tangency point (ordered by x, then y) | — |
-| `y1` | out | y of the first tangency point | — |
-| `x2` | out | x of the second tangency point | — |
-| `y2` | out | y of the second tangency point | — |
+| `cx` | in | x of the centre | - |
+| `cy` | in | y of the centre | - |
+| `r` | in | radius | - |
+| `px` | in | x of the external point | - |
+| `py` | in | y of the external point | - |
+| `length` | out | tangent length sqrt(d^2 - r^2) | - |
+| `x1` | out | x of the first tangency point (ordered by x, then y) | - |
+| `y1` | out | y of the first tangency point | - |
+| `x2` | out | x of the second tangency point | - |
+| `y2` | out | y of the second tangency point | - |
 
 **Applies when:** r > 0; the point is not inside the circle (on the circle: length 0, both points at the point).
 
@@ -1171,7 +1107,7 @@ y2 = 2.4
 
 <a id="triangle_coordinates"></a>
 
-#### Triangle from vertex coordinates: area, perimeter, centroid, angles — `triangle_coordinates`
+#### Triangle from vertex coordinates: area, perimeter, centroid, angles, `triangle_coordinates`
 
 Area, perimeter, centroid and the angles at A, B, C of the triangle with vertices A, B, C.
 
@@ -1181,14 +1117,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the vertices A, B, C: xA yA, xB yB, xC yC | — |
-| `area` | out | area (shoelace) | — |
-| `perimeter` | out | perimeter | — |
-| `gx` | out | x of the centroid | — |
-| `gy` | out | y of the centroid | — |
-| `angle_A` | out | angle at A, degrees | — |
-| `angle_B` | out | angle at B, degrees | — |
-| `angle_C` | out | angle at C, degrees | — |
+| `points` | in | the vertices A, B, C: xA yA, xB yB, xC yC | - |
+| `area` | out | area (shoelace) | - |
+| `perimeter` | out | perimeter | - |
+| `gx` | out | x of the centroid | - |
+| `gy` | out | y of the centroid | - |
+| `angle_A` | out | angle at A, degrees | - |
+| `angle_B` | out | angle at B, degrees | - |
+| `angle_C` | out | angle at C, degrees | - |
 
 **Applies when:** exactly 3 vertices; not collinear.
 
@@ -1211,7 +1147,7 @@ angle_C = 53.13010235
 
 <a id="parabola_arc_length"></a>
 
-#### Arc length of a parabola — `parabola_arc_length`
+#### Arc length of a parabola: `parabola_arc_length`
 
 The length of the curve y = a x^2 + b x + c between x = x0 and x = x1.
 
@@ -1221,12 +1157,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of x^2 | — |
-| `b` | in | coefficient of x | — |
-| `x0` | in | start x | — |
-| `x1` | in | end x | — |
-| `c` | in | constant (does not affect the length) (optional) | — |
-| `length` | out | arc length | — |
+| `a` | in | coefficient of x^2 | - |
+| `b` | in | coefficient of x | - |
+| `x0` | in | start x | - |
+| `x1` | in | end x | - |
+| `c` | in | constant (does not affect the length) (optional) | - |
+| `length` | out | arc length | - |
 
 **Applies when:** x0 != x1 (either order).
 
@@ -1246,7 +1182,7 @@ length = 1.478942858
 
 <a id="curvature_of_graph"></a>
 
-#### Curvature of a polynomial graph at a point — `curvature_of_graph`
+#### Curvature of a polynomial graph at a point, `curvature_of_graph`
 
 The curvature and radius of curvature of y = p(x) at x = x0 for a polynomial p.
 
@@ -1256,11 +1192,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `coefficients` | in | coefficients from the highest power down: a_n, ..., a_1, a_0 | — |
-| `x0` | in | the x-coordinate of the point | — |
-| `curvature` | out | \|y''\| / (1 + y'^2)^(3/2) | — |
-| `radius_of_curvature` | out | 1 / curvature (none where the curvature is 0) | — |
-| `slope` | out | y'(x0) | — |
+| `coefficients` | in | coefficients from the highest power down: a_n, ..., a_1, a_0 | - |
+| `x0` | in | the x-coordinate of the point | - |
+| `curvature` | out | \|y''\| / (1 + y'^2)^(3/2) | - |
+| `radius_of_curvature` | out | 1 / curvature (none where the curvature is 0) | - |
+| `slope` | out | y'(x0) | - |
 
 **Applies when:** polynomial of degree at most 10.
 
@@ -1278,7 +1214,7 @@ slope = 0
 
 <a id="ellipse_curvature"></a>
 
-#### Curvature of an ellipse at a point — `ellipse_curvature`
+#### Curvature of an ellipse at a point: `ellipse_curvature`
 
 The curvature and radius of curvature of the ellipse (a cos t, b sin t) at parameter t (eccentric anomaly).
 
@@ -1288,13 +1224,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | semi-axis along x | — |
-| `b` | in | semi-axis along y | — |
-| `t` | in | parameter t (eccentric anomaly), degrees | — |
-| `curvature` | out | ab / (a^2 sin^2 t + b^2 cos^2 t)^(3/2) | — |
-| `radius_of_curvature` | out | 1 / curvature | — |
-| `x` | out | x of the point | — |
-| `y` | out | y of the point | — |
+| `a` | in | semi-axis along x | - |
+| `b` | in | semi-axis along y | - |
+| `t` | in | parameter t (eccentric anomaly), degrees | - |
+| `curvature` | out | ab / (a^2 sin^2 t + b^2 cos^2 t)^(3/2) | - |
+| `radius_of_curvature` | out | 1 / curvature | - |
+| `x` | out | x of the point | - |
+| `y` | out | y of the point | - |
 
 **Applies when:** a, b > 0; the point is (a cos t, b sin t); 'end of the major/minor axis' means t = 0 / 90 degrees.
 
@@ -1315,7 +1251,7 @@ y = 0
 
 <a id="helix_measures"></a>
 
-#### Helix: curvature, torsion and length per turn — `helix_measures`
+#### Helix: curvature, torsion and length per turn, `helix_measures`
 
 Curvature, torsion and arc length per turn of the circular helix of radius r and pitch p (rise per turn).
 
@@ -1325,11 +1261,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius r of the helix | — |
-| `pitch` | in | pitch p: rise per full turn (negative: left-handed) | — |
-| `curvature` | out | r / (r^2 + c^2), c = p / (2 pi) | — |
-| `torsion` | out | c / (r^2 + c^2) | — |
-| `length_per_turn` | out | sqrt((2 pi r)^2 + p^2) | — |
+| `radius` | in | radius r of the helix | - |
+| `pitch` | in | pitch p: rise per full turn (negative: left-handed) | - |
+| `curvature` | out | r / (r^2 + c^2), c = p / (2 pi) | - |
+| `torsion` | out | c / (r^2 + c^2) | - |
+| `length_per_turn` | out | sqrt((2 pi r)^2 + p^2) | - |
 
 **Applies when:** radius > 0; parametrised (r cos t, r sin t, c t).
 
@@ -1350,7 +1286,7 @@ length_per_turn = 8.885765876
 
 <a id="triangle_area_base_height"></a>
 
-#### Area of a triangle from base and height — `triangle_area_base_height`
+#### Area of a triangle from base and height: `triangle_area_base_height`
 
 The area of a triangle from a base and the height (altitude) to that base.
 
@@ -1360,9 +1296,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `base` | in | length of the base | — |
-| `height` | in | height perpendicular to the base | — |
-| `area` | out | area b*h/2 | — |
+| `base` | in | length of the base | - |
+| `height` | in | height perpendicular to the base | - |
+| `area` | out | area b*h/2 | - |
 
 **Applies when:** base > 0; height > 0.
 
@@ -1379,7 +1315,7 @@ area = 30
 
 <a id="annulus_area"></a>
 
-#### Area of an annulus (ring) — `annulus_area`
+#### Area of an annulus (ring): `annulus_area`
 
 The area between two concentric circles.
 
@@ -1389,9 +1325,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `outer` | in | outer radius | — |
-| `inner` | in | inner radius | — |
-| `area` | out | pi (R^2 - r^2) | — |
+| `outer` | in | outer radius | - |
+| `inner` | in | inner radius | - |
+| `area` | out | pi (R^2 - r^2) | - |
 
 **Applies when:** 0 < inner < outer.
 
@@ -1408,7 +1344,7 @@ area = 50.26548246
 
 <a id="circle_measures"></a>
 
-#### Circle: area, circumference and diameter — `circle_measures`
+#### Circle: area, circumference and diameter, `circle_measures`
 
 Area, circumference and diameter of a circle from its radius (or diameter).
 
@@ -1418,10 +1354,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius of the circle | — |
-| `area` | out | area pi r^2 | — |
-| `circumference` | out | circumference 2 pi r | — |
-| `diameter` | out | diameter 2r | — |
+| `radius` | in | radius of the circle | - |
+| `area` | out | area pi r^2 | - |
+| `circumference` | out | circumference 2 pi r | - |
+| `diameter` | out | diameter 2r | - |
 
 **Applies when:** radius > 0.
 
@@ -1439,7 +1375,7 @@ diameter = 6
 
 <a id="sector_measures"></a>
 
-#### Circular sector: arc length, area and chord — `sector_measures`
+#### Circular sector: arc length, area and chord, `sector_measures`
 
 Arc length, sector area and chord of a circular sector from the radius and central angle.
 
@@ -1449,11 +1385,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius | — |
-| `angle` | in | central angle in degrees | — |
-| `arc_length` | out | r theta (theta in radians) | — |
-| `sector_area` | out | r^2 theta / 2 | — |
-| `chord` | out | 2 r sin(theta/2) | — |
+| `radius` | in | radius | - |
+| `angle` | in | central angle in degrees | - |
+| `arc_length` | out | r theta (theta in radians) | - |
+| `sector_area` | out | r^2 theta / 2 | - |
+| `chord` | out | 2 r sin(theta/2) | - |
 
 **Applies when:** radius > 0; 0 < angle <= 360 degrees.
 
@@ -1472,7 +1408,7 @@ chord = 6
 
 <a id="circular_segment"></a>
 
-#### Circular segment: area, chord, height, arc — `circular_segment`
+#### Circular segment: area, chord, height, arc, `circular_segment`
 
 Area, chord, height (sagitta) and arc length of the circular segment cut off by a chord with a given central angle.
 
@@ -1482,12 +1418,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius | — |
-| `angle` | in | central angle in degrees | — |
-| `area` | out | r^2 (theta - sin theta)/2 | — |
-| `chord` | out | 2 r sin(theta/2) | — |
-| `height` | out | r (1 - cos(theta/2)) | — |
-| `arc_length` | out | r theta | — |
+| `radius` | in | radius | - |
+| `angle` | in | central angle in degrees | - |
+| `area` | out | r^2 (theta - sin theta)/2 | - |
+| `chord` | out | 2 r sin(theta/2) | - |
+| `height` | out | r (1 - cos(theta/2)) | - |
+| `arc_length` | out | r theta | - |
 
 **Applies when:** radius > 0; 0 < angle < 360 degrees.
 
@@ -1507,7 +1443,7 @@ arc_length = 10.47197551
 
 <a id="triangle_classify"></a>
 
-#### Classify a triangle by its sides and angles — `triangle_classify`
+#### Classify a triangle by its sides and angles, `triangle_classify`
 
 Whether a triangle with sides a, b, c is equilateral, isosceles or scalene, and acute, right or obtuse.
 
@@ -1517,11 +1453,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | side a | — |
-| `b` | in | side b | — |
-| `c` | in | side c | — |
-| `by_sides` | out | equilateral / isosceles / scalene | — |
-| `by_angles` | out | acute / right / obtuse | — |
+| `a` | in | side a | - |
+| `b` | in | side b | - |
+| `c` | in | side c | - |
+| `by_sides` | out | equilateral / isosceles / scalene | - |
+| `by_angles` | out | acute / right / obtuse | - |
 
 **Applies when:** a, b, c > 0; triangle inequality; the sides are compared exactly as written.
 
@@ -1540,7 +1476,7 @@ by_angles = right
 
 <a id="triangle_cevians"></a>
 
-#### Medians, altitudes and angle bisectors of a triangle — `triangle_cevians`
+#### Medians, altitudes and angle bisectors of a triangle, `triangle_cevians`
 
 The lengths of the three medians, three altitudes and three internal angle bisectors of a triangle from its sides.
 
@@ -1550,18 +1486,18 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | side a (opposite A) | — |
-| `b` | in | side b (opposite B) | — |
-| `c` | in | side c (opposite C) | — |
-| `median_a` | out | median from vertex A (to side a) | — |
-| `median_b` | out | median from vertex B (to side b) | — |
-| `median_c` | out | median from vertex C (to side c) | — |
-| `altitude_a` | out | altitude from vertex A (to side a) | — |
-| `altitude_b` | out | altitude from vertex B (to side b) | — |
-| `altitude_c` | out | altitude from vertex C (to side c) | — |
-| `bisector_a` | out | bisector from vertex A (to side a) | — |
-| `bisector_b` | out | bisector from vertex B (to side b) | — |
-| `bisector_c` | out | bisector from vertex C (to side c) | — |
+| `a` | in | side a (opposite A) | - |
+| `b` | in | side b (opposite B) | - |
+| `c` | in | side c (opposite C) | - |
+| `median_a` | out | median from vertex A (to side a) | - |
+| `median_b` | out | median from vertex B (to side b) | - |
+| `median_c` | out | median from vertex C (to side c) | - |
+| `altitude_a` | out | altitude from vertex A (to side a) | - |
+| `altitude_b` | out | altitude from vertex B (to side b) | - |
+| `altitude_c` | out | altitude from vertex C (to side c) | - |
+| `bisector_a` | out | bisector from vertex A (to side a) | - |
+| `bisector_b` | out | bisector from vertex B (to side b) | - |
+| `bisector_c` | out | bisector from vertex C (to side c) | - |
 
 **Applies when:** a, b, c > 0; triangle inequality.
 
@@ -1587,7 +1523,7 @@ bisector_c = 2.424366107
 
 <a id="rectangle_measures"></a>
 
-#### Rectangle: area, perimeter and diagonal — `rectangle_measures`
+#### Rectangle: area, perimeter and diagonal, `rectangle_measures`
 
 Area, perimeter and diagonal of a rectangle (a square when length = width).
 
@@ -1597,11 +1533,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `length` | in | length of the rectangle | — |
-| `width` | in | width of the rectangle | — |
-| `area` | out | area l*w | — |
-| `perimeter` | out | perimeter 2(l + w) | — |
-| `diagonal` | out | diagonal sqrt(l^2 + w^2) | — |
+| `length` | in | length of the rectangle | - |
+| `width` | in | width of the rectangle | - |
+| `area` | out | area l*w | - |
+| `perimeter` | out | perimeter 2(l + w) | - |
+| `diagonal` | out | diagonal sqrt(l^2 + w^2) | - |
 
 **Applies when:** length > 0; width > 0.
 
@@ -1620,7 +1556,7 @@ diagonal = 9.433981132
 
 <a id="rhombus_measures"></a>
 
-#### Rhombus from its diagonals: area, side, perimeter — `rhombus_measures`
+#### Rhombus from its diagonals: area, side, perimeter, `rhombus_measures`
 
 Area, side and perimeter of a rhombus from its two diagonals.
 
@@ -1630,11 +1566,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `d1` | in | first diagonal | — |
-| `d2` | in | second diagonal | — |
-| `area` | out | d1 d2 / 2 | — |
-| `side` | out | sqrt(d1^2 + d2^2)/2 | — |
-| `perimeter` | out | 4 * side | — |
+| `d1` | in | first diagonal | - |
+| `d2` | in | second diagonal | - |
+| `area` | out | d1 d2 / 2 | - |
+| `side` | out | sqrt(d1^2 + d2^2)/2 | - |
+| `perimeter` | out | 4 * side | - |
 
 **Applies when:** d1, d2 > 0 (the diagonals of a rhombus bisect each other at right angles).
 
@@ -1653,7 +1589,7 @@ perimeter = 20
 
 <a id="trapezoid_measures"></a>
 
-#### Trapezoid: area and midsegment — `trapezoid_measures`
+#### Trapezoid: area and midsegment, `trapezoid_measures`
 
 Area and midsegment (median) of a trapezoid from its parallel sides and height.
 
@@ -1663,11 +1599,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | first parallel side | — |
-| `b` | in | second parallel side | — |
-| `height` | in | distance between the parallel sides | — |
-| `area` | out | (a + b) h / 2 | — |
-| `midsegment` | out | (a + b) / 2 | — |
+| `a` | in | first parallel side | - |
+| `b` | in | second parallel side | - |
+| `height` | in | distance between the parallel sides | - |
+| `area` | out | (a + b) h / 2 | - |
+| `midsegment` | out | (a + b) / 2 | - |
 
 **Applies when:** a, b, height > 0.
 
@@ -1688,7 +1624,7 @@ midsegment = 8
 
 <a id="polygon_centroid"></a>
 
-#### Centroid of a polygon — `polygon_centroid`
+#### Centroid of a polygon: `polygon_centroid`
 
 The centroid (centre of mass of the uniform region) of a simple polygon given its vertices in order.
 
@@ -1698,9 +1634,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | vertices in order: x1 y1, x2 y2, ... | — |
-| `cx` | out | x of the centroid | — |
-| `cy` | out | y of the centroid | — |
+| `points` | in | vertices in order: x1 y1, x2 y2, ... | - |
+| `cx` | out | x of the centroid | - |
+| `cy` | out | y of the centroid | - |
 
 **Applies when:** at least 3 vertices, in order; simple polygon.
 
@@ -1716,7 +1652,7 @@ cy = 1
 
 <a id="polygon_interior_angles"></a>
 
-#### Interior angles of a polygon from its vertices — `polygon_interior_angles`
+#### Interior angles of a polygon from its vertices, `polygon_interior_angles`
 
 The interior angle at every vertex of a simple polygon (reflex angles included), their sum and the number of reflex vertices.
 
@@ -1726,10 +1662,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | vertices in order: x1 y1, x2 y2, ... | — |
-| `angles` | out | interior angle at each vertex, degrees, in the order given | — |
-| `angle_sum` | out | (n - 2) 180 | — |
-| `reflex_vertices` | out | number of angles above 180 degrees | — |
+| `points` | in | vertices in order: x1 y1, x2 y2, ... | - |
+| `angles` | out | interior angle at each vertex, degrees, in the order given | - |
+| `angle_sum` | out | (n - 2) 180 | - |
+| `reflex_vertices` | out | number of angles above 180 degrees | - |
 
 **Applies when:** simple polygon; either orientation.
 
@@ -1746,7 +1682,7 @@ reflex_vertices = 1
 
 <a id="polygon_is_convex"></a>
 
-#### Is a polygon convex? — `polygon_is_convex`
+#### Is a polygon convex?, `polygon_is_convex`
 
 Whether a simple polygon given by its vertices is convex.
 
@@ -1756,8 +1692,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | vertices in order: x1 y1, x2 y2, ... | — |
-| `convex` | out | yes / no | — |
+| `points` | in | vertices in order: x1 y1, x2 y2, ... | - |
+| `convex` | out | yes / no | - |
 
 **Applies when:** simple polygon; a vertex on a straight edge (180 degrees) does not make it non-convex; exact on the written coordinates.
 
@@ -1772,7 +1708,7 @@ convex = no
 
 <a id="pick_lattice_points"></a>
 
-#### Pick's theorem: lattice points of a polygon — `pick_lattice_points`
+#### Pick's theorem: lattice points of a polygon, `pick_lattice_points`
 
 Area, boundary lattice points and interior lattice points of a simple polygon with integer vertices.
 
@@ -1782,10 +1718,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | integer vertices in order: x1 y1, x2 y2, ... | — |
-| `area` | out | area | — |
-| `boundary_points` | out | lattice points on the boundary | — |
-| `interior_points` | out | lattice points strictly inside | — |
+| `points` | in | integer vertices in order: x1 y1, x2 y2, ... | - |
+| `area` | out | area | - |
+| `boundary_points` | out | lattice points on the boundary | - |
+| `interior_points` | out | lattice points strictly inside | - |
 
 **Applies when:** integer coordinates; simple polygon.
 
@@ -1802,7 +1738,7 @@ interior_points = 6
 
 <a id="regular_polygon_angles"></a>
 
-#### Polygon angles and diagonals — `regular_polygon_angles`
+#### Polygon angles and diagonals: `regular_polygon_angles`
 
 Each interior and exterior angle of a regular n-gon, the interior angle sum of any n-gon and its number of diagonals.
 
@@ -1812,11 +1748,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | number of sides | — |
-| `interior_angle` | out | each interior angle of the regular polygon, degrees | — |
-| `exterior_angle` | out | each exterior angle, degrees | — |
-| `interior_sum` | out | sum of the interior angles, degrees | — |
-| `diagonals` | out | number of diagonals n(n-3)/2 | — |
+| `n` | in | number of sides | - |
+| `interior_angle` | out | each interior angle of the regular polygon, degrees | - |
+| `exterior_angle` | out | each exterior angle, degrees | - |
+| `interior_sum` | out | sum of the interior angles, degrees | - |
+| `diagonals` | out | number of diagonals n(n-3)/2 | - |
 
 **Applies when:** 3 <= n <= 1000 (whole number); each single angle assumes a regular polygon.
 
@@ -1834,7 +1770,7 @@ diagonals = 9
 
 <a id="polygon_area"></a>
 
-#### Polygon from vertices: area, perimeter, orientation — `polygon_area`
+#### Polygon from vertices: area, perimeter, orientation, `polygon_area`
 
 Area (shoelace formula), perimeter and orientation of a simple polygon given its vertices in order.
 
@@ -1844,10 +1780,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | vertices in order: x1 y1, x2 y2, ... | — |
-| `area` | out | enclosed area | — |
-| `perimeter` | out | sum of the edge lengths | — |
-| `orientation` | out | counterclockwise or clockwise | — |
+| `points` | in | vertices in order: x1 y1, x2 y2, ... | - |
+| `area` | out | enclosed area | - |
+| `perimeter` | out | sum of the edge lengths | - |
+| `orientation` | out | counterclockwise or clockwise | - |
 
 **Applies when:** at least 3 vertices, in order; the polygon is simple (its edges do not cross).
 
@@ -1864,7 +1800,7 @@ orientation = counterclockwise
 
 <a id="regular_polygon_measures"></a>
 
-#### Regular polygon: area, perimeter, apothem, circumradius — `regular_polygon_measures`
+#### Regular polygon: area, perimeter, apothem, circumradius, `regular_polygon_measures`
 
 Area, perimeter, apothem (inradius) and circumradius of a regular n-gon from its side length.
 
@@ -1874,12 +1810,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | number of sides | — |
-| `side` | in | side length | — |
-| `area` | out | n s a / 2 | — |
-| `perimeter` | out | n s | — |
-| `apothem` | out | s / (2 tan(pi/n)) | — |
-| `circumradius` | out | s / (2 sin(pi/n)) | — |
+| `n` | in | number of sides | - |
+| `side` | in | side length | - |
+| `area` | out | n s a / 2 | - |
+| `perimeter` | out | n s | - |
+| `apothem` | out | s / (2 tan(pi/n)) | - |
+| `circumradius` | out | s / (2 sin(pi/n)) | - |
 
 **Applies when:** 3 <= n <= 200; side > 0.
 
@@ -1900,7 +1836,7 @@ circumradius = 4
 
 <a id="platonic_solid"></a>
 
-#### Platonic solids: counts, Euler characteristic, volume, surface, radii — `platonic_solid`
+#### Platonic solids: counts, Euler characteristic, volume, surface, radii, `platonic_solid`
 
 Vertices, edges, faces, Euler characteristic, volume, surface area, circumradius and inradius of a regular polyhedron of edge a.
 
@@ -1910,16 +1846,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `solid` | in | which Platonic solid | — |
-| `edge` | in | edge length a | — |
-| `vertices` | out | V | — |
-| `edges` | out | E | — |
-| `faces` | out | F | — |
-| `euler_characteristic` | out | V - E + F | — |
-| `volume` | out | volume | — |
-| `surface_area` | out | surface area | — |
-| `circumradius` | out | radius of the circumscribed sphere | — |
-| `inradius` | out | radius of the inscribed sphere | — |
+| `solid` | in | which Platonic solid | - |
+| `edge` | in | edge length a | - |
+| `vertices` | out | V | - |
+| `edges` | out | E | - |
+| `faces` | out | F | - |
+| `euler_characteristic` | out | V - E + F | - |
+| `volume` | out | volume | - |
+| `surface_area` | out | surface area | - |
+| `circumradius` | out | radius of the circumscribed sphere | - |
+| `inradius` | out | radius of the inscribed sphere | - |
 
 **Applies when:** edge > 0.
 
@@ -1945,7 +1881,7 @@ inradius = 1.511522628
 
 <a id="angle_between_planes"></a>
 
-#### Angle between two planes — `angle_between_planes`
+#### Angle between two planes: `angle_between_planes`
 
 The acute (dihedral) angle between two planes given by their equations (only the normals matter).
 
@@ -1955,13 +1891,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a1` | in | x-coefficient of plane 1 | — |
-| `b1` | in | y-coefficient of plane 1 | — |
-| `c1` | in | z-coefficient of plane 1 | — |
-| `a2` | in | x-coefficient of plane 2 | — |
-| `b2` | in | y-coefficient of plane 2 | — |
-| `c2` | in | z-coefficient of plane 2 | — |
-| `angle` | out | angle between the planes, degrees, 0 to 90 | — |
+| `a1` | in | x-coefficient of plane 1 | - |
+| `b1` | in | y-coefficient of plane 1 | - |
+| `c1` | in | z-coefficient of plane 1 | - |
+| `a2` | in | x-coefficient of plane 2 | - |
+| `b2` | in | y-coefficient of plane 2 | - |
+| `c2` | in | z-coefficient of plane 2 | - |
+| `angle` | out | angle between the planes, degrees, 0 to 90 | - |
 
 **Applies when:** nonzero normals; the constants do not affect the angle.
 
@@ -1982,7 +1918,7 @@ angle = 45
 
 <a id="skew_lines_distance"></a>
 
-#### Distance between two lines in space (skew or parallel) — `skew_lines_distance`
+#### Distance between two lines in space (skew or parallel), `skew_lines_distance`
 
 The shortest distance between the lines P1 + s d1 and P2 + t d2 in three dimensions.
 
@@ -1992,12 +1928,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `p1` | in | a point on line 1 | — |
-| `d1` | in | direction of line 1 | — |
-| `p2` | in | a point on line 2 | — |
-| `d2` | in | direction of line 2 | — |
-| `distance` | out | shortest distance | — |
-| `parallel` | out | yes / no (exact test) | — |
+| `p1` | in | a point on line 1 | - |
+| `d1` | in | direction of line 1 | - |
+| `p2` | in | a point on line 2 | - |
+| `d2` | in | direction of line 2 | - |
+| `distance` | out | shortest distance | - |
+| `parallel` | out | yes / no (exact test) | - |
 
 **Applies when:** nonzero directions.
 
@@ -2013,7 +1949,7 @@ parallel = no
 
 <a id="point_plane_distance"></a>
 
-#### Distance from a point to a plane — `point_plane_distance`
+#### Distance from a point to a plane: `point_plane_distance`
 
 The distance from a point to the plane a x + b y + c z + d = 0 and the foot of the perpendicular.
 
@@ -2023,17 +1959,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the point | — |
-| `py` | in | y of the point | — |
-| `pz` | in | z of the point | — |
-| `a` | in | coefficient of x | — |
-| `b` | in | coefficient of y | — |
-| `c` | in | coefficient of z | — |
-| `d` | in | constant term | — |
-| `distance` | out | \|a px + b py + c pz + d\| / sqrt(a^2 + b^2 + c^2) | — |
-| `fx` | out | x of the foot | — |
-| `fy` | out | y of the foot | — |
-| `fz` | out | z of the foot | — |
+| `px` | in | x of the point | - |
+| `py` | in | y of the point | - |
+| `pz` | in | z of the point | - |
+| `a` | in | coefficient of x | - |
+| `b` | in | coefficient of y | - |
+| `c` | in | coefficient of z | - |
+| `d` | in | constant term | - |
+| `distance` | out | \|a px + b py + c pz + d\| / sqrt(a^2 + b^2 + c^2) | - |
+| `fx` | out | x of the foot | - |
+| `fy` | out | y of the foot | - |
+| `fz` | out | z of the foot | - |
 
 **Applies when:** a, b, c not all 0.
 
@@ -2058,7 +1994,7 @@ fz = 2.333333333
 
 <a id="line_plane_intersection"></a>
 
-#### Intersection of a line and a plane — `line_plane_intersection`
+#### Intersection of a line and a plane: `line_plane_intersection`
 
 The point where the line P0 + t v meets the plane a x + b y + c z + d = 0.
 
@@ -2068,20 +2004,20 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `x0` | in | x of a point on the line | — |
-| `y0` | in | y of the point | — |
-| `z0` | in | z of the point | — |
-| `dx` | in | x of the direction | — |
-| `dy` | in | y of the direction | — |
-| `dz` | in | z of the direction | — |
-| `a` | in | coefficient of x | — |
-| `b` | in | coefficient of y | — |
-| `c` | in | coefficient of z | — |
-| `d` | in | constant term | — |
-| `x` | out | x of the intersection | — |
-| `y` | out | y | — |
-| `z` | out | z | — |
-| `t` | out | line parameter at the intersection | — |
+| `x0` | in | x of a point on the line | - |
+| `y0` | in | y of the point | - |
+| `z0` | in | z of the point | - |
+| `dx` | in | x of the direction | - |
+| `dy` | in | y of the direction | - |
+| `dz` | in | z of the direction | - |
+| `a` | in | coefficient of x | - |
+| `b` | in | coefficient of y | - |
+| `c` | in | coefficient of z | - |
+| `d` | in | constant term | - |
+| `x` | out | x of the intersection | - |
+| `y` | out | y | - |
+| `z` | out | z | - |
+| `t` | out | line parameter at the intersection | - |
 
 **Applies when:** direction not zero; a, b, c not all 0; line not parallel to the plane (exact test).
 
@@ -2109,7 +2045,7 @@ In the worked example, x0 = 1, y0 = 0, z0 = 0, dx = 1, dy = 2, dz = 3, a = 1, b 
 
 <a id="plane_through_points"></a>
 
-#### Plane through three points — `plane_through_points`
+#### Plane through three points: `plane_through_points`
 
 The equation a x + b y + c z + d = 0 of the plane through three points, with (a, b, c) a unit normal.
 
@@ -2119,11 +2055,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the three points: x y z for each | — |
-| `a` | out | x-component of the unit normal | — |
-| `b` | out | y-component | — |
-| `c` | out | z-component | — |
-| `d` | out | constant term | — |
+| `points` | in | the three points: x y z for each | - |
+| `a` | out | x-component of the unit normal | - |
+| `b` | out | y-component | - |
+| `c` | out | z-component | - |
+| `d` | out | constant term | - |
 
 **Applies when:** exactly 3 points, not collinear; convention: (a, b, c) has length 1 and its first nonzero component is positive.
 
@@ -2141,7 +2077,7 @@ d = -0.5773502692
 
 <a id="sphere_four_points"></a>
 
-#### Sphere through four points (circumsphere of a tetrahedron) — `sphere_four_points`
+#### Sphere through four points (circumsphere of a tetrahedron), `sphere_four_points`
 
 Centre and radius of the sphere through four non-coplanar points.
 
@@ -2151,11 +2087,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the four points: x y z for each | — |
-| `cx` | out | x of the centre | — |
-| `cy` | out | y of the centre | — |
-| `cz` | out | z of the centre | — |
-| `radius` | out | radius | — |
+| `points` | in | the four points: x y z for each | - |
+| `cx` | out | x of the centre | - |
+| `cy` | out | y of the centre | - |
+| `cz` | out | z of the centre | - |
+| `radius` | out | radius | - |
 
 **Applies when:** exactly 4 points, not coplanar.
 
@@ -2173,7 +2109,7 @@ radius = 0.8660254038
 
 <a id="tetrahedron_measures"></a>
 
-#### Tetrahedron from four vertices: volume and surface area — `tetrahedron_measures`
+#### Tetrahedron from four vertices: volume and surface area, `tetrahedron_measures`
 
 Volume and total surface area of the tetrahedron with four given vertices.
 
@@ -2183,9 +2119,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the four vertices: x y z for each | — |
-| `volume` | out | \|det(B - A, C - A, D - A)\| / 6 | — |
-| `surface_area` | out | sum of the four face areas | — |
+| `points` | in | the four vertices: x y z for each | - |
+| `volume` | out | \|det(B - A, C - A, D - A)\| / 6 | - |
+| `surface_area` | out | sum of the four face areas | - |
 
 **Applies when:** exactly 4 points; not coplanar.
 
@@ -2201,7 +2137,7 @@ surface_area = 2.366025404
 
 <a id="triangle_area_3d"></a>
 
-#### Triangle in space: area and perimeter from vertices — `triangle_area_3d`
+#### Triangle in space: area and perimeter from vertices, `triangle_area_3d`
 
 Area and perimeter of the triangle with vertices A, B, C in three-dimensional space.
 
@@ -2211,9 +2147,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the vertices: xA yA zA, xB yB zB, xC yC zC | — |
-| `area` | out | area | — |
-| `perimeter` | out | perimeter | — |
+| `points` | in | the vertices: xA yA zA, xB yB zB, xC yC zC | - |
+| `area` | out | area | - |
+| `perimeter` | out | perimeter | - |
 
 **Applies when:** exactly 3 points, not collinear.
 
@@ -2231,7 +2167,7 @@ perimeter = 9.003896913
 
 <a id="solid_angle_cone"></a>
 
-#### Solid angle of a cone — `solid_angle_cone`
+#### Solid angle of a cone: `solid_angle_cone`
 
 The solid angle (steradians) subtended at the apex by a right circular cone of given half-angle.
 
@@ -2241,9 +2177,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `half_angle` | in | half-angle of the cone (axis to side), degrees | — |
-| `solid_angle` | out | 2 pi (1 - cos a) steradians | — |
-| `fraction_of_sphere` | out | solid angle / (4 pi) | — |
+| `half_angle` | in | half-angle of the cone (axis to side), degrees | - |
+| `solid_angle` | out | 2 pi (1 - cos a) steradians | - |
+| `fraction_of_sphere` | out | solid angle / (4 pi) | - |
 
 **Applies when:** 0 < half-angle <= 180 degrees; an apex (full opening) angle in the question is halved.
 
@@ -2260,7 +2196,7 @@ fraction_of_sphere = 0.25
 
 <a id="solid_angle_triangle"></a>
 
-#### Solid angle subtended by a triangle — `solid_angle_triangle`
+#### Solid angle subtended by a triangle: `solid_angle_triangle`
 
 The solid angle (steradians) that the triangle with vertices A, B, C subtends at the origin.
 
@@ -2270,8 +2206,8 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the vertices as seen from the origin: x y z for each | — |
-| `solid_angle` | out | solid angle, steradians | — |
+| `points` | in | the vertices as seen from the origin: x y z for each | - |
+| `solid_angle` | out | solid angle, steradians | - |
 
 **Applies when:** no vertex at the origin; the triangle's plane does not pass through the origin; observer at the origin.
 
@@ -2288,7 +2224,7 @@ solid_angle = 1.570796327
 
 <a id="cone_measures"></a>
 
-#### Cone: volume, slant height and surface area — `cone_measures`
+#### Cone: volume, slant height and surface area, `cone_measures`
 
 Volume, slant height, lateral area and total surface area of a right circular cone.
 
@@ -2298,12 +2234,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius of the base | — |
-| `height` | in | perpendicular height | — |
-| `volume` | out | pi r^2 h / 3 | — |
-| `slant_height` | out | sqrt(r^2 + h^2) | — |
-| `lateral_area` | out | pi r l | — |
-| `total_area` | out | pi r (r + l) | — |
+| `radius` | in | radius of the base | - |
+| `height` | in | perpendicular height | - |
+| `volume` | out | pi r^2 h / 3 | - |
+| `slant_height` | out | sqrt(r^2 + h^2) | - |
+| `lateral_area` | out | pi r l | - |
+| `total_area` | out | pi r (r + l) | - |
 
 **Applies when:** radius, height > 0.
 
@@ -2323,7 +2259,7 @@ total_area = 75.39822369
 
 <a id="cuboid_measures"></a>
 
-#### Cuboid (rectangular box): volume, surface area, space diagonal — `cuboid_measures`
+#### Cuboid (rectangular box): volume, surface area, space diagonal, `cuboid_measures`
 
 Volume, total surface area and space diagonal of a rectangular box (a cube when all edges are equal).
 
@@ -2333,12 +2269,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `length` | in | length | — |
-| `width` | in | width | — |
-| `height` | in | height | — |
-| `volume` | out | l w h | — |
-| `surface_area` | out | 2(lw + lh + wh) | — |
-| `space_diagonal` | out | sqrt(l^2 + w^2 + h^2) | — |
+| `length` | in | length | - |
+| `width` | in | width | - |
+| `height` | in | height | - |
+| `volume` | out | l w h | - |
+| `surface_area` | out | 2(lw + lh + wh) | - |
+| `space_diagonal` | out | sqrt(l^2 + w^2 + h^2) | - |
 
 **Applies when:** length, width, height > 0.
 
@@ -2358,7 +2294,7 @@ space_diagonal = 13
 
 <a id="cylinder_measures"></a>
 
-#### Cylinder: volume and surface area — `cylinder_measures`
+#### Cylinder: volume and surface area, `cylinder_measures`
 
 Volume, lateral (curved) area and total surface area of a right circular cylinder.
 
@@ -2368,11 +2304,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius of the base | — |
-| `height` | in | height | — |
-| `volume` | out | pi r^2 h | — |
-| `lateral_area` | out | 2 pi r h | — |
-| `total_area` | out | 2 pi r (r + h) | — |
+| `radius` | in | radius of the base | - |
+| `height` | in | height | - |
+| `volume` | out | pi r^2 h | - |
+| `lateral_area` | out | 2 pi r h | - |
+| `total_area` | out | 2 pi r (r + h) | - |
 
 **Applies when:** radius, height > 0.
 
@@ -2391,7 +2327,7 @@ total_area = 150.7964474
 
 <a id="frustum_measures"></a>
 
-#### Frustum of a cone: volume and surface area — `frustum_measures`
+#### Frustum of a cone: volume and surface area, `frustum_measures`
 
 Volume, slant height, lateral and total surface area of a frustum of a right circular cone.
 
@@ -2401,13 +2337,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r1` | in | radius of one base | — |
-| `r2` | in | radius of the other base | — |
-| `height` | in | perpendicular height | — |
-| `volume` | out | pi h (R^2 + R r + r^2)/3 | — |
-| `slant_height` | out | sqrt(h^2 + (R - r)^2) | — |
-| `lateral_area` | out | pi (R + r) s | — |
-| `total_area` | out | lateral + pi (R^2 + r^2) | — |
+| `r1` | in | radius of one base | - |
+| `r2` | in | radius of the other base | - |
+| `height` | in | perpendicular height | - |
+| `volume` | out | pi h (R^2 + R r + r^2)/3 | - |
+| `slant_height` | out | sqrt(h^2 + (R - r)^2) | - |
+| `lateral_area` | out | pi (R + r) s | - |
+| `total_area` | out | lateral + pi (R^2 + r^2) | - |
 
 **Applies when:** r1, r2, height > 0.
 
@@ -2428,7 +2364,7 @@ total_area = 282.7433388
 
 <a id="regular_prism"></a>
 
-#### Right prism on a regular polygon base: volume and surface area — `regular_prism`
+#### Right prism on a regular polygon base: volume and surface area, `regular_prism`
 
 Volume, base area, lateral and total surface area of a right prism whose base is a regular n-gon.
 
@@ -2438,13 +2374,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `n` | in | number of sides of the base | — |
-| `side` | in | side length of the base | — |
-| `height` | in | height (length) of the prism | — |
-| `volume` | out | base area * height | — |
-| `lateral_area` | out | n s h | — |
-| `total_area` | out | lateral + 2 * base | — |
-| `base_area` | out | n s^2 / (4 tan(pi/n)) | — |
+| `n` | in | number of sides of the base | - |
+| `side` | in | side length of the base | - |
+| `height` | in | height (length) of the prism | - |
+| `volume` | out | base area * height | - |
+| `lateral_area` | out | n s h | - |
+| `total_area` | out | lateral + 2 * base | - |
+| `base_area` | out | n s^2 / (4 tan(pi/n)) | - |
 
 **Applies when:** 3 <= n <= 200; side, height > 0; a triangular prism is read only when 'regular' or 'equilateral' is said.
 
@@ -2464,7 +2400,7 @@ base_area = 10.39230485
 
 <a id="pyramid_measures"></a>
 
-#### Right rectangular (or square) pyramid: volume and surface area — `pyramid_measures`
+#### Right rectangular (or square) pyramid: volume and surface area, `pyramid_measures`
 
 Volume, lateral area and total surface area of a right pyramid on a rectangular base (apex above the base centre).
 
@@ -2474,12 +2410,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `length` | in | base length | — |
-| `width` | in | base width | — |
-| `height` | in | perpendicular height | — |
-| `volume` | out | l w h / 3 | — |
-| `lateral_area` | out | area of the four triangular faces | — |
-| `total_area` | out | lateral + base | — |
+| `length` | in | base length | - |
+| `width` | in | base width | - |
+| `height` | in | perpendicular height | - |
+| `volume` | out | l w h / 3 | - |
+| `lateral_area` | out | area of the four triangular faces | - |
+| `total_area` | out | lateral + base | - |
 
 **Applies when:** length, width, height > 0; the apex is directly above the centre of the base.
 
@@ -2499,7 +2435,7 @@ total_area = 96
 
 <a id="sphere_measures"></a>
 
-#### Sphere: volume and surface area — `sphere_measures`
+#### Sphere: volume and surface area, `sphere_measures`
 
 Volume and surface area of a sphere from its radius (or diameter).
 
@@ -2509,9 +2445,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius | — |
-| `volume` | out | 4/3 pi r^3 | — |
-| `surface_area` | out | 4 pi r^2 | — |
+| `radius` | in | radius | - |
+| `volume` | out | 4/3 pi r^3 | - |
+| `surface_area` | out | 4 pi r^2 | - |
 
 **Applies when:** radius > 0.
 
@@ -2528,7 +2464,7 @@ surface_area = 113.0973355
 
 <a id="spherical_cap"></a>
 
-#### Spherical cap: volume, curved area, base radius — `spherical_cap`
+#### Spherical cap: volume, curved area, base radius, `spherical_cap`
 
 Volume, curved surface area and base radius of a cap of height h cut from a sphere of radius R.
 
@@ -2538,11 +2474,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `radius` | in | radius R of the sphere | — |
-| `height` | in | height h of the cap | — |
-| `volume` | out | pi h^2 (3R - h)/3 | — |
-| `cap_area` | out | 2 pi R h | — |
-| `base_radius` | out | sqrt(h (2R - h)) | — |
+| `radius` | in | radius R of the sphere | - |
+| `height` | in | height h of the cap | - |
+| `volume` | out | pi h^2 (3R - h)/3 | - |
+| `cap_area` | out | 2 pi R h | - |
+| `base_radius` | out | sqrt(h (2R - h)) | - |
 
 **Applies when:** R > 0; 0 < h <= 2R.
 
@@ -2561,7 +2497,7 @@ base_radius = 4
 
 <a id="spheroid_measures"></a>
 
-#### Spheroid (ellipsoid of revolution): surface area and volume — `spheroid_measures`
+#### Spheroid (ellipsoid of revolution): surface area and volume, `spheroid_measures`
 
 Surface area and volume of an oblate or prolate spheroid with equatorial radius a and polar radius c.
 
@@ -2571,11 +2507,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | equatorial radius (semi-axis in the equator) | — |
-| `c` | in | polar radius (semi-axis along the axis) | — |
-| `surface_area` | out | surface area | — |
-| `volume` | out | 4/3 pi a^2 c | — |
-| `shape` | out | oblate / prolate / sphere | — |
+| `a` | in | equatorial radius (semi-axis in the equator) | - |
+| `c` | in | polar radius (semi-axis along the axis) | - |
+| `surface_area` | out | surface area | - |
+| `volume` | out | 4/3 pi a^2 c | - |
+| `shape` | out | oblate / prolate / sphere | - |
 
 **Applies when:** a, c > 0.
 
@@ -2594,7 +2530,7 @@ shape = prolate
 
 <a id="torus_measures"></a>
 
-#### Torus: volume and surface area — `torus_measures`
+#### Torus: volume and surface area, `torus_measures`
 
 Volume and surface area of a ring torus with major radius R (centre to tube centre) and tube radius r.
 
@@ -2604,10 +2540,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `major` | in | major radius R | — |
-| `minor` | in | tube (minor) radius r | — |
-| `volume` | out | 2 pi^2 R r^2 | — |
-| `surface_area` | out | 4 pi^2 R r | — |
+| `major` | in | major radius R | - |
+| `minor` | in | tube (minor) radius r | - |
+| `volume` | out | 2 pi^2 R r^2 | - |
+| `surface_area` | out | 4 pi^2 R r | - |
 
 **Applies when:** 0 < r < R.
 
@@ -2627,7 +2563,7 @@ surface_area = 394.784176
 
 <a id="spherical_triangle_area"></a>
 
-#### Area and spherical excess of a spherical triangle — `spherical_triangle_area`
+#### Area and spherical excess of a spherical triangle, `spherical_triangle_area`
 
 The spherical excess and area of the triangle with three vertices given by latitude and longitude on a sphere of radius R.
 
@@ -2637,10 +2573,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `points` | in | the vertices (lat lon): lat1 lon1, lat2 lon2, lat3 lon3, degrees | — |
-| `radius` | in | sphere radius (default 1; 'Earth' means 6371 km) (optional) | — |
-| `excess` | out | spherical excess A + B + C - 180, degrees | — |
-| `area` | out | area E R^2 (E in radians) | — |
+| `points` | in | the vertices (lat lon): lat1 lon1, lat2 lon2, lat3 lon3, degrees | - |
+| `radius` | in | sphere radius (default 1; 'Earth' means 6371 km) (optional) | - |
+| `excess` | out | spherical excess A + B + C - 180, degrees | - |
+| `area` | out | area E R^2 (E in radians) | - |
 
 **Applies when:** the smaller triangle (each side less than 180 degrees); vertices not on one great circle; radius defaults to 1.
 
@@ -2657,7 +2593,7 @@ area = 1.570796327
 
 <a id="great_circle_distance"></a>
 
-#### Great-circle distance between two points on a sphere — `great_circle_distance`
+#### Great-circle distance between two points on a sphere, `great_circle_distance`
 
 The central angle and great-circle distance between two points given by latitude and longitude (on the Earth unless a radius is given).
 
@@ -2667,13 +2603,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | latitude of point 1, degrees | — |
-| `lon1` | in | longitude of point 1, degrees | — |
-| `lat2` | in | latitude of point 2 | — |
-| `lon2` | in | longitude of point 2 | — |
-| `radius` | in | sphere radius (default 6371, the mean Earth radius in km) (optional) | — |
-| `central_angle` | out | central angle, degrees | — |
-| `distance` | out | great-circle distance (radius units) | — |
+| `lat1` | in | latitude of point 1, degrees | - |
+| `lon1` | in | longitude of point 1, degrees | - |
+| `lat2` | in | latitude of point 2 | - |
+| `lon2` | in | longitude of point 2 | - |
+| `radius` | in | sphere radius (default 6371, the mean Earth radius in km) (optional) | - |
+| `central_angle` | out | central angle, degrees | - |
+| `distance` | out | great-circle distance (radius units) | - |
 
 **Applies when:** points written (latitude, longitude) in signed decimal degrees; radius defaults to 6371 km (mean Earth radius; the Earth is treated as a sphere).
 
@@ -2694,7 +2630,7 @@ distance = 1.570796327
 
 <a id="initial_bearing"></a>
 
-#### Initial bearing (forward azimuth) along a great circle — `initial_bearing`
+#### Initial bearing (forward azimuth) along a great circle, `initial_bearing`
 
 The initial compass bearing from point 1 to point 2 along the great circle, degrees clockwise from north.
 
@@ -2704,11 +2640,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `lat1` | in | latitude of the start, degrees | — |
-| `lon1` | in | longitude of the start | — |
-| `lat2` | in | latitude of the destination | — |
-| `lon2` | in | longitude of the destination | — |
-| `bearing` | out | initial bearing, degrees in [0, 360), clockwise from north | — |
+| `lat1` | in | latitude of the start, degrees | - |
+| `lon1` | in | longitude of the start | - |
+| `lat2` | in | latitude of the destination | - |
+| `lon2` | in | longitude of the destination | - |
+| `bearing` | out | initial bearing, degrees in [0, 360), clockwise from north | - |
 
 **Applies when:** (latitude, longitude) in signed decimal degrees; the start is not a pole; the points are neither equal nor antipodal.
 
@@ -2729,7 +2665,7 @@ bearing = 90
 
 <a id="torus_curvature"></a>
 
-#### Curvature of a torus at a point — `torus_curvature`
+#### Curvature of a torus at a point: `torus_curvature`
 
 Gaussian, mean and principal curvatures of a ring torus at tube angle v (v = 0 on the outer equator, 180 on the inner).
 
@@ -2739,13 +2675,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `major` | in | major radius R | — |
-| `minor` | in | tube radius r | — |
-| `v` | in | tube angle v, degrees (0 = outer equator) | — |
-| `gaussian` | out | K = cos v / (r (R + r cos v)) | — |
-| `mean` | out | H = (R + 2 r cos v) / (2 r (R + r cos v)) | — |
-| `k1` | out | principal curvature around the tube, 1/r | — |
-| `k2` | out | principal curvature along the ring, cos v / (R + r cos v) | — |
+| `major` | in | major radius R | - |
+| `minor` | in | tube radius r | - |
+| `v` | in | tube angle v, degrees (0 = outer equator) | - |
+| `gaussian` | out | K = cos v / (r (R + r cos v)) | - |
+| `mean` | out | H = (R + 2 r cos v) / (2 r (R + r cos v)) | - |
+| `k1` | out | principal curvature around the tube, 1/r | - |
+| `k2` | out | principal curvature along the ring, cos v / (R + r cos v) | - |
 
 **Applies when:** 0 < r < R; signs: curvatures positive where the surface bends away from the outward normal (a sphere is positive).
 
@@ -2766,7 +2702,7 @@ k2 = 0.25
 
 <a id="surface_curvature"></a>
 
-#### Gaussian and mean curvature of a quadratic surface z = f(x, y) — `surface_curvature`
+#### Gaussian and mean curvature of a quadratic surface z = f(x, y), `surface_curvature`
 
 Gaussian curvature K and mean curvature H of z = A x^2 + B xy + C y^2 + D x + E y + F at the point above (x0, y0).
 
@@ -2776,16 +2712,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | coefficient of x^2 | — |
-| `B` | in | coefficient of xy | — |
-| `C` | in | coefficient of y^2 | — |
-| `D` | in | coefficient of x | — |
-| `E` | in | coefficient of y | — |
-| `x0` | in | x of the point | — |
-| `y0` | in | y of the point | — |
-| `F` | in | constant term (does not affect curvature) (optional) | — |
-| `gaussian` | out | Gaussian curvature K | — |
-| `mean` | out | mean curvature H (upward normal: positive where the surface opens upward) | — |
+| `A` | in | coefficient of x^2 | - |
+| `B` | in | coefficient of xy | - |
+| `C` | in | coefficient of y^2 | - |
+| `D` | in | coefficient of x | - |
+| `E` | in | coefficient of y | - |
+| `x0` | in | x of the point | - |
+| `y0` | in | y of the point | - |
+| `F` | in | constant term (does not affect curvature) (optional) | - |
+| `gaussian` | out | Gaussian curvature K | - |
+| `mean` | out | mean curvature H (upward normal: positive where the surface opens upward) | - |
 
 **Applies when:** the unit normal points upward, (-f_x, -f_y, 1)/|...|.
 
@@ -2811,7 +2747,7 @@ mean = 2
 
 <a id="dilate_point"></a>
 
-#### Dilation (enlargement) of a point — `dilate_point`
+#### Dilation (enlargement) of a point: `dilate_point`
 
 The image of a point under a dilation with scale factor k about a centre (the origin unless given).
 
@@ -2821,13 +2757,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the point | — |
-| `py` | in | y of the point | — |
-| `k` | in | scale factor (negative: through the centre) | — |
-| `cx` | in | x of the centre (default 0) (optional) | — |
-| `cy` | in | y of the centre (default 0) (optional) | — |
-| `x` | out | x of the image | — |
-| `y` | out | y of the image | — |
+| `px` | in | x of the point | - |
+| `py` | in | y of the point | - |
+| `k` | in | scale factor (negative: through the centre) | - |
+| `cx` | in | x of the centre (default 0) (optional) | - |
+| `cy` | in | y of the centre (default 0) (optional) | - |
+| `x` | out | x of the image | - |
+| `y` | out | y of the image | - |
 
 **Applies when:** k != 0; centre defaults to the origin.
 
@@ -2846,7 +2782,7 @@ y = 9
 
 <a id="reflect_point_line"></a>
 
-#### Reflection of a point in a line — `reflect_point_line`
+#### Reflection of a point in a line: `reflect_point_line`
 
 The mirror image of a point in the line a x + b y + c = 0 (including the axes and y = x).
 
@@ -2856,13 +2792,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the point | — |
-| `py` | in | y of the point | — |
-| `a` | in | coefficient of x of the line | — |
-| `b` | in | coefficient of y of the line | — |
-| `c` | in | constant of the line | — |
-| `x` | out | x of the image | — |
-| `y` | out | y of the image | — |
+| `px` | in | x of the point | - |
+| `py` | in | y of the point | - |
+| `a` | in | coefficient of x of the line | - |
+| `b` | in | coefficient of y of the line | - |
+| `c` | in | constant of the line | - |
+| `x` | out | x of the image | - |
+| `y` | out | y of the image | - |
 
 **Applies when:** a and b not both 0.
 
@@ -2883,7 +2819,7 @@ y = 3
 
 <a id="rotate_point"></a>
 
-#### Rotation of a point — `rotate_point`
+#### Rotation of a point: `rotate_point`
 
 The image of a point rotated by an angle about a centre (the origin unless given); counterclockwise is positive.
 
@@ -2893,13 +2829,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `px` | in | x of the point | — |
-| `py` | in | y of the point | — |
-| `angle` | in | rotation angle in degrees, counterclockwise positive | — |
-| `cx` | in | x of the centre (default 0) (optional) | — |
-| `cy` | in | y of the centre (default 0) (optional) | — |
-| `x` | out | x of the image | — |
-| `y` | out | y of the image | — |
+| `px` | in | x of the point | - |
+| `py` | in | y of the point | - |
+| `angle` | in | rotation angle in degrees, counterclockwise positive | - |
+| `cx` | in | x of the centre (default 0) (optional) | - |
+| `cy` | in | y of the centre (default 0) (optional) | - |
+| `x` | out | x of the image | - |
+| `y` | out | y of the image | - |
 
 **Applies when:** angle in degrees, counterclockwise positive ('clockwise' in a question makes it negative); centre defaults to the origin.
 
@@ -2918,7 +2854,7 @@ In the worked example, angle = 90, px = 3, py = 4 go through the equation above 
 
 <a id="rotate_point_3d"></a>
 
-#### Rotation of a point in space about an axis — `rotate_point_3d`
+#### Rotation of a point in space about an axis, `rotate_point_3d`
 
 The image of a point rotated by an angle about an axis through the origin (right-hand rule).
 
@@ -2928,12 +2864,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `point` | in | the point x y z | — |
-| `axis` | in | axis direction (through the origin) | — |
-| `angle` | in | angle in degrees (right-hand rule) | — |
-| `x` | out | x of the image | — |
-| `y` | out | y of the image | — |
-| `z` | out | z of the image | — |
+| `point` | in | the point x y z | - |
+| `axis` | in | axis direction (through the origin) | - |
+| `angle` | in | angle in degrees (right-hand rule) | - |
+| `x` | out | x of the image | - |
+| `y` | out | y of the image | - |
+| `z` | out | z of the image | - |
 
 **Applies when:** axis not zero; it passes through the origin; positive angle: counterclockwise looking from the axis tip toward the origin.
 
@@ -2949,4 +2885,4 @@ z = 0
 
 In the worked example, angle = 90, axis = [0, 0, 1], point = [1, 0, 0] go through the equation above and give x = 0, y = 1, z = 0. It applies only when axis not zero; it passes through the origin; positive angle: counterclockwise looking from the axis tip toward the origin: outside that it says what is wrong instead of returning a number.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.

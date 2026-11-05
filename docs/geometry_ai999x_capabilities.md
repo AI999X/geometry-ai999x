@@ -184,7 +184,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="rectangle_measures"></a>
 
-### Rectangle: area, perimeter and diagonal — `rectangle_measures`
+### Rectangle: area, perimeter and diagonal, `rectangle_measures`
 
 Area, perimeter and diagonal of a rectangle (a square when length = width).
 
@@ -244,7 +244,7 @@ geometry_ai999x.solve('rectangle_measures', length=7, width=7)
 
 <a id="triangle_area_base_height"></a>
 
-### Area of a triangle from base and height — `triangle_area_base_height`
+### Area of a triangle from base and height: `triangle_area_base_height`
 
 The area of a triangle from a base and the height (altitude) to that base.
 
@@ -294,7 +294,7 @@ geometry_ai999x.solve('triangle_area_base_height', base=7, height=4)
 
 <a id="circle_measures"></a>
 
-### Circle: area, circumference and diameter — `circle_measures`
+### Circle: area, circumference and diameter, `circle_measures`
 
 Area, circumference and diameter of a circle from its radius (or diameter).
 
@@ -342,7 +342,7 @@ geometry_ai999x.solve('circle_measures', radius=5)
 
 <a id="trapezoid_measures"></a>
 
-### Trapezoid: area and midsegment — `trapezoid_measures`
+### Trapezoid: area and midsegment, `trapezoid_measures`
 
 Area and midsegment (median) of a trapezoid from its parallel sides and height.
 
@@ -389,7 +389,7 @@ geometry_ai999x.solve('trapezoid_measures', a=8, b=12, height=5)
 
 <a id="rhombus_measures"></a>
 
-### Rhombus from its diagonals: area, side, perimeter — `rhombus_measures`
+### Rhombus from its diagonals: area, side, perimeter, `rhombus_measures`
 
 Area, side and perimeter of a rhombus from its two diagonals.
 
@@ -440,7 +440,7 @@ geometry_ai999x.solve('rhombus_measures', d1=10, d2=24)
 
 <a id="sector_measures"></a>
 
-### Circular sector: arc length, area and chord — `sector_measures`
+### Circular sector: arc length, area and chord, `sector_measures`
 
 Arc length, sector area and chord of a circular sector from the radius and central angle.
 
@@ -493,7 +493,7 @@ geometry_ai999x.solve('sector_measures', radius=10, angle=90)
 
 <a id="regular_polygon_angles"></a>
 
-### Polygon angles and diagonals — `regular_polygon_angles`
+### Polygon angles and diagonals: `regular_polygon_angles`
 
 Each interior and exterior angle of a regular n-gon, the interior angle sum of any n-gon and its number of diagonals.
 
@@ -552,7 +552,7 @@ geometry_ai999x.solve('regular_polygon_angles', n='5')
 
 <a id="regular_polygon_measures"></a>
 
-### Regular polygon: area, perimeter, apothem, circumradius — `regular_polygon_measures`
+### Regular polygon: area, perimeter, apothem, circumradius, `regular_polygon_measures`
 
 Area, perimeter, apothem (inradius) and circumradius of a regular n-gon from its side length.
 
@@ -606,7 +606,7 @@ geometry_ai999x.solve('regular_polygon_measures', n=4, side=5)
 
 <a id="cuboid_measures"></a>
 
-### Cuboid (rectangular box): volume, surface area, space diagonal — `cuboid_measures`
+### Cuboid (rectangular box): volume, surface area, space diagonal, `cuboid_measures`
 
 Volume, total surface area and space diagonal of a rectangular box (a cube when all edges are equal).
 
@@ -656,7 +656,7 @@ geometry_ai999x.solve('cuboid_measures', length=5, width=5, height=5)
 
 <a id="cylinder_measures"></a>
 
-### Cylinder: volume and surface area — `cylinder_measures`
+### Cylinder: volume and surface area, `cylinder_measures`
 
 Volume, lateral (curved) area and total surface area of a right circular cylinder.
 
@@ -708,7 +708,7 @@ geometry_ai999x.solve('cylinder_measures', radius=5, height=20)
 
 <a id="cone_measures"></a>
 
-### Cone: volume, slant height and surface area — `cone_measures`
+### Cone: volume, slant height and surface area, `cone_measures`
 
 Volume, slant height, lateral area and total surface area of a right circular cone.
 
@@ -761,7 +761,7 @@ geometry_ai999x.solve('cone_measures', radius=5, height=12)
 
 <a id="sphere_measures"></a>
 
-### Sphere: volume and surface area — `sphere_measures`
+### Sphere: volume and surface area, `sphere_measures`
 
 Volume and surface area of a sphere from its radius (or diameter).
 
@@ -807,7 +807,7 @@ geometry_ai999x.solve('sphere_measures', radius=5)
 
 <a id="triangle_classify"></a>
 
-### Classify a triangle by its sides and angles — `triangle_classify`
+### Classify a triangle by its sides and angles, `triangle_classify`
 
 Whether a triangle with sides a, b, c is equilateral, isosceles or scalene, and acute, right or obtuse.
 
@@ -865,7 +865,7 @@ geometry_ai999x.solve('triangle_classify', a=6, b=6, c=6)
 
 <a id="polygon_area"></a>
 
-### Polygon from vertices: area, perimeter, orientation — `polygon_area`
+### Polygon from vertices: area, perimeter, orientation, `polygon_area`
 
 Area (shoelace formula), perimeter and orientation of a simple polygon given its vertices in order.
 
@@ -916,7 +916,7 @@ geometry_ai999x.solve('polygon_area', points='0 0, 4 0, 4 4, 2 1, 0 4')
 
 <a id="polygon_centroid"></a>
 
-### Centroid of a polygon — `polygon_centroid`
+### Centroid of a polygon: `polygon_centroid`
 
 The centroid (centre of mass of the uniform region) of a simple polygon given its vertices in order.
 
@@ -939,7 +939,7 @@ $$
 
 ![The L-shaped polygon 0 0, 6 0, 6 2, 2 2, 2 5, 0 5, with the interior angle at each vertex (sum 720°, 1 reflex), area 18 and perimeter 22; marked: the centroid x = 2](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/polygon-centroid-shape.svg)
 
-*The L-shaped polygon 0 0, 6 0, 6 2, 2 2, 2 5, 0 5, with the interior angle at each vertex (sum 720°, 1 reflex), area 18 and perimeter 22; marked: the centroid x = 2.33333, y = 1.83333 — all computed by the package. The centroid of a non-convex shape need not be its middle.*
+*The L-shaped polygon 0 0, 6 0, 6 2, 2 2, 2 5, 0 5, with the interior angle at each vertex (sum 720°, 1 reflex), area 18 and perimeter 22; marked: the centroid x = 2.33333, y = 1.83333, all computed by the package. The centroid of a non-convex shape need not be its middle.*
 
 ![The rows of points (vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-centroid-points)
 
@@ -964,7 +964,7 @@ geometry_ai999x.solve('polygon_centroid', points='0 0, 6 0, 6 6, 0 3')
 
 <a id="triangle_coordinates"></a>
 
-### Triangle from vertex coordinates: area, perimeter, centroid, angles — `triangle_coordinates`
+### Triangle from vertex coordinates: area, perimeter, centroid, angles, `triangle_coordinates`
 
 Area, perimeter, centroid and the angles at A, B, C of the triangle with vertices A, B, C.
 
@@ -1014,7 +1014,7 @@ geometry_ai999x.solve('triangle_coordinates', points=[0, 0, 2, 0, 1, 1.732050807
 
 <a id="triangle_circumcircle"></a>
 
-### Circumcircle: the circle through three points — `triangle_circumcircle`
+### Circumcircle: the circle through three points, `triangle_circumcircle`
 
 Circumcentre and circumradius of a triangle given by its vertices (the circle through three points).
 
@@ -1064,7 +1064,7 @@ geometry_ai999x.solve('triangle_circumcircle', points='1 0, 0 1, -1 0')
 
 <a id="triangle_incircle"></a>
 
-### Incircle of a triangle: incentre and inradius — `triangle_incircle`
+### Incircle of a triangle: incentre and inradius, `triangle_incircle`
 
 Incentre and inradius of the triangle with the given vertices.
 
@@ -1109,7 +1109,7 @@ geometry_ai999x.solve('triangle_incircle', points='0 0, 6 0, 0 8')
 
 <a id="triangle_orthocenter"></a>
 
-### Orthocentre of a triangle — `triangle_orthocenter`
+### Orthocentre of a triangle: `triangle_orthocenter`
 
 The orthocentre (common point of the three altitudes) of the triangle with the given vertices.
 
@@ -1153,7 +1153,7 @@ geometry_ai999x.solve('triangle_orthocenter', points='0 0, 4 0, 0 3')
 
 <a id="line_intersection"></a>
 
-### Intersection point of two lines — `line_intersection`
+### Intersection point of two lines: `line_intersection`
 
 The point where two lines a1 $x + b_{1}$ $y + c_{1} = 0$ and a2 $x + b_{2}$ $y + c_{2} = 0$ meet.
 
@@ -1203,7 +1203,7 @@ geometry_ai999x.solve('line_intersection', a1=2, b1=-1, c1=1, a2=1, b2=1, c2=-7)
 
 <a id="angle_between_lines"></a>
 
-### Angle between two lines — `angle_between_lines`
+### Angle between two lines: `angle_between_lines`
 
 The acute (or right) angle between two lines given by equations.
 
@@ -1252,7 +1252,7 @@ geometry_ai999x.solve('angle_between_lines', a1=2, b1=-1, c1=1, a2=3, b2=-1, c2=
 
 <a id="reflect_point_line"></a>
 
-### Reflection of a point in a line — `reflect_point_line`
+### Reflection of a point in a line: `reflect_point_line`
 
 The mirror image of a point in the line a x + b $y + c = 0$ (including the axes and y = x).
 
@@ -1302,7 +1302,7 @@ geometry_ai999x.solve('reflect_point_line', px=1, py=2, a=1, b=1, c=-5)
 
 <a id="rotate_point"></a>
 
-### Rotation of a point — `rotate_point`
+### Rotation of a point: `rotate_point`
 
 The image of a point rotated by an angle about a centre (the origin unless given); counterclockwise is positive.
 
@@ -1356,7 +1356,7 @@ geometry_ai999x.solve('rotate_point', px=5, py=1, angle=-30, cx=1, cy=1)
 
 <a id="dilate_point"></a>
 
-### Dilation (enlargement) of a point — `dilate_point`
+### Dilation (enlargement) of a point: `dilate_point`
 
 The image of a point under a dilation with scale factor k about a centre (the origin unless given).
 
@@ -1405,7 +1405,7 @@ geometry_ai999x.solve('dilate_point', px=6, py=4, k=0.5, cx=2, cy=2)
 
 <a id="circle_line_intersection"></a>
 
-### Intersection of a circle and a line — `circle_line_intersection`
+### Intersection of a circle and a line: `circle_line_intersection`
 
 The points where the line a x + b $y + c = 0$ meets the circle with centre (cx, cy) and radius r (0, 1 or 2 points).
 
@@ -1464,7 +1464,7 @@ geometry_ai999x.solve('circle_line_intersection', cx=0, cy=0, r=1, a=0, b=1, c=-
 
 <a id="circle_circle_intersection"></a>
 
-### Intersection of two circles — `circle_circle_intersection`
+### Intersection of two circles: `circle_circle_intersection`
 
 The points where two circles meet (0, 1 or 2 points).
 
@@ -1517,7 +1517,7 @@ geometry_ai999x.solve('circle_circle_intersection', x1=0, y1=0, r1=5, x2=8, y2=0
 
 <a id="tangent_from_point"></a>
 
-### Tangents from a point to a circle — `tangent_from_point`
+### Tangents from a point to a circle: `tangent_from_point`
 
 The tangent length from an external point to a circle and the two points of tangency.
 
@@ -1573,7 +1573,7 @@ geometry_ai999x.solve('tangent_from_point', cx=0, cy=0, r=6, px=0, py=10)
 
 <a id="conic_classify"></a>
 
-### Classify a conic section from its general equation — `conic_classify`
+### Classify a conic section from its general equation, `conic_classify`
 
 Whether A $x^{2} + B$ xy + C $y^{2} + D$ x + E $y + F = 0$ is a circle, ellipse, parabola, hyperbola, a degenerate conic or has no real points.
 
@@ -1639,7 +1639,7 @@ geometry_ai999x.solve('conic_classify', A=1, B=0, C=-1, D=0, E=0, F=0)
 
 <a id="point_in_polygon"></a>
 
-### Point in polygon test — `point_in_polygon`
+### Point in polygon test: `point_in_polygon`
 
 Whether a point lies inside, outside or on the boundary of a simple polygon.
 
@@ -1663,7 +1663,7 @@ $$
 
 ![inside / outside / boundary (location) over px (x of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-decision)
 
-*inside / outside / boundary (location) over px (x of the point) from 0.2 to 20 and py (y of the point) from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of geometry-ai999x, coloured by the verdict it returned — inside: 273 cells, outside: 378 cells. Other inputs as in the worked example: points = 0 0, 5 0, 5 5, 0 5. Marked: the worked example, px = 2, py = 3 → inside.*
+*inside / outside / boundary (location) over px (x of the point) from 0.2 to 20 and py (y of the point) from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of geometry-ai999x, coloured by the verdict it returned, inside: 273 cells, outside: 378 cells. Other inputs as in the worked example: points = 0 0, 5 0, 5 5, 0 5. Marked: the worked example, px = 2, py = 3 → inside.*
 
 ![The rows of points (polygon vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-points)
 
@@ -1695,7 +1695,7 @@ geometry_ai999x.solve('point_in_polygon', px=2, py=2, points='0 0, 4 0, 0 4')
 
 <a id="convex_hull"></a>
 
-### Convex hull of points in the plane — `convex_hull`
+### Convex hull of points in the plane: `convex_hull`
 
 The convex hull of a set of points: its vertices (counterclockwise), their number, its area and perimeter.
 
@@ -1720,7 +1720,7 @@ $$
 
 ![Ten points (0 0, 5 5, 1 1, 9 2, 6 6](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/convex-hull-shape.svg)
 
-*Ten points (0 0, 5 5, 1 1, 9 2, 6 6.5, 3 7, 7 3, 2 4, 8 6, 4 1.5), their convex hull as returned by the package — 5 vertices, area 38.25, perimeter 26.0614 — and the smallest circle enclosing them; marked: its centre x = 4.07895, y = 2.89474, radius 5.00173.*
+*Ten points (0 0, 5 5, 1 1, 9 2, 6 6.5, 3 7, 7 3, 2 4, 8 6, 4 1.5), their convex hull as returned by the package (5 vertices, area 38.25, perimeter 26.0614), and the smallest circle enclosing them; marked: its centre x = 4.07895, y = 2.89474, radius 5.00173.*
 
 ![The rows of points (the points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-hull-points)
 
@@ -1746,7 +1746,7 @@ geometry_ai999x.solve('convex_hull', points='0 0, 1 1, 2 0, 2 2, 0 2, 1 0')
 
 <a id="closest_pair"></a>
 
-### Closest pair of points — `closest_pair`
+### Closest pair of points: `closest_pair`
 
 The smallest distance between any two of a set of points in the plane.
 
@@ -1789,7 +1789,7 @@ geometry_ai999x.solve('closest_pair', points='0 0, 3 4, 10 0')
 
 <a id="farthest_pair"></a>
 
-### Farthest pair of points (diameter of a point set) — `farthest_pair`
+### Farthest pair of points (diameter of a point set), `farthest_pair`
 
 The largest distance between any two of a set of points in the plane.
 
@@ -1832,7 +1832,7 @@ geometry_ai999x.solve('farthest_pair', points='0 0, 6 8')
 
 <a id="segment_intersection"></a>
 
-### Intersection of two line segments — `segment_intersection`
+### Intersection of two line segments: `segment_intersection`
 
 Whether segments AB and CD meet, and where: at one point, along an overlap, or not at all.
 
@@ -1888,7 +1888,7 @@ geometry_ai999x.solve('segment_intersection', points='0 0, 2 0, 2 0, 2 5')
 
 <a id="point_segment_distance"></a>
 
-### Distance from a point to a segment — `point_segment_distance`
+### Distance from a point to a segment: `point_segment_distance`
 
 The shortest distance from a point to the segment AB and the closest point of the segment.
 
@@ -1938,7 +1938,7 @@ geometry_ai999x.solve('point_segment_distance', px=8, py=3, x1=0, y1=0, x2=4, y2
 
 <a id="polyline_length"></a>
 
-### Length of a polyline (path through points) — `polyline_length`
+### Length of a polyline (path through points), `polyline_length`
 
 The total length of the open path that visits the points in the order given.
 
@@ -1982,7 +1982,7 @@ geometry_ai999x.solve('polyline_length', points=[0, 0, 1, 0, 1, 1, 0, 1])
 
 <a id="polygon_is_convex"></a>
 
-### Is a polygon convex? — `polygon_is_convex`
+### Is a polygon convex?, `polygon_is_convex`
 
 Whether a simple polygon given by its vertices is convex.
 
@@ -2030,7 +2030,7 @@ geometry_ai999x.solve('polygon_is_convex', points='0 0, 2 0, 4 0, 4 4, 0 4')
 
 <a id="pick_lattice_points"></a>
 
-### Pick's theorem: lattice points of a polygon — `pick_lattice_points`
+### Pick's theorem: lattice points of a polygon, `pick_lattice_points`
 
 Area, boundary lattice points and interior lattice points of a simple polygon with integer vertices.
 
@@ -2076,7 +2076,7 @@ geometry_ai999x.solve('pick_lattice_points', points='0 0, 5 0, 0 5')
 
 <a id="triangle_cevians"></a>
 
-### Medians, altitudes and angle bisectors of a triangle — `triangle_cevians`
+### Medians, altitudes and angle bisectors of a triangle, `triangle_cevians`
 
 The lengths of the three medians, three altitudes and three internal angle bisectors of a triangle from its sides.
 
@@ -2130,7 +2130,7 @@ geometry_ai999x.solve('triangle_cevians', a=13, b=14, c=15)
 
 <a id="annulus_area"></a>
 
-### Area of an annulus (ring) — `annulus_area`
+### Area of an annulus (ring): `annulus_area`
 
 The area between two concentric circles.
 
@@ -2174,7 +2174,7 @@ geometry_ai999x.solve('annulus_area', outer=5, inner=3)
 
 <a id="circular_segment"></a>
 
-### Circular segment: area, chord, height, arc — `circular_segment`
+### Circular segment: area, chord, height, arc, `circular_segment`
 
 Area, chord, height (sagitta) and arc length of the circular segment cut off by a chord with a given central angle.
 
@@ -2226,7 +2226,7 @@ geometry_ai999x.solve('circular_segment', radius=2, angle=180)
 
 <a id="frustum_measures"></a>
 
-### Frustum of a cone: volume and surface area — `frustum_measures`
+### Frustum of a cone: volume and surface area, `frustum_measures`
 
 Volume, slant height, lateral and total surface area of a frustum of a right circular cone.
 
@@ -2270,7 +2270,7 @@ geometry_ai999x.solve('frustum_measures', r1=6, r2=3, height=4)
 
 <a id="pyramid_measures"></a>
 
-### Right rectangular (or square) pyramid: volume and surface area — `pyramid_measures`
+### Right rectangular (or square) pyramid: volume and surface area, `pyramid_measures`
 
 Volume, lateral area and total surface area of a right pyramid on a rectangular base (apex above the base centre).
 
@@ -2318,7 +2318,7 @@ geometry_ai999x.solve('pyramid_measures', length=6, width=8, height=12)
 
 <a id="regular_prism"></a>
 
-### Right prism on a regular polygon base: volume and surface area — `regular_prism`
+### Right prism on a regular polygon base: volume and surface area, `regular_prism`
 
 Volume, base area, lateral and total surface area of a right prism whose base is a regular n-gon.
 
@@ -2366,7 +2366,7 @@ geometry_ai999x.solve('regular_prism', n=3, side=4, height=10)
 
 <a id="platonic_solid"></a>
 
-### Platonic solids: counts, Euler characteristic, volume, surface, radii — `platonic_solid`
+### Platonic solids: counts, Euler characteristic, volume, surface, radii, `platonic_solid`
 
 Vertices, edges, faces, Euler characteristic, volume, surface area, circumradius and inradius of a regular polyhedron of edge a.
 
@@ -2424,7 +2424,7 @@ geometry_ai999x.solve('platonic_solid', solid='tetrahedron', edge=6)
 
 <a id="spherical_cap"></a>
 
-### Spherical cap: volume, curved area, base radius — `spherical_cap`
+### Spherical cap: volume, curved area, base radius, `spherical_cap`
 
 Volume, curved surface area and base radius of a cap of height h cut from a sphere of radius R.
 
@@ -2474,7 +2474,7 @@ geometry_ai999x.solve('spherical_cap', radius=3, height=3)
 
 <a id="torus_measures"></a>
 
-### Torus: volume and surface area — `torus_measures`
+### Torus: volume and surface area, `torus_measures`
 
 Volume and surface area of a ring torus with major radius R (centre to tube centre) and tube radius r.
 
@@ -2519,7 +2519,7 @@ geometry_ai999x.solve('torus_measures', major=5, minor=2)
 
 <a id="spheroid_measures"></a>
 
-### Spheroid (ellipsoid of revolution): surface area and volume — `spheroid_measures`
+### Spheroid (ellipsoid of revolution): surface area and volume, `spheroid_measures`
 
 Surface area and volume of an oblate or prolate spheroid with equatorial radius a and polar radius c.
 
@@ -2544,7 +2544,7 @@ $$
 
 ![oblate / prolate / sphere (shape) over a (equatorial radius (semi-axis in the equator)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spheroid-measures-decision)
 
-*oblate / prolate / sphere (shape) over a (equatorial radius (semi-axis in the equator)) from 0.1 to 10 and c (polar radius (semi-axis along the axis)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of geometry-ai999x, coloured by the verdict it returned — oblate: 234 cells, prolate: 417 cells. Marked: the worked example, a = 1, c = 2 → prolate.*
+*oblate / prolate / sphere (shape) over a (equatorial radius (semi-axis in the equator)) from 0.1 to 10 and c (polar radius (semi-axis along the axis)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of geometry-ai999x, coloured by the verdict it returned, oblate: 234 cells, prolate: 417 cells. Marked: the worked example, a = 1, c = 2 → prolate.*
 
 ```python
 geometry_ai999x.solve('spheroid_measures', a=1, c=2)
@@ -2565,7 +2565,7 @@ geometry_ai999x.solve('spheroid_measures', a=3, c=3)
 
 <a id="ellipse_perimeter"></a>
 
-### Perimeter of an ellipse (exact, by the complete elliptic integral) — `ellipse_perimeter`
+### Perimeter of an ellipse (exact, by the complete elliptic integral), `ellipse_perimeter`
 
 The exact perimeter (circumference) and area of an ellipse with semi-axes a and b.
 
@@ -2610,7 +2610,7 @@ geometry_ai999x.solve('ellipse_perimeter', a=5, b=3)
 
 <a id="triangle_area_3d"></a>
 
-### Triangle in space: area and perimeter from vertices — `triangle_area_3d`
+### Triangle in space: area and perimeter from vertices, `triangle_area_3d`
 
 Area and perimeter of the triangle with vertices A, B, C in three-dimensional space.
 
@@ -2654,7 +2654,7 @@ geometry_ai999x.solve('triangle_area_3d', points='0 0 0, 3 0 0, 0 4 0')
 
 <a id="tetrahedron_measures"></a>
 
-### Tetrahedron from four vertices: volume and surface area — `tetrahedron_measures`
+### Tetrahedron from four vertices: volume and surface area, `tetrahedron_measures`
 
 Volume and total surface area of the tetrahedron with four given vertices.
 
@@ -2698,7 +2698,7 @@ geometry_ai999x.solve('tetrahedron_measures', points='0 0 0, 3 0 0, 0 4 0, 0 0 6
 
 <a id="plane_through_points"></a>
 
-### Plane through three points — `plane_through_points`
+### Plane through three points: `plane_through_points`
 
 The equation a x + b y + c $z + d = 0$ of the plane through three points, with (a, b, c) a unit normal.
 
@@ -2745,7 +2745,7 @@ geometry_ai999x.solve('plane_through_points', points='0 0 2, 1 0 2, 0 1 2')
 
 <a id="point_plane_distance"></a>
 
-### Distance from a point to a plane — `point_plane_distance`
+### Distance from a point to a plane: `point_plane_distance`
 
 The distance from a point to the plane a x + b y + c $z + d = 0$ and the foot of the perpendicular.
 
@@ -2792,7 +2792,7 @@ geometry_ai999x.solve('point_plane_distance', px=1, py=2, pz=3, a=2, b=-1, c=2, 
 
 <a id="line_plane_intersection"></a>
 
-### Intersection of a line and a plane — `line_plane_intersection`
+### Intersection of a line and a plane: `line_plane_intersection`
 
 The point where the line $P_{0} + t$ v meets the plane a x + b y + c $z + d = 0.$
 
@@ -2842,7 +2842,7 @@ geometry_ai999x.solve('line_plane_intersection', x0=1, y0=0, z0=0, dx=1, dy=2, d
 
 <a id="skew_lines_distance"></a>
 
-### Distance between two lines in space (skew or parallel) — `skew_lines_distance`
+### Distance between two lines in space (skew or parallel), `skew_lines_distance`
 
 The shortest distance between the lines $P_{1} + s$ d1 and $P_{2} + t$ d2 in three dimensions.
 
@@ -2889,7 +2889,7 @@ geometry_ai999x.solve('skew_lines_distance', p1=[0, 0, 0], d1=[1, 0, 0], p2=[0, 
 
 <a id="angle_between_planes"></a>
 
-### Angle between two planes — `angle_between_planes`
+### Angle between two planes: `angle_between_planes`
 
 The acute (dihedral) angle between two planes given by their equations (only the normals matter).
 
@@ -2932,7 +2932,7 @@ geometry_ai999x.solve('angle_between_planes', a1=0, b1=0, c1=1, a2=1, b2=0, c2=1
 
 <a id="rotate_point_3d"></a>
 
-### Rotation of a point in space about an axis — `rotate_point_3d`
+### Rotation of a point in space about an axis, `rotate_point_3d`
 
 The image of a point rotated by an angle about an axis through the origin (right-hand rule).
 
@@ -2979,7 +2979,7 @@ geometry_ai999x.solve('rotate_point_3d', point=[1, 2, 3], axis=[1, 1, 1], angle=
 
 <a id="sphere_four_points"></a>
 
-### Sphere through four points (circumsphere of a tetrahedron) — `sphere_four_points`
+### Sphere through four points (circumsphere of a tetrahedron), `sphere_four_points`
 
 Centre and radius of the sphere through four non-coplanar points.
 
@@ -3025,7 +3025,7 @@ geometry_ai999x.solve('sphere_four_points', points='2 0 0, -2 0 0, 0 2 0, 0 0 2'
 
 <a id="great_circle_distance"></a>
 
-### Great-circle distance between two points on a sphere — `great_circle_distance`
+### Great-circle distance between two points on a sphere, `great_circle_distance`
 
 The central angle and great-circle distance between two points given by latitude and longitude (on the Earth unless a radius is given).
 
@@ -3074,7 +3074,7 @@ geometry_ai999x.solve('great_circle_distance', lat1=90, lon1=0, lat2=0, lon2=45)
 
 <a id="initial_bearing"></a>
 
-### Initial bearing (forward azimuth) along a great circle — `initial_bearing`
+### Initial bearing (forward azimuth) along a great circle, `initial_bearing`
 
 The initial compass bearing from point 1 to point 2 along the great circle, degrees clockwise from north.
 
@@ -3120,7 +3120,7 @@ geometry_ai999x.solve('initial_bearing', lat1=0, lon1=0, lat2=45, lon2=0)
 
 <a id="spherical_triangle_area"></a>
 
-### Area and spherical excess of a spherical triangle — `spherical_triangle_area`
+### Area and spherical excess of a spherical triangle, `spherical_triangle_area`
 
 The spherical excess and area of the triangle with three vertices given by latitude and longitude on a sphere of radius R.
 
@@ -3169,7 +3169,7 @@ geometry_ai999x.solve('spherical_triangle_area', points='0 0, 0 90, 90 0', radiu
 
 <a id="solid_angle_cone"></a>
 
-### Solid angle of a cone — `solid_angle_cone`
+### Solid angle of a cone: `solid_angle_cone`
 
 The solid angle (steradians) subtended at the apex by a right circular cone of given half-angle.
 
@@ -3214,7 +3214,7 @@ geometry_ai999x.solve('solid_angle_cone', half_angle=90)
 
 <a id="solid_angle_triangle"></a>
 
-### Solid angle subtended by a triangle — `solid_angle_triangle`
+### Solid angle subtended by a triangle: `solid_angle_triangle`
 
 The solid angle (steradians) that the triangle with vertices A, B, C subtends at the origin.
 
@@ -3257,7 +3257,7 @@ geometry_ai999x.solve('solid_angle_triangle', points='2 0 0, 0 3 0, 0 0 5')
 
 <a id="curvature_of_graph"></a>
 
-### Curvature of a polynomial graph at a point — `curvature_of_graph`
+### Curvature of a polynomial graph at a point, `curvature_of_graph`
 
 The curvature and radius of curvature of $y = p$(x) at $x = x_{0}$ for a polynomial p.
 
@@ -3304,7 +3304,7 @@ geometry_ai999x.solve('curvature_of_graph', coefficients=[1, 0, -2, 0], x0=1)
 
 <a id="helix_measures"></a>
 
-### Helix: curvature, torsion and length per turn — `helix_measures`
+### Helix: curvature, torsion and length per turn, `helix_measures`
 
 Curvature, torsion and arc length per turn of the circular helix of radius r and pitch p (rise per turn).
 
@@ -3355,7 +3355,7 @@ geometry_ai999x.solve('helix_measures', radius=3, pitch=25.132741228718345)
 
 <a id="ellipse_curvature"></a>
 
-### Curvature of an ellipse at a point — `ellipse_curvature`
+### Curvature of an ellipse at a point: `ellipse_curvature`
 
 The curvature and radius of curvature of the ellipse (a cos t, b sin t) at parameter t (eccentric anomaly).
 
@@ -3403,7 +3403,7 @@ geometry_ai999x.solve('ellipse_curvature', a=5, b=3, t=90)
 
 <a id="surface_curvature"></a>
 
-### Gaussian and mean curvature of a quadratic surface z = f(x, y) — `surface_curvature`
+### Gaussian and mean curvature of a quadratic surface z = f(x, y), `surface_curvature`
 
 Gaussian curvature K and mean curvature H of $z = A$ $x^{2} + B$ xy + C $y^{2} + D$ x + E y + F at the point above (x0, y0).
 
@@ -3455,7 +3455,7 @@ geometry_ai999x.solve('surface_curvature', A=1, B=0, C=-1, D=0, E=0, x0=0, y0=0)
 
 <a id="torus_curvature"></a>
 
-### Curvature of a torus at a point — `torus_curvature`
+### Curvature of a torus at a point: `torus_curvature`
 
 Gaussian, mean and principal curvatures of a ring torus at tube angle v (v = 0 on the outer equator, 180 on the inner).
 
@@ -3508,7 +3508,7 @@ geometry_ai999x.solve('torus_curvature', major=3, minor=1, v=90)
 
 <a id="parabola_arc_length"></a>
 
-### Arc length of a parabola — `parabola_arc_length`
+### Arc length of a parabola: `parabola_arc_length`
 
 The length of the curve $y = a$ $x^{2} + b$ x + c between $x = x_{0}$ and $x = x_{1}.$
 
@@ -3555,7 +3555,7 @@ geometry_ai999x.solve('parabola_arc_length', a=0, b=1, x0=0, x1=3)
 
 <a id="min_enclosing_circle"></a>
 
-### Smallest enclosing circle of points — `min_enclosing_circle`
+### Smallest enclosing circle of points: `min_enclosing_circle`
 
 Centre and radius of the smallest circle that contains every given point.
 
@@ -3600,7 +3600,7 @@ geometry_ai999x.solve('min_enclosing_circle', points='0 0, 2 0, 1 2')
 
 <a id="min_area_rectangle"></a>
 
-### Minimum-area enclosing rectangle — `min_area_rectangle`
+### Minimum-area enclosing rectangle: `min_area_rectangle`
 
 The area (and sides) of the smallest-area rectangle, in any orientation, enclosing the points.
 
@@ -3645,7 +3645,7 @@ geometry_ai999x.solve('min_area_rectangle', points='0 0, 3 0, 3 1, 0 1, 1 0.5')
 
 <a id="delaunay_voronoi_counts"></a>
 
-### Delaunay triangulation and Voronoi diagram: counts — `delaunay_voronoi_counts`
+### Delaunay triangulation and Voronoi diagram: counts, `delaunay_voronoi_counts`
 
 Numbers of Delaunay triangles and edges, hull vertices, Voronoi vertices and unbounded Voronoi cells of points in general position.
 
@@ -3692,7 +3692,7 @@ geometry_ai999x.solve('delaunay_voronoi_counts', points='0 0, 1 0, 0 1')
 
 <a id="convex_polygon_intersection"></a>
 
-### Area of the intersection of two convex polygons — `convex_polygon_intersection`
+### Area of the intersection of two convex polygons, `convex_polygon_intersection`
 
 The area common to two convex polygons given by their vertices.
 
@@ -3736,7 +3736,7 @@ geometry_ai999x.solve('convex_polygon_intersection', p='0 0, 1 0, 0 1', q='5 5, 
 
 <a id="hausdorff_distance"></a>
 
-### Hausdorff distance between two point sets — `hausdorff_distance`
+### Hausdorff distance between two point sets: `hausdorff_distance`
 
 The Hausdorff distance between two finite point sets and both directed distances.
 
@@ -3776,7 +3776,7 @@ geometry_ai999x.solve('hausdorff_distance', a='0 0, 1 0', b='0 0, 3 4')
 
 <a id="nearest_neighbor"></a>
 
-### Nearest neighbour of a query point — `nearest_neighbor`
+### Nearest neighbour of a query point: `nearest_neighbor`
 
 Which of a list of points is nearest to a query point, and how far it is.
 
@@ -3822,7 +3822,7 @@ geometry_ai999x.solve('nearest_neighbor', px=3, py=3, points='0 0, 5 5, 2 3')
 
 <a id="barycentric_coordinates"></a>
 
-### Barycentric coordinates of a point in a triangle — `barycentric_coordinates`
+### Barycentric coordinates of a point in a triangle, `barycentric_coordinates`
 
 The barycentric coordinates (l1, l2, l3) of a point with respect to triangle ABC: $P = l_{1}$ $A + l_{2}$ $B + l_{3}$ C, $l_{1} + l_{2} + l_{3} = 1.$
 
@@ -3867,7 +3867,7 @@ geometry_ai999x.solve('barycentric_coordinates', px=1, py=1, points='0 0, 4 0, 0
 
 <a id="polygon_interior_angles"></a>
 
-### Interior angles of a polygon from its vertices — `polygon_interior_angles`
+### Interior angles of a polygon from its vertices, `polygon_interior_angles`
 
 The interior angle at every vertex of a simple polygon (reflex angles included), their sum and the number of reflex vertices.
 
