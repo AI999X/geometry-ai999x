@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/AI999X/geometry-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/geometry-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/geometry-ai999x)](https://pypi.org/project/geometry-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/geometry-ai999x)
 
-**[Install](https://pypi.org/project/geometry-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/geometry-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/geometry-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
+**[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/geometry-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/geometry-ai999x/)** · **[Guides](https://huggingface.co/AI999X/geometry-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/geometry-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
 License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
 
@@ -12,7 +12,297 @@ geometry-ai999x is an offline, deterministic Python solver that answers geometry
 
 **geometry-ai999x** is a compact, deterministic geometry engine for Python. It reads a question in plain English (or a typed call), picks a certified geometry capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
+
+**Run it your way.** geometry-ai999x comes as the AI999X desktop app and as the command-line program `geometry` for Windows and Linux, runs in your browser as WebAssembly, and installs as a Python package. The desktop app, the command line and the browser run the same compiled Rust program on your own device: offline, no Python needed.
+
+## Get it
+
+| Way to run it | For | Get it |
+|---|---|---|
+| **AI999X Geometry desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
+| **Command line** (`geometry`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/geometry-ai999x/#try) |
+| **Python** | Python 3.10+ | `pip install geometry-ai999x` |
+
+Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+
+## Rust versions
+
+Geometry also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/geometry-ai999x/releases/tag/v1.0.3) and on the website.
+
+| Program | System | File | Size | Download | Use |
+|---|---|---|---|---|---|
+| Desktop app (Geometry) | Windows x86-64 | `ai999x-geometry-1.2.0-windows-x86_64.zip` | 7.7 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-geometry.exe` (no installer) |
+| Desktop app (Geometry) | Linux x86-64 | `ai999x-geometry-1.2.0-linux-x86_64.tar.gz` | 8.7 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-geometry` (X11 or Wayland desktop) |
+| Command line (`geometry`) | Windows x86-64 | `ai999x-geometry-cli-1.2.0-windows-x86_64.zip` | 3.5 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `geometry.exe ask "<question>"` or `geometry.exe solve <capability> name=value` |
+| Command line (`geometry`) | Linux x86-64 | `ai999x-geometry-cli-1.2.0-linux-x86_64.tar.gz` | 3.4 MB | [Hub](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/ai999x-geometry-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/geometry-ai999x/releases/download/v1.0.3/ai999x-geometry-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./geometry ask "<question>"` or `./geometry solve <capability> name=value` |
+
+The command-line archive holds `geometry` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+
+## Quick start
+
+### Desktop app
+
+Download **AI999X Geometry** for your system (above), unpack it and start it; type a question in words or pick a capability, fill in the form and press Compute. Figures and an explanation of the answer appear beside it. The AI999X desktop app has the same, with Geometry among all AI999X models.
+
+Linux, from a terminal:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-geometry-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-geometry-1.2.0-linux-x86_64.tar.gz
+./ai999x-geometry-1.2.0-linux-x86_64/ai999x-geometry
+```
+
+### Command line
+
+Linux:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+geometry --version
+```
+
+Windows (PowerShell):
+
+```powershell
+$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+(Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
+Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
+geometry --version
+```
+
+Every command below was run as shown; the text under it is what the program printed.
+
+**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```console
+$ geometry ask "Find the circumcenter and circumradius of the triangle with vertices (0, 0), (4, 0) and (0, 3)."
+Read as: Circumcircle: the circle through three points
+cx = 2
+cy = 1.5
+radius = 2.5
+  by: Circumcircle: the circle through three points  (intersection of the perpendicular bisectors, solved in coordinates relative to the first point)
+  assumes: exactly 3 points; not collinear
+```
+
+**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```console
+$ geometry info circle_line_intersection
+Intersection of a circle and a line
+  foot of the perpendicular from the centre, then the half-chord sqrt(r^2 - d^2) along the line
+  in   cx       x of the centre [1]
+  in   cy       y of the centre [1]
+  in   r        radius [1]
+  in   a        coefficient of x of the line [1]
+  in   b        coefficient of y of the line [1]
+  in   c        constant of the line [1]
+  out  count    number of intersection points (0, 1 or 2) [1]
+  out  x1       x of the first point (ordered by x, then y) [1]
+  out  y1       y of the first point [1]
+  out  x2       x of the second point [1]
+  out  y2       y of the second point [1]
+```
+
+**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```console
+$ geometry solve circle_line_intersection cx=0.0 cy=0.0 r=5.0 a=-1.0 b=1.0 c=-1.0
+count = 2
+x1 = -4
+y1 = -3
+x2 = 3
+y2 = 4
+  by: Intersection of a circle and a line  (foot of the perpendicular from the centre, then the half-chord sqrt(r^2 - d^2) along the line)
+  cx = 0
+  cy = 0
+  r = 5
+  a = -1
+  b = 1
+  c = -1
+  assumes: r > 0; a and b not both 0; tangency is decided exactly on the written values; points ordered by x, then y; absent points are empty
+```
+
+**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
+
+```console
+$ geometry figures triangle_circumcircle "points=[0, 0, 4, 0, 0, 3]" --out .
+[
+  {
+    "slug": "triangle-circumcircle-live-1",
+    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 3 varies",
+    "caption": "Circumradius as points[3] runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your points[3] = 4 gives radius = 2.5. Your inputs: points = (list).",
+    "file": "./triangle-circumcircle-live-1.svg"
+  },
+  {
+    "slug": "triangle-circumcircle-live-2",
+    "title": "Circumradius as the three points: x1 y1, x2 y2, x3 y3, entry 6 varies",
+    "caption": "Circumradius as points[6] runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your points[6] = 3 gives radius = 2.5. Your inputs: points = (list).",
+    "file": "./triangle-circumcircle-live-2.svg"
+  }
+]
+```
+
+**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | geometry batch
+
+`cases.jsonl`:
+
+```json
+{"key": "circle_line_intersection", "inputs": {"cx": 0.0, "cy": 0.0, "r": 5.0, "a": -1.0, "b": 1.0, "c": -1.0}}
+{"key": "triangle_circumcircle", "inputs": {"points": "[0, 0, 4, 0, 0, 3]"}}
+```
+
+```console
+$ geometry batch < cases.jsonl
+{"outcome":"SOLVED","message":"","value":2.0,"unit":"","solved_for":"count","si":[["cx",0.0],["cy",0.0],["r",5.0],["a",-1.0],["b",1.0],["c",-1.0]],"values":[["count",2,""],["x1",-4.0,""],["y1",-3.0,""],["x2",3.0,""],["y2",4.0,""]],"target":"count","phrase":"number of intersection points (0, 1 or 2)","assumptions":["r > 0","a and b not both 0","tangency is decided exactly on the written values","points ordered by x, then y; absent points are empty"],"name":"Intersection of a circle and a line","equation":"foot of the perpendicular from the centre, then the half-chord sqrt(r^2 - d^2) along the line"}
+{"outcome":"SOLVED","message":"","value":2.5,"unit":"","solved_for":"radius","values":[["cx",2.0,""],["cy",1.5,""],["radius",2.5,""]],"target":"radius","phrase":"x of the circumcentre","assumptions":["exactly 3 points","not collinear"],"name":"Circumcircle: the circle through three points","equation":"intersection of the perpendicular bisectors, solved in coordinates relative to the first point"}
+```
+
+### In your browser
+
+Open [Geometry on ai999x.com](https://www.ai999x.com/models/geometry-ai999x/#try), choose a capability and press **Compute**: the model runs on your own device as WebAssembly; nothing is sent anywhere. Change any input (any unit of the right kind) and the answer, its explanation and the figures follow.
+
+In your own page: `geometry_ai999x.wasm` and the loader `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js).
+
+### Python
+
+```bash
+pip install geometry-ai999x
+```
+
+## Worked examples in every form
+
+The same worked example from the command line, from Python and in the browser. Each command-line output is what the program printed.
+
+### Area of the intersection of two convex polygons
+
+The area common to two convex polygons given by their vertices.
+
+Command line:
+
+```console
+$ geometry solve convex_polygon_intersection "p=[0, 0, 2, 0, 2, 2, 0, 2]" "q=[1, 1, 3, 1, 3, 3, 1, 3]"
+area = 1
+  by: Area of the intersection of two convex polygons  (Sutherland-Hodgman clipping of one polygon by the other's edges, then the shoelace area)
+  assumes: both polygons simple and convex
+```
+
+Python:
+
+```python
+import geometry_ai999x as m
+
+a = m.solve("convex_polygon_intersection", p=[0, 0, 2, 0, 2, 2, 0, 2], q=[1, 1, 3, 1, 3, 3, 1, 3])
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/geometry-ai999x/#cap-convex_polygon_intersection) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the common region shared by two convex polygons, defined by their ordered vertices. Clipping one polygon against the edges of the other and applying the shoelace formula to the resulting shape gives the precise overlap area. The result, 1, represents the total size of this intersection in square units, indicating how much space the two shapes occupy simultaneously.
+
+### Closest pair of points
+
+The smallest distance between any two of a set of points in the plane.
+
+Command line:
+
+```console
+$ geometry solve closest_pair "points=[0, 0, 5, 5, 1, 1, 9, 2, 6, 6.5]"
+distance = 1.414213562
+  by: Closest pair of points  (sort by x and sweep, stopping each scan once the x-gap exceeds the best distance)
+  assumes: at least 2 points, at most 2000; a repeated point gives distance 0
+```
+
+Python:
+
+```python
+import geometry_ai999x as m
+
+a = m.solve("closest_pair", points=[0, 0, 5, 5, 1, 1, 9, 2, 6, 6.5])
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/geometry-ai999x/#cap-closest_pair) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the smallest Euclidean distance between any two points in the provided set. By sorting the points and sweeping through them, the algorithm identifies the minimum separation, which is reported as 1.41421. This value represents the tightest proximity found among all possible pairs.
+
+### Convex hull of points in the plane
+
+The convex hull of a set of points: its vertices (counterclockwise), their number, its area and perimeter.
+
+Command line:
+
+```console
+$ geometry solve convex_hull "points=[0, 0, 2, 1, 4, 0, 3, 3, 1, 2, 2, 4]"
+hull = [[0.0,0.0],[4.0,0.0],[3.0,3.0],[2.0,4.0]]
+n_vertices = 4
+area = 9
+perimeter = 13.04862718
+  by: Convex hull of points in the plane  (Andrew's monotone chain with exact (rational) orientation tests; shoelace area)
+  assumes: at least 3 points, not all collinear, at most 5000; points on a hull edge between two vertices are not vertices; repeated points count once
+```
+
+Python:
+
+```python
+import geometry_ai999x as m
+
+a = m.solve("convex_hull", points=[0, 0, 2, 1, 4, 0, 3, 3, 1, 2, 2, 4])
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/geometry-ai999x/#cap-convex_hull) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the smallest convex polygon that contains all provided points. The result identifies 4 specific vertices arranged in counterclockwise order, starting from the point with the smallest x-coordinate. The enclosed region has an area of 9 and a boundary length of 13.0486. This process assumes the input set contains at least three non-collinear points to form a valid two-dimensional shape.
+
+### Delaunay triangulation and Voronoi diagram: counts
+
+Numbers of Delaunay triangles and edges, hull vertices, Voronoi vertices and unbounded Voronoi cells of points in general position.
+
+Command line:
+
+```console
+$ geometry solve delaunay_voronoi_counts "points=[0, 0, 4, 0, 0, 3, 5, 4, 2, 1]"
+triangles = 4
+edges = 8
+hull_vertices = 4
+voronoi_vertices = 4
+unbounded_cells = 4
+  by: Delaunay triangulation and Voronoi diagram: counts  (exact general-position checks, the convex hull, then Euler's formula for a triangulation; Voronoi is the dual)
+  assumes: 3 to 25 distinct points; general position: no three collinear, no four concyclic (checked exactly)
+```
+
+Python:
+
+```python
+import geometry_ai999x as m
+
+a = m.solve("delaunay_voronoi_counts", points=[0, 0, 4, 0, 0, 3, 5, 4, 2, 1])
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/geometry-ai999x/#cap-delaunay_voronoi_counts) and press **Compute in your browser**.
+
+_What this means:_ Given a set of distinct points in general position, this calculation determines the structural counts for both the Delaunay triangulation and its dual, the Voronoi diagram. The number of triangles is derived from the total point count minus the convex hull vertices, resulting in 4 triangles. Correspondingly, there are 8 edges connecting these points. The Voronoi diagram mirrors this structure with 4 vertices, matching the triangle count, and 4 unbounded regions, which correspond to the 4 vertices on the outer boundary of the point cloud.
+
+## Documentation
+
+- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_rust_guide.md)
+- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_capabilities.md)
+- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/geometry-ai999x/
 
 ## Highlights
 
@@ -20,6 +310,7 @@ geometry-ai999x is an offline, deterministic Python solver that answers geometry
 - **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 375 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `geometry` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** plane and solid figures, coordinate geometry, conic sections, polygons and polyhedra, computational geometry, transformations, spherical geometry and curves and surfaces.
 
@@ -38,7 +329,7 @@ geometry-ai999x is an offline, deterministic Python solver that answers geometry
 | Creator / engineer | Ibnul Jaif Farabi |
 | Organization | AI999X |
 
-## Quickstart
+## Python quick start
 
 ```bash
 pip install geometry-ai999x
@@ -61,7 +352,7 @@ geometry.ask("Who created you?").message
 # -> geometry-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `geometry-ai999x "<question>"`, `geometry-ai999x --capabilities`. The outputs above were produced by running this exact code on geometry-ai999x 1.0.3.
+The Python package also installs a Python command, `geometry-ai999x "<question>"`; for the native program use `geometry` (above). The outputs above were produced by running this exact code on geometry-ai999x 1.0.3.
 
 ## Find the right capability, and draw it
 
@@ -83,7 +374,7 @@ geometry.search("Solve x^2 - 5x + 6 = 0", k=2)
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
-## Worked examples
+## Python worked examples, with their steps
 
 Each question was put to `geometry-ai999x`; the answer is the one it returned, with the steps it took.
 
