@@ -370,7 +370,7 @@ $$
 
 ![area ((a + b) h / 2) against a (first parallel side) from 3 to 9](https://www.ai999x.com/?ax_fig=geometry-ai999x/trapezoid-measures-curve)
 
-*area ((a + b) h / 2) against a (first parallel side) from 3 to 9. One curve for each value of height (distance between the parallel sides): 4, 2, 8. Other inputs as in the worked example: b = 10. 31 points per curve computed by geometry-ai999x; marked: the worked example, a = 6, area = 32.*
+*area ((a + b) h / 2) against a (first parallel side) from 3 to 9. One curve for each value of height (distance between the parallel sides): 4, 2, 8. Other inputs as in the worked example: b = 10.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, a = 6, area = 32.*
 
 ```python
 geometry_ai999x.solve('trapezoid_measures', a=6, b=10, height=4)
@@ -635,7 +635,7 @@ $$
 
 ![volume (l w h) against length (length) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cuboid-measures-curve)
 
-*volume (l w h) against length (length) from 1.5 to 4.5. One curve for each value of width (width): 4, 2, 8. Other inputs as in the worked example: height = 12. 31 points per curve computed by geometry-ai999x; marked: the worked example, length = 3, volume = 144.*
+*volume (l w h) against length (length) from 1.5 to 4.5. One curve for each value of width (width): 4, 2, 8. Other inputs as in the worked example: height = 12.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, length = 3, volume = 144.*
 
 ```python
 geometry_ai999x.solve('cuboid_measures', length=3, width=4, height=12)
@@ -1184,7 +1184,7 @@ $$
 
 ![x (x of the intersection) against a1 (coefficient of x in line 1 (a1 x + b1 y + c1 = 0)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-intersection-curve)
 
-*x (x of the intersection) against a1 (coefficient of x in line 1 (a1 x + b1 y + c1 = 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of a2 (coefficient of x in line 2 (a2 x + b2 y + c2 = 0)): 1, 0.5, 2. Other inputs as in the worked example: b1 = 1, c1 = -5, b2 = -1, c2 = -1. 41 points per curve computed by geometry-ai999x; marked: the worked example, a1 = 2, x = 2.*
+*x (x of the intersection) against a1 (coefficient of x in line 1 (a1 x + b1 y + c1 = 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of a2 (coefficient of x in line 2 (a2 x + b2 y + c2 = 0)): 1, 0.5, 2. Other inputs as in the worked example: b1 = 1.0, c1 = -5.0, b2 = -1.0, c2 = -1.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, a1 = 2, x = 2.*
 
 ```python
 geometry_ai999x.solve('line_intersection', a1=2, b1=1, c1=-5, a2=1, b2=-1, c2=-1)
@@ -1231,9 +1231,9 @@ $$
 - **Assumes:** each line has a or b nonzero; the acute angle is reported (parallel lines: 0)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![angle (angle between the lines, degrees, 0 to 90) against a1 (coefficient of x in line 1 (a1 x + b1 y + c1 = 0)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-lines-curve)
+![angle (angle between the lines, degrees, 0 to 90) against b1 (coefficient of y in line 1) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-lines-curve)
 
-*angle (angle between the lines, degrees, 0 to 90) against a1 (coefficient of x in line 1 (a1 x + b1 y + c1 = 0)) from 0.1 to 10 on a logarithmic axis. One curve for each value of a2 (coefficient of x in line 2 (a2 x + b2 y + c2 = 0)): 1, 0.5, 2. Other inputs as in the worked example: b1 = -1, c1 = 1, b2 = 1, c2 = -3. 41 points per curve computed by geometry-ai999x; marked: the worked example, a1 = 1, angle = 90.*
+*angle (angle between the lines, degrees, 0 to 90) against b1 (coefficient of y in line 1) from 0.1 to 10 on a logarithmic axis. One curve for each value of a2 (coefficient of x in line 2 (a2 x + b2 y + c2 = 0)): 1, 0.5, 2. Other inputs as in the worked example: a1 = -1.0, c1 = -1.0, b2 = 1.0, c2 = -3.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, b1 = 1, angle = 90.*
 
 ```python
 geometry_ai999x.solve('angle_between_lines', a1=1, b1=-1, c1=1, a2=1, b2=1, c2=-3)
@@ -1280,9 +1280,9 @@ $$
 - **Assumes:** a and b not both 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![x (x of the image) against a (coefficient of x of the line) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/reflect-point-line-curve)
+![x (x of the image) against b (coefficient of y of the line) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/reflect-point-line-curve)
 
-*x (x of the image) against a (coefficient of x of the line) from 0.1 to 10 on a logarithmic axis. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: px = 3, b = -1, c = 0. 41 points per curve computed by geometry-ai999x; marked: the worked example, a = 1, x = 4.*
+*x (x of the image) against b (coefficient of y of the line) from 0.1 to 10 on a logarithmic axis. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: px = 3.0, a = -1.0, c = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, b = 1, x = 4.*
 
 ```python
 geometry_ai999x.solve('reflect_point_line', px=3, py=4, a=1, b=-1, c=0)
@@ -1336,7 +1336,7 @@ $$
 
 ![x (x of the image) against angle (rotation angle in degrees, counterclockwise positive) from 0 to 90](https://www.ai999x.com/?ax_fig=geometry-ai999x/rotate-point-curve)
 
-*x (x of the image) against angle (rotation angle in degrees, counterclockwise positive) from 0 to 90. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: px = 3. 41 points per curve computed by geometry-ai999x; marked: the worked example, angle = 90, x = -4.*
+*x (x of the image) against angle (rotation angle in degrees, counterclockwise positive) from 0 to 90. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: px = 3.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, angle = 90, x = -4.*
 
 ```python
 geometry_ai999x.solve('rotate_point', px=3, py=4, angle=90)
@@ -1386,7 +1386,7 @@ $$
 
 ![x (x of the image) against px (x of the point) from 1 to 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/dilate-point-curve)
 
-*x (x of the image) against px (x of the point) from 1 to 3. One curve for each value of k (scale factor (negative: through the centre)): 3, 1.5, 6. Other inputs as in the worked example: py = 3. 31 points per curve computed by geometry-ai999x; marked: the worked example, px = 2, x = 6.*
+*x (x of the image) against px (x of the point) from 1 to 3. One curve for each value of k (scale factor (negative: through the centre)): 3, 1.5, 6. Other inputs as in the worked example: py = 3.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, px = 2, x = 6.*
 
 ```python
 geometry_ai999x.solve('dilate_point', px=2, py=3, k=3)
@@ -1437,9 +1437,9 @@ $$
 - **Assumes:** $r > 0$; a and b not both 0; tangency is decided exactly on the written values; points ordered by x, then y; absent points are empty
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![count (number of intersection points (0, 1 or 2)) against c (constant of the line) from 1 to 9](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-line-intersection-curve)
+![The worked example of Intersection of a circle and a line as inputs and results: stated cx = 0, cy = 0, r = 5, a = -1, b = 1, c = -1; returned by geometry-ai999x: count = 2, x1 = -4, y1 = -3, x2 = 3, y2 = 4](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-line-intersection-io)
 
-*count (number of intersection points (0, 1 or 2)) against c (constant of the line) from 1 to 9. One curve for each value of r (radius): 5, 2.5, 10. Other inputs as in the worked example: cx = 0, cy = 0, a = 1, b = -1. 9 points per curve computed by geometry-ai999x; marked: the worked example, c = 1, count = 2.*
+*The worked example of Intersection of a circle and a line as inputs and results: stated cx = 0, cy = 0, r = 5, a = -1, b = 1, c = -1; returned by geometry-ai999x: count = 2, x1 = -4, y1 = -3, x2 = 3, y2 = 4.*
 
 ```python
 geometry_ai999x.solve('circle_line_intersection', cx=0, cy=0, r=5, a=1, b=-1, c=1)
@@ -1498,7 +1498,7 @@ $$
 
 ![count (number of intersection points (0, 1 or 2)) against r1 (first radius) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-circle-intersection-curve)
 
-*count (number of intersection points (0, 1 or 2)) against r1 (first radius) from 0.5 to 50 on a logarithmic axis. One curve for each value of x2 (x of the second centre): 6, 3, 12. Other inputs as in the worked example: x1 = 0, y1 = 0, y2 = 0, r2 = 5. 41 points per curve computed by geometry-ai999x; marked: the worked example, r1 = 5, count = 2.*
+*count (number of intersection points (0, 1 or 2)) against r1 (first radius) from 0.5 to 50 on a logarithmic axis. One curve for each value of x2 (x of the second centre): 6, 3, 12. Other inputs as in the worked example: x1 = 0.0, y1 = 0.0, y2 = 0.0, r2 = 5.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, r1 = 5, count = 2.*
 
 ```python
 geometry_ai999x.solve('circle_circle_intersection', x1=0, y1=0, r1=5, x2=6, y2=0, r2=5)
@@ -1554,7 +1554,7 @@ $$
 
 ![length (tangent length sqrt(d^2 - r^2)) against cy (y of the centre) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/tangent-from-point-curve)
 
-*length (tangent length sqrt(d^2 - r^2)) against cy (y of the centre) from -1 to 1. One curve for each value of px (x of the external point): 5, 10. Other inputs as in the worked example: cx = 0, r = 3, py = 0. 41 points per curve computed by geometry-ai999x; marked: the worked example, cy = 0, length = 4.*
+*length (tangent length sqrt(d^2 - r^2)) against cy (y of the centre) from -1 to 1. One curve for each value of px (x of the external point): 5, 10. Other inputs as in the worked example: cx = 0.0, r = 3.0, py = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, cy = 0, length = 4.*
 
 ```python
 geometry_ai999x.solve('tangent_from_point', cx=0, cy=0, r=3, px=5, py=0)
@@ -1670,7 +1670,7 @@ $$
 
 ![The rows of points (polygon vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-points)
 
-*The rows of points (polygon vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon. Other inputs: px = 2, py = 3.*
+*The rows of points (polygon vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon. Other inputs: px = 2.0, py = 3.0.*
 
 ```python
 geometry_ai999x.solve('point_in_polygon', px=2, py=3, points='0 0, 5 0, 5 5, 0 5')
@@ -1920,7 +1920,7 @@ $$
 
 ![distance (shortest distance) against px (x of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-segment-distance-curve)
 
-*distance (shortest distance) against px (x of the point) from 0.3 to 30 on a logarithmic axis. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: x1 = 0, y1 = 0, x2 = 6, y2 = 0. 41 points per curve computed by geometry-ai999x; marked: the worked example, px = 3, distance = 4.*
+*distance (shortest distance) against px (x of the point) from 0.3 to 30 on a logarithmic axis. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: x1 = 0.0, y1 = 0.0, x2 = 6.0, y2 = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, px = 3, distance = 4.*
 
 ```python
 geometry_ai999x.solve('point_segment_distance', px=3, py=4, x1=0, y1=0, x2=6, y2=0)
@@ -2111,7 +2111,7 @@ $$
 
 ![median_a (median from vertex A (to side a)) against a (side a (opposite A)) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-cevians-curve)
 
-*median_a (median from vertex A (to side a)) against a (side a (opposite A)) from 1.5 to 4.5. One curve for each value of b (side b (opposite B)): 4, 2, 8. Other inputs as in the worked example: c = 5. 31 points per curve computed by geometry-ai999x; marked: the worked example, a = 3, median_a = 4.272.*
+*median_a (median from vertex A (to side a)) against a (side a (opposite A)) from 1.5 to 4.5. One curve for each value of b (side b (opposite B)): 4, 2, 8. Other inputs as in the worked example: c = 5.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, a = 3, median_a = 4.272.*
 
 ```python
 geometry_ai999x.solve('triangle_cevians', a=3, b=4, c=5)
@@ -2254,9 +2254,9 @@ $$
 - **Assumes:** r1, r2, height > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (pi h (R^2 + R r + r^2)/3) against r1 (radius of one base) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/frustum-measures-curve)
+![volume (pi h (R^2 + R r + r^2)/3) against r2 (radius of the other base) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/frustum-measures-curve)
 
-*volume (pi h (R^2 + R r + r^2)/3) against r1 (radius of one base) from 0.6 to 60 on a logarithmic axis. Other inputs as in the worked example: r2 = 3, height = 4. 41 points computed by geometry-ai999x; marked: the worked example, r1 = 6, volume = 263.894.*
+*volume (pi h (R^2 + R r + r^2)/3) against r2 (radius of the other base) from 0.6 to 60 on a logarithmic axis. Other inputs as in the worked example: r1 = 3.0, height = 4.0. 41 points computed by geometry-ai999x; marked: the worked example, r2 = 6, volume = 263.894.*
 
 ```python
 geometry_ai999x.solve('frustum_measures', r1=6, r2=3, height=4)
@@ -2299,7 +2299,7 @@ $$
 
 ![volume (l w h / 3) against length (base length) from 3 to 9](https://www.ai999x.com/?ax_fig=geometry-ai999x/pyramid-measures-curve)
 
-*volume (l w h / 3) against length (base length) from 3 to 9. One curve for each value of width (base width): 6, 3, 12. Other inputs as in the worked example: height = 4. 31 points per curve computed by geometry-ai999x; marked: the worked example, length = 6, volume = 48.*
+*volume (l w h / 3) against length (base length) from 3 to 9. One curve for each value of width (base width): 6, 3, 12. Other inputs as in the worked example: height = 4.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, length = 6, volume = 48.*
 
 ```python
 geometry_ai999x.solve('pyramid_measures', length=6, width=6, height=4)
@@ -2348,7 +2348,7 @@ $$
 
 ![volume (base area * height) against n (number of sides of the base) from 1 to 14](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-prism-curve)
 
-*volume (base area * height) against n (number of sides of the base) from 1 to 14. One curve for each value of side (side length of the base): 2, 1, 4. Other inputs as in the worked example: height = 10. 12 points per curve computed by geometry-ai999x; marked: the worked example, n = 6, volume = 103.923.*
+*volume (base area * height) against n (number of sides of the base) from 1 to 14. One curve for each value of side (side length of the base): 2, 1, 4. Other inputs as in the worked example: height = 10.0. 12 points per curve computed by geometry-ai999x; marked: the worked example, n = 6, volume = 103.923.*
 
 ```python
 geometry_ai999x.solve('regular_prism', n=6, side=2, height=10)
@@ -2590,9 +2590,9 @@ $$
 - **Assumes:** a, $b > 0$; axis ratio at least 0.001
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![perimeter (4 a E(e^2), a the larger semi-axis) against a (one semi-axis) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-perimeter-curve)
+![perimeter (4 a E(e^2), a the larger semi-axis) against b (the other semi-axis) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-perimeter-curve)
 
-*perimeter (4 a E(e^2), a the larger semi-axis) against a (one semi-axis) from 0.2 to 20 on a logarithmic axis. One curve for each value of b (the other semi-axis): 2, 1, 4. 41 points per curve computed by geometry-ai999x; marked: the worked example, a = 2, perimeter = 12.5664.*
+*perimeter (4 a E(e^2), a the larger semi-axis) against b (the other semi-axis) from 0.3 to 30 on a logarithmic axis. One curve for each value of a (one semi-axis): 5, 2.5, 10. 41 points per curve computed by geometry-ai999x; marked: the worked example, b = 3, perimeter = 25.527.*
 
 ```python
 geometry_ai999x.solve('ellipse_perimeter', a=2, b=2)
@@ -2779,7 +2779,7 @@ $$
 
 ![distance (|a px + b py + c pz + d| / sqrt(a^2 + b^2 + c^2)) against py (y of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-plane-distance-curve)
 
-*distance (|a px + b py + c pz + d| / sqrt(a^2 + b^2 + c^2)) against py (y of the point) from 0.2 to 20 on a logarithmic axis. One curve for each value of pz (z of the point): 3, 1.5, 6. Other inputs as in the worked example: px = 1, a = 2, b = -1, c = 2, d = -3. 41 points per curve computed by geometry-ai999x; marked: the worked example, py = 2, distance = 1.*
+*distance (|a px + b py + c pz + d| / sqrt(a^2 + b^2 + c^2)) against py (y of the point) from 0.2 to 20 on a logarithmic axis. One curve for each value of pz (z of the point): 3, 1.5, 6. Other inputs as in the worked example: px = 1.0, a = 2.0, b = -1.0, c = 2.0, d = -3.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, py = 2, distance = 1.*
 
 ```python
 geometry_ai999x.solve('point_plane_distance', px=1, py=2, pz=3, a=2, b=-1, c=2, d=-3)
@@ -2829,7 +2829,7 @@ $$
 
 ![x (x of the intersection) against dx (x of the direction) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-plane-intersection-curve)
 
-*x (x of the intersection) against dx (x of the direction) from 0.1 to 10 on a logarithmic axis. One curve for each value of x0 (x of a point on the line): 1, 0.5, 2. Other inputs as in the worked example: y0 = 0, z0 = 0, dy = 2, dz = 3, a = 1, b = 1, c = 1, d = -7. 41 points per curve computed by geometry-ai999x; marked: the worked example, dx = 1, x = 2.*
+*x (x of the intersection) against dx (x of the direction) from 0.1 to 10 on a logarithmic axis. One curve for each value of x0 (x of a point on the line): 1, 0.5, 2. Other inputs as in the worked example: y0 = 0.0, z0 = 0.0, dy = 2.0, dz = 3.0, a = 1.0, b = 1.0, c = 1.0, d = -7.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, dx = 1, x = 2.*
 
 ```python
 geometry_ai999x.solve('line_plane_intersection', x0=1, y0=0, z0=0, dx=1, dy=2, dz=3, a=1, b=1, c=1, d=-7)
@@ -2919,7 +2919,7 @@ $$
 
 ![angle (angle between the planes, degrees, 0 to 90) against b1 (y-coefficient of plane 1) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-planes-curve)
 
-*angle (angle between the planes, degrees, 0 to 90) against b1 (y-coefficient of plane 1) from -1 to 1. One curve for each value of a1 (x-coefficient of plane 1): 0, -0.5, 0.5. Other inputs as in the worked example: c1 = 1, a2 = 1, b2 = 0, c2 = 1. 41 points per curve computed by geometry-ai999x; marked: the worked example, b1 = 0, angle = 45.*
+*angle (angle between the planes, degrees, 0 to 90) against b1 (y-coefficient of plane 1) from -1 to 1. One curve for each value of a1 (x-coefficient of plane 1): 0, -0.5, 0.5. Other inputs as in the worked example: c1 = 1.0, a2 = 1.0, b2 = 0.0, c2 = 1.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, b1 = 0, angle = 45.*
 
 ```python
 geometry_ai999x.solve('angle_between_planes', a1=0, b1=0, c1=1, a2=1, b2=0, c2=1)
@@ -3055,7 +3055,7 @@ $$
 
 ![distance (great-circle distance (radius units)) against lon2 (longitude of point 2) from 9 to 900 on a logarithmic axis](https://www.ai999x.com/?ax_fig=geometry-ai999x/great-circle-distance-curve)
 
-*distance (great-circle distance (radius units)) against lon2 (longitude of point 2) from 9 to 900 on a logarithmic axis. One curve for each value of radius (sphere radius (default 6371, the mean Earth radius in km)): 1, 0.5, 2. Other inputs as in the worked example: lat1 = 0, lon1 = 0, lat2 = 0. 33 points per curve computed by geometry-ai999x; marked: the worked example, lon2 = 90, distance = 1.5708.*
+*distance (great-circle distance (radius units)) against lon2 (longitude of point 2) from 9 to 900 on a logarithmic axis. One curve for each value of radius (sphere radius (default 6371, the mean Earth radius in km)): 1, 0.5, 2. Other inputs as in the worked example: lat1 = 0.0, lon1 = 0.0, lat2 = 0.0. 33 points per curve computed by geometry-ai999x; marked: the worked example, lon2 = 90, distance = 1.5708.*
 
 ```python
 geometry_ai999x.solve('great_circle_distance', lat1=0, lon1=0, lat2=0, lon2=90, radius=1)
@@ -3102,7 +3102,7 @@ $$
 
 ![bearing (initial bearing, degrees in [0, 360), clockwise from north) against lon2 (longitude of the destination) from 9 to 900 on a logarithmic axis](https://www.ai999x.com/?ax_fig=geometry-ai999x/initial-bearing-curve)
 
-*bearing (initial bearing, degrees in [0, 360), clockwise from north) against lon2 (longitude of the destination) from 9 to 900 on a logarithmic axis. One curve for each value of lat2 (latitude of the destination): 0, 22.5, 67.5. Other inputs as in the worked example: lat1 = 0, lon1 = 0. 33 points per curve computed by geometry-ai999x; marked: the worked example, lon2 = 90, bearing = 90.*
+*bearing (initial bearing, degrees in [0, 360), clockwise from north) against lon2 (longitude of the destination) from 9 to 900 on a logarithmic axis. One curve for each value of lat2 (latitude of the destination): 0, 22.5, 67.5. Other inputs as in the worked example: lat1 = 0.0, lon1 = 0.0. 33 points per curve computed by geometry-ai999x; marked: the worked example, lon2 = 90, bearing = 90.*
 
 ```python
 geometry_ai999x.solve('initial_bearing', lat1=0, lon1=0, lat2=0, lon2=90)
@@ -3147,7 +3147,7 @@ $$
 
 ![The rows of points (the vertices (lat lon): lat1 lon1, lat2 lon2, lat3 lon3, degrees) drawn as points (numbered in order), joined in order as a polygon](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-triangle-area-points)
 
-*The rows of points (the vertices (lat lon): lat1 lon1, lat2 lon2, lat3 lon3, degrees) drawn as points (numbered in order), joined in order as a polygon. Returned: excess = 90, area = 1.5708. Other inputs: radius = 1.*
+*The rows of points (the vertices (lat lon): lat1 lon1, lat2 lon2, lat3 lon3, degrees) drawn as points (numbered in order), joined in order as a polygon. Returned: excess = 90, area = 1.5708. Other inputs: radius = 1.0.*
 
 ![area (area E R^2 (E in radians)) against radius (sphere radius (default 1; 'Earth' means 6371 km)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-triangle-area-curve)
 
@@ -3385,7 +3385,7 @@ $$
 
 ![curvature (ab / (a^2 sin^2 t + b^2 cos^2 t)^(3/2)) against t (parameter t (eccentric anomaly), degrees) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-curvature-curve)
 
-*curvature (ab / (a^2 sin^2 t + b^2 cos^2 t)^(3/2)) against t (parameter t (eccentric anomaly), degrees) from -1 to 1. One curve for each value of b (semi-axis along y): 3, 1.5, 6. Other inputs as in the worked example: a = 5. 41 points per curve computed by geometry-ai999x; marked: the worked example, t = 0, curvature = 0.555556.*
+*curvature (ab / (a^2 sin^2 t + b^2 cos^2 t)^(3/2)) against t (parameter t (eccentric anomaly), degrees) from -1 to 1. One curve for each value of b (semi-axis along y): 3, 1.5, 6. Other inputs as in the worked example: a = 5.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, t = 0, curvature = 0.555556.*
 
 ```python
 geometry_ai999x.solve('ellipse_curvature', a=5, b=3, t=0)
@@ -3436,7 +3436,7 @@ $$
 
 ![gaussian (Gaussian curvature K) against x0 (x of the point) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/surface-curvature-curve)
 
-*gaussian (Gaussian curvature K) against x0 (x of the point) from -1 to 1. One curve for each value of A (coefficient of x^2): 1, 0.5, 2. Other inputs as in the worked example: B = 0, C = 1, D = 0, E = 0, y0 = 0. 41 points per curve computed by geometry-ai999x; marked: the worked example, x0 = 0, gaussian = 4.*
+*gaussian (Gaussian curvature K) against x0 (x of the point) from -1 to 1. One curve for each value of A (coefficient of x^2): 1, 0.5, 2. Other inputs as in the worked example: B = 0.0, C = 1.0, D = 0.0, E = 0.0, y0 = 0.0, F = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, x0 = 0, gaussian = 4.*
 
 ```python
 geometry_ai999x.solve('surface_curvature', A=1, B=0, C=1, D=0, E=0, x0=0, y0=0)
@@ -3485,7 +3485,7 @@ $$
 
 ![gaussian (K = cos v / (r (R + r cos v))) against minor (tube radius r) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-curvature-curve)
 
-*gaussian (K = cos v / (r (R + r cos v))) against minor (tube radius r) from 0.5 to 1.5. One curve for each value of major (major radius R): 3, 1.5, 6. Other inputs as in the worked example: v = 0. 31 points per curve computed by geometry-ai999x; marked: the worked example, minor = 1, gaussian = 0.25.*
+*gaussian (K = cos v / (r (R + r cos v))) against minor (tube radius r) from 0.5 to 1.5. One curve for each value of major (major radius R): 3, 1.5, 6. Other inputs as in the worked example: v = 0.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, minor = 1, gaussian = 0.25.*
 
 ```python
 geometry_ai999x.solve('torus_curvature', major=3, minor=1, v=0)
@@ -3537,7 +3537,7 @@ $$
 
 ![length (arc length) against a (coefficient of x^2) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/parabola-arc-length-curve)
 
-*length (arc length) against a (coefficient of x^2) from 0.1 to 10 on a logarithmic axis. One curve for each value of x1 (end x): 1, 0.5, 2. Other inputs as in the worked example: b = 0, x0 = 0. 41 points per curve computed by geometry-ai999x; marked: the worked example, a = 1, length = 1.47894.*
+*length (arc length) against a (coefficient of x^2) from 0.1 to 10 on a logarithmic axis. One curve for each value of x1 (end x): 1, 0.5, 2. Other inputs as in the worked example: b = 0.0, x0 = 0.0, c = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, a = 1, length = 1.47894.*
 
 ```python
 geometry_ai999x.solve('parabola_arc_length', a=1, b=0, x0=0, x1=1)
@@ -3806,7 +3806,7 @@ $$
 
 ![The rows of points (the candidate points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/nearest-neighbor-points)
 
-*The rows of points (the candidate points: x1 y1, x2 y2, ...) drawn as points (numbered in order), returned (x, y) pairs marked. Returned: index = 3, distance = 1, nx = 2, ny = 3. Other inputs: px = 3, py = 3.*
+*The rows of points (the candidate points: x1 y1, x2 y2, ...) drawn as points (numbered in order), returned (x, y) pairs marked. Returned: index = 3, distance = 1, nx = 2, ny = 3. Other inputs: px = 3.0, py = 3.0.*
 
 ![distance (its distance) against py (y of the query point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/nearest-neighbor-curve)
 
@@ -3851,7 +3851,7 @@ $$
 
 ![The rows of points (the triangle's vertices A, B, C) drawn as points (numbered in order), joined in order as a polygon](https://www.ai999x.com/?ax_fig=geometry-ai999x/barycentric-coordinates-points)
 
-*The rows of points (the triangle's vertices A, B, C) drawn as points (numbered in order), joined in order as a polygon. Returned: l1 = 0.5, l2 = 0.25, l3 = 0.25. Other inputs: px = 1, py = 1.*
+*The rows of points (the triangle's vertices A, B, C) drawn as points (numbered in order), joined in order as a polygon. Returned: l1 = 0.5, l2 = 0.25, l3 = 0.25. Other inputs: px = 1.0, py = 1.0.*
 
 ![l1 (weight of A) against px (x of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/barycentric-coordinates-curve)
 
