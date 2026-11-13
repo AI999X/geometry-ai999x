@@ -44,8 +44,9 @@ result.show()
 | Polygons / lattice polygons | [Pick's theorem: lattice points of a polygon](#pick_lattice_points) |
 | Polygons / regular polygons | [Polygon angles and diagonals](#regular_polygon_angles), [Regular polygon: area, perimeter, apothem, circumradius](#regular_polygon_measures) |
 | Polyhedra / regular polyhedra | [Platonic solids: counts, Euler characteristic, volume, surface, radii](#platonic_solid) |
+| Similarity / similar figures | [Similar figures: scale factor, missing lengths, area and volume ratios](#similar_figures) |
 | Solid coordinate geometry / lines | [Distance between two lines in space (skew or parallel)](#skew_lines_distance) |
-| Solid coordinate geometry / lines and planes | [Intersection of a line and a plane](#line_plane_intersection) |
+| Solid coordinate geometry / lines and planes | [Intersection of a line and a plane](#line_plane_intersection), [Line in space: vector, parametric and symmetric equations](#line_in_space) |
 | Solid coordinate geometry / planes | [Plane through three points](#plane_through_points), [Distance from a point to a plane](#point_plane_distance), [Angle between two planes](#angle_between_planes) |
 | Solid coordinate geometry / polyhedra | [Tetrahedron from four vertices: volume and surface area](#tetrahedron_measures) |
 | Solid coordinate geometry / spheres | [Sphere through four points (circumsphere of a tetrahedron)](#sphere_four_points) |
@@ -181,6 +182,8 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 | nearest_neighbor | Nearest neighbour of a query point | px, py, points | index, distance, nx, ny |
 | barycentric_coordinates | Barycentric coordinates of a point in a triangle | px, py, points | l1, l2, l3 |
 | polygon_interior_angles | Interior angles of a polygon from its vertices | points | angles, angle_sum, reflex_vertices |
+| similar_figures | Similar figures: scale factor, missing lengths, area and volume ratios | measure, m1, m2, other_length, other_area, other_volume | scale_factor, area_ratio, volume_ratio, length2, area2, volume2 |
+| line_in_space | Line in space: vector, parametric and symmetric equations | point, second_point, direction, t | vector_form, parametric, symmetric, x0, y0, z0, dx, dy, dz, ux, uy, uz, xt, yt, zt |
 
 <a id="rectangle_measures"></a>
 
@@ -3912,3 +3915,140 @@ geometry_ai999x.solve('polygon_interior_angles', points='0 0, 2 0, 2 2, 1 1, 0 2
 | question | outcome | result |
 |---|---|---|
 | Find the interior angles of the polygon with vertices (0, 0), (2, 0), (2, 2), (1, 1), (0, 2). | SOLVED | angles = [90.0, 90.0, 45.0, 270.0, 45.0], angle_sum = 540, reflex_vertices = 1 |
+
+<a id="similar_figures"></a>
+
+### Similar figures: scale factor, missing lengths, area and volume ratios, `similar_figures`
+
+For two similar figures, the scale factor from corresponding lengths (or areas, or volumes), the ratios of their areas and volumes, and the measurements of the second figure that correspond to a length, area or volume of the first.
+
+$$
+k = \frac{l_2}{l_1},\qquad \frac{A_2}{A_1} = k^2,\qquad \frac{V_2}{V_1} = k^3
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `measure` | what the two corresponding values measure: lengths, areas or volumes |  |
+| `m1` | the value in the first figure |  |
+| `m2` | the corresponding value in the second figure |  |
+| `other_length` | another length of the first figure |  |
+| `other_area` | an area of the first figure |  |
+| `other_volume` | a volume of the first figure |  |
+
+| output | meaning |
+|---|---|
+| `scale_factor` | the scale factor k (second : first) |
+| `area_ratio` | ratio of areas $k^{2}$ |
+| `volume_ratio` | ratio of volumes $k^{3}$ |
+| `length2` | the corresponding length of the second figure |
+| `area2` | the corresponding area of the second figure |
+| `volume2` | the corresponding volume of the second figure |
+
+- **Method:** $k = l_{2}/l_{1}$ (or sqrt of the area ratio, or cube root of the volume ratio); lengths scale by k, areas by $k^{2}$, volumes by $k^{3}$
+- **Assumes:** the values are positive; the figures are similar (one is a scaled copy of the other)
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![scale_factor (the scale factor k (second : first)) against m1 (the value in the first figure) from 2 to 6](https://www.ai999x.com/?ax_fig=geometry-ai999x/similar-figures-curve)
+
+*scale_factor (the scale factor k (second : first)) against m1 (the value in the first figure) from 2 to 6. One curve for each value of m2 (the corresponding value in the second figure): 6, 3, 12. Other inputs as in the worked example: measure = lengths. 31 points per curve computed by geometry-ai999x; marked: the worked example, m1 = 4, scale_factor = 1.5.*
+
+![scale_factor (the scale factor k (second : first)) over m1 (the value in the first figure) from 2 to 6 and m2 (the corresponding value in the second figure) from 3 to 9: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/similar-figures-field)
+
+*scale_factor (the scale factor k (second : first)) over m1 (the value in the first figure) from 2 to 6 and m2 (the corresponding value in the second figure) from 3 to 9: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0.5 to dark 4.5); iso-lines at scale_factor = 1, 2, 3, 4. Other inputs as in the worked example: measure = lengths. Marked: the worked example, m1 = 4, m2 = 6, scale_factor = 1.5.*
+
+```python
+geometry_ai999x.solve('similar_figures', measure='lengths', m1=4, m2=6)
+# -> scale_factor = 1.5, area_ratio = 2.25, volume_ratio = 3.375, length2 = none, area2 = none, volume2 = none   (SOLVED)
+```
+
+```python
+geometry_ai999x.solve('similar_figures', measure='volumes', m1=27, m2=64)
+# -> scale_factor = 1.33333, area_ratio = 1.77778, volume_ratio = 2.37037, length2 = none, area2 = none, volume2 = none   (SOLVED)
+```
+
+```python
+geometry_ai999x.solve('similar_figures', measure='lengths', m1=4, m2=6, other_length=5, other_area=12)
+# -> scale_factor = 1.5, area_ratio = 2.25, volume_ratio = 3.375, length2 = 7.5, area2 = 27, volume2 = none   (SOLVED)
+```
+
+```python
+geometry_ai999x.solve('similar_figures', measure='areas', m1=16, m2=25, other_length=8)
+# -> scale_factor = 1.25, area_ratio = 1.5625, volume_ratio = 1.95312, length2 = 10, area2 = none, volume2 = none   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Two similar figures have corresponding sides 4 and 6. Find the scale factor, the area ratio and the volume ratio. | SOLVED | scale_factor = 1.5, area_ratio = 2.25, volume_ratio = 3.375, length2 = none, area2 = none, volume2 = none |
+| Two similar solids have volumes 27 and 64. Find the scale factor and the ratio of their surface areas. | SOLVED | scale_factor = 1.33333, area_ratio = 1.77778, volume_ratio = 2.37037, length2 = none, area2 = none, volume2 = none |
+| Two similar figures have corresponding sides 4 cm and 6 cm; the first has another side of 5 cm and an area of 12 cm^2. Find the corresponding side and area of the second. | SOLVED | scale_factor = 1.5, area_ratio = 2.25, volume_ratio = 3.375, length2 = 7.5, area2 = 27, volume2 = none |
+| Two similar figures have areas 16 and 25. The first has a side of 8. Find the corresponding side of the second. | SOLVED | scale_factor = 1.25, area_ratio = 1.5625, volume_ratio = 1.95312, length2 = 10, area2 = none, volume2 = none |
+| Two similar figures have corresponding sides 4 and 0. Find the scale factor. | INVALID_INPUT | Similar figures: scale factor, missing lengths, area and volume ratios: m2 must be positive. |
+
+<a id="line_in_space"></a>
+
+### Line in space: vector, parametric and symmetric equations, `line_in_space`
+
+The vector, parametric and symmetric equations of the line in space through two points, or through a point with a given direction, its unit direction and the point at a given parameter t.
+
+$$
+\mathbf r = \mathbf P + t\,\mathbf v,\qquad \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `point` | a point P on the line: x y z |  |
+| `second_point` | a second point Q on the line: x y z |  |
+| `direction` | a direction vector: x y z |  |
+| `t` | a parameter value t (the point P + t v) |  |
+
+| output | meaning |
+|---|---|
+| `vector_form` | $r = P + t$ v |
+| `parametric` | $x = x_{0} + a$ t, $y = y_{0} + b$ t, $z = z_{0} + c$ t |
+| `symmetric` | $(x - x_{0})/a = (y - y_{0})/b = (z - z_{0})/c$ (a coordinate whose direction component is 0 stays fixed) |
+| `x0` | x of P |
+| `y0` | y of P |
+| `z0` | z of P |
+| `dx` | x of the direction v |
+| `dy` | y of the direction v |
+| `dz` | z of the direction v |
+| `ux` | x of the unit direction |
+| `uy` | y of the unit direction |
+| `uz` | z of the unit direction |
+| `xt` | x of the point at t |
+| `yt` | y of the point at t |
+| `zt` | z of the point at t |
+
+- **Method:** $v = Q - P$ (or the given direction); $r = P + t$ v; eliminating t gives the symmetric equations
+- **Assumes:** either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The worked example of Line in space: vector, parametric and symmetric equations as inputs and results: stated point = 1 2 3, second_point = 4 6 9; returned by geometry-ai999x: vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1, y0 = 2, z0 = 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-in-space-io)
+
+*The worked example of Line in space: vector, parametric and symmetric equations as inputs and results: stated point = 1 2 3, second_point = 4 6 9; returned by geometry-ai999x: vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1, y0 = 2, z0 = 3.*
+
+```python
+geometry_ai999x.solve('line_in_space', point='1 2 3', second_point='4 6 9')
+# -> vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1, y0 = 2, z0 = 3, dx = 3, dy = 4, dz = 6, ux = 0.384111, uy = 0.512148, uz = 0.768221, xt = none, yt = none, zt = none   (SOLVED)
+```
+
+```python
+geometry_ai999x.solve('line_in_space', point=[1, -2, 0], direction=[2, 0, -1], t=3)
+# -> vector_form = r = (1, -2, 0) + t(2, 0, -1), parametric = x = 1 + 2t, y = -2, z = -t, symmetric = (x - 1)/2 = z/(-1); y = -2, x0 = 1, y0 = -2, z0 = 0, dx = 2, dy = 0, dz = -1, ux = 0.894427, uy = 0, uz = -0.447214, xt = 7, yt = -2, zt = -3   (SOLVED)
+```
+
+```python
+geometry_ai999x.solve('line_in_space', point=[0, 0, 0], second_point=[2, -1, 2])
+# -> vector_form = r = (0, 0, 0) + t(2, -1, 2), parametric = x = 2t, y = -t, z = 2t, symmetric = x/2 = y/(-1) = z/2, x0 = 0, y0 = 0, z0 = 0, dx = 2, dy = -1, dz = 2, ux = 0.666667, uy = -0.333333, uz = 0.666667, xt = none, yt = none, zt = none   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Find the vector, parametric and symmetric equations of the line through (1, 2, 3) and (4, 6, 9). | SOLVED | vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1, y0 = 2, z0 = 3, dx = 3, dy = 4, dz = 6, ux = 0.384111, uy = 0.512148, uz = 0.768221, xt = none, yt = none, zt = none |
+| Find the parametric equations of the line through (1, -2, 0) with direction (2, 0, -1) and the point at t = 3. | SOLVED | vector_form = r = (1, -2, 0) + t(2, 0, -1), parametric = x = 1 + 2t, y = -2, z = -t, symmetric = (x - 1)/2 = z/(-1); y = -2, x0 = 1, y0 = -2, z0 = 0, dx = 2, dy = 0, dz = -1, ux = 0.894427, uy = 0, uz = -0.447214, xt = 7, yt = -2, zt = -3 |
+| Find the symmetric equations of the line through (0, 0, 0) and (2, -1, 2). | SOLVED | vector_form = r = (0, 0, 0) + t(2, -1, 2), parametric = x = 2t, y = -t, z = 2t, symmetric = x/2 = y/(-1) = z/2, x0 = 0, y0 = 0, z0 = 0, dx = 2, dy = -1, dz = 2, ux = 0.666667, uy = -0.333333, uz = 0.666667, xt = none, yt = none, zt = none |
+| Find the equations of the line through (1, 2, 3) and (1, 2, 3). | INVALID_INPUT | Line in space: vector, parametric and symmetric equations: the two points coincide: they do not determine a line. |

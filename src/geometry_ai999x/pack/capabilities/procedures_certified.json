@@ -75,9 +75,11 @@
   "hausdorff_distance",
   "nearest_neighbor",
   "barycentric_coordinates",
-  "polygon_interior_angles"
+  "polygon_interior_angles",
+  "similar_figures",
+  "line_in_space"
  ],
- "generated": "2026-10-23",
+ "generated": "2026-11-13",
  "tool": "tools/certify_procedures.py",
  "report": "release/procedure_certification.json"
 }

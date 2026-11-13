@@ -21,42 +21,42 @@ figcaption{font-size:9pt;color:#555}
 .pb{page-break-after:always}
 </style></head><body>
 <h1>geometry: the Geometry program, user guide</h1>
-<p><strong>geometry-ai999x 1.1.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
-<p>Geometry covers plane and solid geometry, coordinate geometry, conic sections, polygons and polyhedra, computational geometry (convex hulls, Voronoi, triangulation) and curves and surfaces. This guide is about <code>geometry</code>, the model as a self-contained program for Windows and Linux: 76 capabilities in 13 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/geometry-ai999x/); the Python package (<code>pip install geometry-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
+<p><strong>geometry-ai999x 1.6.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p>Geometry covers plane and solid geometry, coordinate geometry, conic sections, polygons and polyhedra, computational geometry (convex hulls, Voronoi, triangulation) and curves and surfaces. This guide is about <code>geometry</code>, the model as a self-contained program for Windows and Linux: 78 capabilities in 14 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/geometry-ai999x/); the Python package (<code>pip install geometry-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
 <h2>Contents</h2>
 <ul><li>1. Get it: desktop app, command line, browser, Python</li><li>2. Quick start</li><li>3. Writing inputs</li><li>4. Outcomes and exit codes</li><li>5. Scripts and agents: batch and JSON</li><li>6. Figures</li><li>7. In a web page or Node.js: WebAssembly</li><li>8. Every capability</li></ul>
 <h2>1. Get it</h2>
-<p>Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
-<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Geometry</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Geometry</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Version 1.6.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
+<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Geometry</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-geometry-1.6.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Geometry</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-geometry-1.6.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz</td></tr></tbody></table>
 <h3>Desktop app</h3>
-<p>Geometry in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geometry-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geometry.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+<p>Geometry in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geometry-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geometry.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-geometry-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-geometry-1.5.0-linux-x86_64.tar.gz
-./ai999x-geometry-1.5.0-linux-x86_64/ai999x-geometry</code></pre>
-<p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+tar xzf ai999x-geometry-1.6.0-linux-x86_64.tar.gz
+./ai999x-geometry-1.6.0-linux-x86_64/ai999x-geometry</code></pre>
+<p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
-./ai999x-1.5.0-linux-x86_64/ai999x</code></pre>
+tar xzf ai999x-1.6.0-linux-x86_64.tar.gz
+./ai999x-1.6.0-linux-x86_64/ai999x</code></pre>
 <h3>Command line, Linux</h3>
 <p>The bundle holds one program per model; <code>geometry</code> is this one. The checksum line should print OK.</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
+mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
 geometry --version</code></pre>
 <h3>Command line, Windows (PowerShell)</h3>
 <p>The fourth line should print True.</p>
-<pre><code class="powershell">$F = &quot;ai999x-cli-1.5.0-windows-x86_64.zip&quot;
-Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.5.0/$F&quot; -OutFile $F
-Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS&quot; -OutFile SHA256SUMS
+<pre><code class="powershell">$F = &quot;ai999x-cli-1.6.0-windows-x86_64.zip&quot;
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.6.0/$F&quot; -OutFile $F
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS&quot; -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split &#x27; &#x27;)[0]
 Expand-Archive $F -DestinationPath &quot;$env:LOCALAPPDATA\AI999X&quot; -Force
-$D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
+$D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
 [Environment]::SetEnvironmentVariable(&quot;Path&quot;, [Environment]::GetEnvironmentVariable(&quot;Path&quot;, &quot;User&quot;) + &quot;;$D&quot;, &quot;User&quot;)
 geometry --version</code></pre>
 <h3>In your browser</h3>
@@ -67,7 +67,7 @@ geometry --version</code></pre>
 <h3>2.1 Check the install</h3>
 <p>Prints the model, its version and that this is the Rust build.</p>
 <pre><code class="shell">$ geometry --version
-geometry-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)</code></pre>
+geometry-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)</code></pre>
 <h3>2.2 Ask in words</h3>
 <p>Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.</p>
 <pre><code class="shell">$ geometry ask &quot;Find the circumcenter and circumradius of the triangle with vertices (0, 0), (4, 0) and (0, 3).&quot;
@@ -86,8 +86,8 @@ circle_circle_intersection           Intersection of two circles  (coordinate ge
 line_intersection                    Intersection point of two lines  (coordinate geometry / lines)
 segment_intersection                 Intersection of two line segments  (computational geometry / intersections)
 angle_between_lines                  Angle between two lines  (coordinate geometry / lines)
-reflect_point_line                   Reflection of a point in a line  (transformations / reflections)
 convex_polygon_intersection          Area of the intersection of two convex polygons  (computational geometry / polygon clipping)
+reflect_point_line                   Reflection of a point in a line  (transformations / reflections)
 … 12 more</code></pre>
 <h3>2.4 List the capabilities</h3>
 <p>Every capability the program answers: its id (what you pass to solve) and its name.</p>
@@ -100,7 +100,7 @@ circle_circle_intersection               Intersection of two circles
 circle_line_intersection                 Intersection of a circle and a line
 circle_measures                          Circle: area, circumference and diameter
 circular_segment                         Circular segment: area, chord, height, arc
-… 68 more</code></pre>
+… 70 more</code></pre>
 <h3>2.5 What a capability needs</h3>
 <p>The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.</p>
 <pre><code class="shell">$ geometry info circle_line_intersection
@@ -837,7 +837,26 @@ inradius = 1.511522628
   solid = icosahedron
   assumes: edge &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the fundamental geometric properties of a specified Platonic solid based on its edge length. Using the provided edge size 2, it computes the exact counts for vertices 12, edges 30, and faces 20. These integer counts satisfy the topological constraint where the Euler characteristic is always 2. Additionally, the method derives continuous metrics including the volume 17.4536, surface area 34.641, circumradius 1.90211, and inradius 1.51152, providing a complete description of the polyhedron&#x27;s spatial extent.</p>
-<h3>Solid coordinate geometry (8)</h3>
+<h3>Similarity (1)</h3>
+<h4 id="similar_figures">Similar figures: scale factor, missing lengths, area and volume ratios, <code>similar_figures</code></h4>
+<p>For two similar figures, the scale factor from corresponding lengths (or areas, or volumes), the ratios of their areas and volumes, and the measurements of the second figure that correspond to a length, area or volume of the first.</p>
+<div class="math">\[k = \frac{l_2}{l_1},\qquad \frac{A_2}{A_1} = k^2,\qquad \frac{V_2}{V_1} = k^3\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>measure</code></td><td>in</td><td>what the two corresponding values measure: lengths, areas or volumes</td><td>, </td></tr><tr><td><code>m1</code></td><td>in</td><td>the value in the first figure</td><td>, </td></tr><tr><td><code>m2</code></td><td>in</td><td>the corresponding value in the second figure</td><td>, </td></tr><tr><td><code>other_length</code></td><td>in</td><td>another length of the first figure (optional)</td><td>, </td></tr><tr><td><code>other_area</code></td><td>in</td><td>an area of the first figure (optional)</td><td>, </td></tr><tr><td><code>other_volume</code></td><td>in</td><td>a volume of the first figure (optional)</td><td>, </td></tr><tr><td><code>scale_factor</code></td><td>out</td><td>the scale factor k (second : first)</td><td>, </td></tr><tr><td><code>area_ratio</code></td><td>out</td><td>ratio of areas k^2</td><td>, </td></tr><tr><td><code>volume_ratio</code></td><td>out</td><td>ratio of volumes k^3</td><td>, </td></tr><tr><td><code>length2</code></td><td>out</td><td>the corresponding length of the second figure</td><td>, </td></tr><tr><td><code>area2</code></td><td>out</td><td>the corresponding area of the second figure</td><td>, </td></tr><tr><td><code>volume2</code></td><td>out</td><td>the corresponding volume of the second figure</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> the values are positive; the figures are similar (one is a scaled copy of the other).</p>
+<pre><code class="shell">$ geometry solve similar_figures measure=lengths m1=4 m2=6
+scale_factor = 1.5
+area_ratio = 2.25
+volume_ratio = 3.375
+length2 = null
+area2 = null
+volume2 = null
+  by: Similar figures: scale factor, missing lengths, area and volume ratios  (k = l2/l1 (or sqrt of the area ratio, or cube root of the volume ratio); lengths scale by k, areas by k^2, volumes by k^3)
+  m1 = 4
+  m2 = 6
+  measure = lengths
+  assumes: the values are positive; the figures are similar (one is a scaled copy of the other)</code></pre>
+<p>In the worked example, measure = lengths, m1 = 4, m2 = 6 go through the equation above and give scale_factor = 1.5, area_ratio = 2.25, volume_ratio = 3.375, length2 = None. It applies only when the values are positive; the figures are similar (one is a scaled copy of the other): outside that it says what is wrong instead of returning a number.</p>
+<h3>Solid coordinate geometry (9)</h3>
 <h4 id="angle_between_planes">Angle between two planes, <code>angle_between_planes</code></h4>
 <p>The acute (dihedral) angle between two planes given by their equations (only the normals matter).</p>
 <div class="math">\[\cos\theta = \frac{|\mathbf n_1\cdot\mathbf n_2|}{\|\mathbf n_1\|\|\mathbf n_2\|}\]</div>
@@ -908,6 +927,30 @@ t = 1
   d = -7
   assumes: direction not zero; a, b, c not all 0; line not parallel to the plane (exact test)</code></pre>
 <p>In the worked example, x0 = 1, y0 = 0, z0 = 0, dx = 1, dy = 2, dz = 3, a = 1, b = 1, c = 1, d = -7 go through the equation above and give x = 2, y = 2, z = 3, t = 1. It applies only when direction not zero; a, b, c not all 0; line not parallel to the plane (exact test): outside that it says what is wrong instead of returning a number.</p>
+<h4 id="line_in_space">Line in space: vector, parametric and symmetric equations, <code>line_in_space</code></h4>
+<p>The vector, parametric and symmetric equations of the line in space through two points, or through a point with a given direction, its unit direction and the point at a given parameter t.</p>
+<div class="math">\[\mathbf r = \mathbf P + t\,\mathbf v,\qquad \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>point</code></td><td>in</td><td>a point P on the line: x y z</td><td>, </td></tr><tr><td><code>second_point</code></td><td>in</td><td>a second point Q on the line: x y z (optional)</td><td>, </td></tr><tr><td><code>direction</code></td><td>in</td><td>a direction vector: x y z (optional)</td><td>, </td></tr><tr><td><code>t</code></td><td>in</td><td>a parameter value t (the point P + t v) (optional)</td><td>, </td></tr><tr><td><code>vector_form</code></td><td>out</td><td>r = P + t v</td><td>, </td></tr><tr><td><code>parametric</code></td><td>out</td><td>x = x0 + a t, y = y0 + b t, z = z0 + c t</td><td>, </td></tr><tr><td><code>symmetric</code></td><td>out</td><td>(x - x0)/a = (y - y0)/b = (z - z0)/c (a coordinate whose direction component is 0 stays fixed)</td><td>, </td></tr><tr><td><code>x0</code></td><td>out</td><td>x of P</td><td>, </td></tr><tr><td><code>y0</code></td><td>out</td><td>y of P</td><td>, </td></tr><tr><td><code>z0</code></td><td>out</td><td>z of P</td><td>, </td></tr><tr><td><code>dx</code></td><td>out</td><td>x of the direction v</td><td>, </td></tr><tr><td><code>dy</code></td><td>out</td><td>y of the direction v</td><td>, </td></tr><tr><td><code>dz</code></td><td>out</td><td>z of the direction v</td><td>, </td></tr><tr><td><code>ux</code></td><td>out</td><td>x of the unit direction</td><td>, </td></tr><tr><td><code>uy</code></td><td>out</td><td>y of the unit direction</td><td>, </td></tr><tr><td><code>uz</code></td><td>out</td><td>z of the unit direction</td><td>, </td></tr><tr><td><code>xt</code></td><td>out</td><td>x of the point at t</td><td>, </td></tr><tr><td><code>yt</code></td><td>out</td><td>y of the point at t</td><td>, </td></tr><tr><td><code>zt</code></td><td>out</td><td>z of the point at t</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P.</p>
+<pre><code class="shell">$ geometry solve line_in_space &quot;second_point=[4, 6, 9]&quot; &quot;point=[1, 2, 3]&quot;
+vector_form = r = (1, 2, 3) + t(3, 4, 6)
+parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t
+symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6
+x0 = 1
+y0 = 2
+z0 = 3
+dx = 3
+dy = 4
+dz = 6
+ux = 0.3841106398
+uy = 0.5121475197
+uz = 0.7682212796
+xt = null
+yt = null
+zt = null
+  by: Line in space: vector, parametric and symmetric equations  (v = Q - P (or the given direction); r = P + t v; eliminating t gives the symmetric equations)
+  assumes: either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P</code></pre>
+<p>In the worked example, second_point = [4, 6, 9], point = [1, 2, 3] go through the equation above and give vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1. It applies only when either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P: outside that it says what is wrong instead of returning a number.</p>
 <h4 id="plane_through_points">Plane through three points, <code>plane_through_points</code></h4>
 <p>The equation a x + b y + c z + d = 0 of the plane through three points, with (a, b, c) a unit normal.</p>
 <div class="math">\[\mathbf n = (B-A)\times(C-A),\quad \mathbf n\cdot\mathbf x - \mathbf n\cdot A = 0\]</div>

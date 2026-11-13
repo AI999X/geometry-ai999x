@@ -15,7 +15,7 @@ def _bind(product) -> None:
     _P = product
 
 
-CapabilityId = Literal["angle_between_lines", "angle_between_planes", "annulus_area", "barycentric_coordinates", "circle_circle_intersection", "circle_line_intersection", "circle_measures", "circular_segment", "closest_pair", "cone_measures", "conic_classify", "convex_hull", "convex_polygon_intersection", "cuboid_measures", "curvature_of_graph", "cylinder_measures", "delaunay_voronoi_counts", "dilate_point", "ellipse_curvature", "ellipse_perimeter", "farthest_pair", "frustum_measures", "great_circle_distance", "hausdorff_distance", "helix_measures", "initial_bearing", "line_intersection", "line_plane_intersection", "min_area_rectangle", "min_enclosing_circle", "nearest_neighbor", "parabola_arc_length", "pick_lattice_points", "plane_through_points", "platonic_solid", "point_in_polygon", "point_plane_distance", "point_segment_distance", "polygon_area", "polygon_centroid", "polygon_interior_angles", "polygon_is_convex", "polyline_length", "pyramid_measures", "rectangle_measures", "reflect_point_line", "regular_polygon_angles", "regular_polygon_measures", "regular_prism", "rhombus_measures", "rotate_point", "rotate_point_3d", "sector_measures", "segment_intersection", "skew_lines_distance", "solid_angle_cone", "solid_angle_triangle", "sphere_four_points", "sphere_measures", "spherical_cap", "spherical_triangle_area", "spheroid_measures", "surface_curvature", "tangent_from_point", "tetrahedron_measures", "torus_curvature", "torus_measures", "trapezoid_measures", "triangle_area_3d", "triangle_area_base_height", "triangle_cevians", "triangle_circumcircle", "triangle_classify", "triangle_coordinates", "triangle_incircle", "triangle_orthocenter"]
+CapabilityId = Literal["angle_between_lines", "angle_between_planes", "annulus_area", "barycentric_coordinates", "circle_circle_intersection", "circle_line_intersection", "circle_measures", "circular_segment", "closest_pair", "cone_measures", "conic_classify", "convex_hull", "convex_polygon_intersection", "cuboid_measures", "curvature_of_graph", "cylinder_measures", "delaunay_voronoi_counts", "dilate_point", "ellipse_curvature", "ellipse_perimeter", "farthest_pair", "frustum_measures", "great_circle_distance", "hausdorff_distance", "helix_measures", "initial_bearing", "line_in_space", "line_intersection", "line_plane_intersection", "min_area_rectangle", "min_enclosing_circle", "nearest_neighbor", "parabola_arc_length", "pick_lattice_points", "plane_through_points", "platonic_solid", "point_in_polygon", "point_plane_distance", "point_segment_distance", "polygon_area", "polygon_centroid", "polygon_interior_angles", "polygon_is_convex", "polyline_length", "pyramid_measures", "rectangle_measures", "reflect_point_line", "regular_polygon_angles", "regular_polygon_measures", "regular_prism", "rhombus_measures", "rotate_point", "rotate_point_3d", "sector_measures", "segment_intersection", "similar_figures", "skew_lines_distance", "solid_angle_cone", "solid_angle_triangle", "sphere_four_points", "sphere_measures", "spherical_cap", "spherical_triangle_area", "spheroid_measures", "surface_curvature", "tangent_from_point", "tetrahedron_measures", "torus_curvature", "torus_measures", "trapezoid_measures", "triangle_area_3d", "triangle_area_base_height", "triangle_cevians", "triangle_circumcircle", "triangle_classify", "triangle_coordinates", "triangle_incircle", "triangle_orthocenter"]
 
 
 def solve(find: CapabilityId | str, given: dict | None = None, conditions=(), *, target: str | None = None, **inputs):
@@ -368,6 +368,20 @@ def initial_bearing(lat1=None, lon1=None, lat2=None, lon2=None):
     """
     given = {k: v for k, v in dict(lat1=lat1, lon1=lon1, lat2=lat2, lon2=lon2).items() if v is not None}
     return _P.solve("initial_bearing", **given)
+
+def line_in_space(point=None, second_point=None, direction=None, t=None):
+    """Line in space: vector, parametric and symmetric equations. The vector, parametric and symmetric equations of the line in space through two points, or through a point with a given direction, its unit direction and the point at a given parameter t.
+    Formula: \\mathbf r = \\mathbf P + t\\,\\mathbf v,\\qquad \\frac{x - x_0}{a} = \\frac{y - y_0}{b} = \\frac{z - z_0}{c}
+    Inputs:
+        point: a point P on the line: x y z
+        second_point: a second point Q on the line: x y z (optional)
+        direction: a direction vector: x y z (optional)
+        t: a parameter value t (the point P + t v) (optional)
+    Outputs: vector_form (r = P + t v), parametric (x = x0 + a t, y = y0 + b t, z = z0 + c t), symmetric ((x - x0)/a = (y - y0)/b = (z - z0)/c (a coordinate whose direction component is 0 stays fixed)), x0 (x of P), y0 (y of P), z0 (z of P), dx (x of the direction v), dy (y of the direction v), dz (z of the direction v), ux (x of the unit direction), uy (y of the unit direction), uz (z of the unit direction), xt (x of the point at t), yt (y of the point at t), zt (z of the point at t)
+    See also: help("line_in_space")
+    """
+    given = {k: v for k, v in dict(point=point, second_point=second_point, direction=direction, t=t).items() if v is not None}
+    return _P.solve("line_in_space", **given)
 
 def line_intersection(a1=None, b1=None, c1=None, a2=None, b2=None, c2=None):
     """Intersection point of two lines. The point where two lines a1 x + b1 y + c1 = 0 and a2 x + b2 y + c2 = 0 meet.
@@ -729,6 +743,22 @@ def segment_intersection(points=None):
     given = {k: v for k, v in dict(points=points).items() if v is not None}
     return _P.solve("segment_intersection", **given)
 
+def similar_figures(measure=None, m1=None, m2=None, other_length=None, other_area=None, other_volume=None):
+    """Similar figures: scale factor, missing lengths, area and volume ratios. For two similar figures, the scale factor from corresponding lengths (or areas, or volumes), the ratios of their areas and volumes, and the measurements of the second figure that correspond to a length, area or volume of the first.
+    Formula: k = \\frac{l_2}{l_1},\\qquad \\frac{A_2}{A_1} = k^2,\\qquad \\frac{V_2}{V_1} = k^3
+    Inputs:
+        measure: what the two corresponding values measure: lengths, areas or volumes
+        m1: the value in the first figure
+        m2: the corresponding value in the second figure
+        other_length: another length of the first figure (optional)
+        other_area: an area of the first figure (optional)
+        other_volume: a volume of the first figure (optional)
+    Outputs: scale_factor (the scale factor k (second : first)), area_ratio (ratio of areas k^2), volume_ratio (ratio of volumes k^3), length2 (the corresponding length of the second figure), area2 (the corresponding area of the second figure), volume2 (the corresponding volume of the second figure)
+    See also: help("similar_figures")
+    """
+    given = {k: v for k, v in dict(measure=measure, m1=m1, m2=m2, other_length=other_length, other_area=other_area, other_volume=other_volume).items() if v is not None}
+    return _P.solve("similar_figures", **given)
+
 def skew_lines_distance(p1=None, d1=None, p2=None, d2=None):
     """Distance between two lines in space (skew or parallel). The shortest distance between the lines P1 + s d1 and P2 + t d2 in three dimensions.
     Formula: d = \\frac{|(P_2-P_1)\\cdot(\\mathbf d_1\\times\\mathbf d_2)|}{\\|\\mathbf d_1\\times\\mathbf d_2\\|}
@@ -999,4 +1029,4 @@ def triangle_orthocenter(points=None):
     return _P.solve("triangle_orthocenter", **given)
 
 
-__all__ = ["CapabilityId", "solve", "help", "angle_between_lines", "angle_between_planes", "annulus_area", "barycentric_coordinates", "circle_circle_intersection", "circle_line_intersection", "circle_measures", "circular_segment", "closest_pair", "cone_measures", "conic_classify", "convex_hull", "convex_polygon_intersection", "cuboid_measures", "curvature_of_graph", "cylinder_measures", "delaunay_voronoi_counts", "dilate_point", "ellipse_curvature", "ellipse_perimeter", "farthest_pair", "frustum_measures", "great_circle_distance", "hausdorff_distance", "helix_measures", "initial_bearing", "line_intersection", "line_plane_intersection", "min_area_rectangle", "min_enclosing_circle", "nearest_neighbor", "parabola_arc_length", "pick_lattice_points", "plane_through_points", "platonic_solid", "point_in_polygon", "point_plane_distance", "point_segment_distance", "polygon_area", "polygon_centroid", "polygon_interior_angles", "polygon_is_convex", "polyline_length", "pyramid_measures", "rectangle_measures", "reflect_point_line", "regular_polygon_angles", "regular_polygon_measures", "regular_prism", "rhombus_measures", "rotate_point", "rotate_point_3d", "sector_measures", "segment_intersection", "skew_lines_distance", "solid_angle_cone", "solid_angle_triangle", "sphere_four_points", "sphere_measures", "spherical_cap", "spherical_triangle_area", "spheroid_measures", "surface_curvature", "tangent_from_point", "tetrahedron_measures", "torus_curvature", "torus_measures", "trapezoid_measures", "triangle_area_3d", "triangle_area_base_height", "triangle_cevians", "triangle_circumcircle", "triangle_classify", "triangle_coordinates", "triangle_incircle", "triangle_orthocenter"]
+__all__ = ["CapabilityId", "solve", "help", "angle_between_lines", "angle_between_planes", "annulus_area", "barycentric_coordinates", "circle_circle_intersection", "circle_line_intersection", "circle_measures", "circular_segment", "closest_pair", "cone_measures", "conic_classify", "convex_hull", "convex_polygon_intersection", "cuboid_measures", "curvature_of_graph", "cylinder_measures", "delaunay_voronoi_counts", "dilate_point", "ellipse_curvature", "ellipse_perimeter", "farthest_pair", "frustum_measures", "great_circle_distance", "hausdorff_distance", "helix_measures", "initial_bearing", "line_in_space", "line_intersection", "line_plane_intersection", "min_area_rectangle", "min_enclosing_circle", "nearest_neighbor", "parabola_arc_length", "pick_lattice_points", "plane_through_points", "platonic_solid", "point_in_polygon", "point_plane_distance", "point_segment_distance", "polygon_area", "polygon_centroid", "polygon_interior_angles", "polygon_is_convex", "polyline_length", "pyramid_measures", "rectangle_measures", "reflect_point_line", "regular_polygon_angles", "regular_polygon_measures", "regular_prism", "rhombus_measures", "rotate_point", "rotate_point_3d", "sector_measures", "segment_intersection", "similar_figures", "skew_lines_distance", "solid_angle_cone", "solid_angle_triangle", "sphere_four_points", "sphere_measures", "spherical_cap", "spherical_triangle_area", "spheroid_measures", "surface_curvature", "tangent_from_point", "tetrahedron_measures", "torus_curvature", "torus_measures", "trapezoid_measures", "triangle_area_3d", "triangle_area_base_height", "triangle_cevians", "triangle_circumcircle", "triangle_classify", "triangle_coordinates", "triangle_incircle", "triangle_orthocenter"]

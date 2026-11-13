@@ -5551,6 +5551,345 @@ _add("polygon_interior_angles", "intermediate",
 
 
 # ==================================================================================================================
+# CORE GAPS (2026-11-12): similar figures and the line in space. run and verify use plain arithmetic and math only (they
+# translate to Rust). Conventions: the scale factor is figure 2 : figure 1 (a value above 1 enlarges); a line through two
+# points has the direction Q - P, a line through a point with a direction keeps the direction as written; the symmetric
+# equations list the coordinates whose direction component is not zero, then the coordinates that stay fixed.
+# ==================================================================================================================
+_SIM_MEASURES = ["lengths", "areas", "volumes"]
+_SIM_POWER = {"lengths": 1, "areas": 2, "volumes": 3}
+
+
+def _sim_rel(a, b):
+    return abs(a - b) / max(abs(a), abs(b), 1e-300)
+
+
+def similar_figures(measure, m1, m2, other_length=None, other_area=None, other_volume=None):
+    if measure not in _SIM_MEASURES:
+        raise ValueError("the measure compared is lengths, areas or volumes")
+    a, b = _pos(m1, "m1"), _pos(m2, "m2")
+    r = b / a
+    if measure == "lengths":
+        k, ar, vr = r, r * r, r * r * r
+    elif measure == "areas":
+        k = math.sqrt(r)
+        ar, vr = r, r * k
+    else:
+        k = r ** (1.0 / 3.0)
+        ar, vr = k * k, r
+    out = {"scale_factor": k, "area_ratio": ar, "volume_ratio": vr, "length2": None, "area2": None, "volume2": None}
+    if other_length is not None:
+        out["length2"] = k * _pos(other_length, "other_length")
+    if other_area is not None:
+        out["area2"] = ar * _pos(other_area, "other_area")
+    if other_volume is not None:
+        out["volume2"] = vr * _pos(other_volume, "other_volume")
+    return out
+
+
+def _verify_similar(i, o):
+    k = o["scale_factor"]
+    if not k > 0:
+        return 1.0
+    worst = max(_sim_rel(i["m1"] * k ** _SIM_POWER[i["measure"]], i["m2"]), _sim_rel(o["area_ratio"], k * k), _sim_rel(o["volume_ratio"], k * k * k))
+    for name, other, power in (("length2", "other_length", 1), ("area2", "other_area", 2), ("volume2", "other_volume", 3)):
+        if i.get(other) is None:
+            if o[name] is not None:
+                return 1.0
+        else:
+            if o[name] is None:
+                return 1.0
+            worst = max(worst, _sim_rel(o[name], i[other] * k ** power))
+    return worst
+
+
+def _ref_similar(measure, m1, m2, other_length=None, other_area=None, other_volume=None):
+    import sympy as sp
+    k = sp.Symbol("k", positive=True)
+    K = sp.solve(sp.Eq(_R(m1) * k ** _SIM_POWER[measure], _R(m2)), k)[0]
+    return {"scale_factor": _F(K), "area_ratio": _F(K ** 2), "volume_ratio": _F(K ** 3),
+            "length2": None if other_length is None else _F(K * _R(other_length)),
+            "area2": None if other_area is None else _F(K ** 2 * _R(other_area)),
+            "volume2": None if other_volume is None else _F(K ** 3 * _R(other_volume))}
+
+
+def _wrong_similar(measure, m1, m2, other_length=None, other_area=None, other_volume=None):
+    """The ratio of the stated measures used for every ratio (areas and volumes scaled like lengths)."""
+    r = float(m2) / float(m1)
+    return {"scale_factor": r, "area_ratio": r, "volume_ratio": r, "length2": None if other_length is None else r * other_length,
+            "area2": None if other_area is None else r * other_area, "volume2": None if other_volume is None else r * other_volume}
+
+
+def _rand_similar(rng):
+    m1 = _rand_len(rng, 1, 40)
+    m2 = _rand_len(rng, 1, 40)
+    while abs(m2 - m1) < 0.5:
+        m2 = _rand_len(rng, 1, 40)
+    out = {"measure": rng.choice(_SIM_MEASURES), "m1": m1, "m2": m2}
+    for name in ("other_length", "other_area", "other_volume"):
+        if rng.random() < 0.4:
+            out[name] = _rand_len(rng, 1, 80)
+    return out
+
+
+_SIM_WORDS = {"side lengths": "lengths", "sides": "lengths", "lengths": "lengths", "edges": "lengths", "heights": "lengths",
+              "radii": "lengths", "perimeters": "lengths", "surface areas": "areas", "areas": "areas", "volumes": "volumes"}
+
+
+def parse_similar(q0):
+    q = _norm(q0)
+    if not re.search(r"\bsimilar\b", q):
+        return None
+    m = re.search(r"\b(?:corresponding )?(side lengths|sides|lengths|edges|heights|radii|perimeters|surface areas|areas|volumes)\s*"
+                  r"(?:of|are|=|:)?\s*(" + _N + r")\s*(?:[a-z]{1,6}(?:\^[23])?)?\s*(?:and|to)\s*(" + _N + r")", q)
+    if not m:
+        return None
+    out = {"measure": _SIM_WORDS[m.group(1)], "m1": float(m.group(2)), "m2": float(m.group(3))}
+    rest = q[m.end():]
+    for name, rx in (("other_length", r"(?:another |a |an )?(?:side|length|edge|height)"), ("other_area", r"(?:an |a )?(?:surface )?area"),
+                     ("other_volume", r"(?:a )?volume")):
+        f = re.search(r"\bfirst\b[^.?;]*?\b" + rx + r"\s*(?:of|is|=)?\s*(" + _N + r")", rest)
+        if f:
+            out[name] = float(f.group(1))
+    return out
+
+
+_add("similar_figures", "beginner",
+     name="Similar figures: scale factor, missing lengths, area and volume ratios", topic="similarity / similar figures",
+     purpose="For two similar figures, the scale factor from corresponding lengths (or areas, or volumes), the ratios of their "
+             "areas and volumes, and the measurements of the second figure that correspond to a length, area or volume of the first.",
+     inputs=[{"symbol": "measure", "kind": "text", "type": "choice", "choices": _SIM_MEASURES, "required": True,
+              "meaning": "what the two corresponding values measure: lengths, areas or volumes"},
+             _I("m1", "the value in the first figure"), _I("m2", "the corresponding value in the second figure"),
+             _I("other_length", "another length of the first figure", required=False),
+             _I("other_area", "an area of the first figure", required=False),
+             _I("other_volume", "a volume of the first figure", required=False)],
+     outputs=[_O("scale_factor", "the scale factor k (second : first)"), _O("area_ratio", "ratio of areas k^2"), _O("volume_ratio", "ratio of volumes k^3"),
+              _O("length2", "the corresponding length of the second figure"), _O("area2", "the corresponding area of the second figure"),
+              _O("volume2", "the corresponding volume of the second figure")],
+     primary="scale_factor", conditions=["the values are positive", "the figures are similar (one is a scaled copy of the other)"],
+     method="k = l2/l1 (or sqrt of the area ratio, or cube root of the volume ratio); lengths scale by k, areas by k^2, volumes by k^3",
+     latex=r"k = \frac{l_2}{l_1},\qquad \frac{A_2}{A_1} = k^2,\qquad \frac{V_2}{V_1} = k^3",
+     run=similar_figures, verify=_verify_similar, parse=parse_similar, reference=_ref_similar, wrong=_wrong_similar, random_inputs=_rand_similar,
+     templates=["Two similar figures have corresponding sides 4 and 6. Find the scale factor, the area ratio and the volume ratio.",
+                "Two similar solids have volumes 27 and 64. Find the scale factor and the ratio of their surface areas."],
+     examples=[{"inputs": {"measure": "lengths", "m1": 4, "m2": 6}, "outputs": {"scale_factor": 1.5, "area_ratio": 2.25, "volume_ratio": 3.375}},
+               {"inputs": {"measure": "volumes", "m1": 27, "m2": 64}, "outputs": {"scale_factor": 4 / 3, "area_ratio": 16 / 9, "volume_ratio": 64 / 27}},
+               {"inputs": {"measure": "lengths", "m1": 4, "m2": 6, "other_length": 5, "other_area": 12}, "outputs": {"length2": 7.5, "area2": 27.0, "volume2": None}},
+               {"inputs": {"measure": "areas", "m1": 16, "m2": 25, "other_length": 8}, "outputs": {"scale_factor": 1.25, "length2": 10.0}}],
+     questions=[{"q": "Two similar figures have corresponding sides 4 and 6. Find the scale factor, the area ratio and the volume ratio.",
+                 "outputs": {"scale_factor": 1.5, "area_ratio": 2.25, "volume_ratio": 3.375}},
+                {"q": "Two similar solids have volumes 27 and 64. Find the scale factor and the ratio of their surface areas.",
+                 "outputs": {"scale_factor": 4 / 3, "area_ratio": 16 / 9}},
+                {"q": "Two similar figures have corresponding sides 4 cm and 6 cm; the first has another side of 5 cm and an area of 12 cm^2. "
+                      "Find the corresponding side and area of the second.", "outputs": {"length2": 7.5, "area2": 27.0}},
+                {"q": "Two similar figures have areas 16 and 25. The first has a side of 8. Find the corresponding side of the second.",
+                 "outputs": {"scale_factor": 1.25, "length2": 10.0}},
+                {"q": "Two similar figures have corresponding sides 4 and 0. Find the scale factor.", "outcome": "INVALID_INPUT"}])
+
+
+def _l3_num(v):
+    return f"{v + 0.0:.12g}"
+
+
+def _l3_texts(P, D):
+    """(vector form, parametric equations, symmetric equations) of the line P + t D, as text."""
+    names = ["x", "y", "z"]
+    par = []
+    chain = []
+    fixed = []
+    for k in range(3):
+        p, d = P[k], D[k]
+        coef = "" if abs(d) == 1 else _l3_num(abs(d))
+        if d == 0:
+            par.append(names[k] + " = " + _l3_num(p))
+            fixed.append(names[k] + " = " + _l3_num(p))
+            continue
+        if p == 0:
+            par.append(names[k] + " = " + ("-" if d < 0 else "") + coef + "t")
+            num = names[k]
+        else:
+            par.append(names[k] + " = " + _l3_num(p) + (" - " if d < 0 else " + ") + coef + "t")
+            num = "(" + names[k] + (" - " + _l3_num(p) if p > 0 else " + " + _l3_num(-p)) + ")"
+        if d == 1:
+            chain.append(num[1:-1] if num[0] == "(" else num)
+        elif d < 0:
+            chain.append(num + "/(" + _l3_num(d) + ")")
+        else:
+            chain.append(num + "/" + _l3_num(d))
+    parts = []
+    if len(chain) >= 2:
+        parts.append(" = ".join(chain))
+    for f in fixed:
+        parts.append(f)
+    vec = "r = (" + _l3_num(P[0]) + ", " + _l3_num(P[1]) + ", " + _l3_num(P[2]) + ") + t(" + _l3_num(D[0]) + ", " + _l3_num(D[1]) + ", " + _l3_num(D[2]) + ")"
+    return vec, ", ".join(par), "; ".join(parts)
+
+
+def line_in_space(point, second_point=None, direction=None, t=None):
+    if len(point) != 3:
+        raise ValueError("a point in space has three coordinates")
+    P = [_fin(float(point[0]), "point"), _fin(float(point[1]), "point"), _fin(float(point[2]), "point")]
+    if (second_point is None) == (direction is None):
+        raise ValueError("give either a second point or a direction vector (exactly one of them)")
+    if second_point is not None:
+        if len(second_point) != 3:
+            raise ValueError("a point in space has three coordinates")
+        D = [_fin(float(second_point[k]), "second_point") - P[k] + 0.0 for k in range(3)]
+        if D[0] == 0 and D[1] == 0 and D[2] == 0:
+            raise ValueError("the two points coincide: they do not determine a line")
+    else:
+        if len(direction) != 3:
+            raise ValueError("a direction in space has three components")
+        D = [_fin(float(direction[k]), "direction") + 0.0 for k in range(3)]
+        if D[0] == 0 and D[1] == 0 and D[2] == 0:
+            raise ValueError("the direction vector must not be zero")
+    # 12 significant digits (Q - P of written decimals: 1.1 - 0.1 is 1.0000000000000002), so that the equations shown
+    # and the numbers returned are the same values
+    P = [_r12(P[0]), _r12(P[1]), _r12(P[2])]
+    D = [_r12(D[0]), _r12(D[1]), _r12(D[2])]
+    n = math.sqrt(D[0] * D[0] + D[1] * D[1] + D[2] * D[2])
+    vec, par, sym = _l3_texts(P, D)
+    out = {"vector_form": vec, "parametric": par, "symmetric": sym, "x0": P[0], "y0": P[1], "z0": P[2], "dx": D[0], "dy": D[1], "dz": D[2],
+           "ux": D[0] / n + 0.0, "uy": D[1] / n + 0.0, "uz": D[2] / n + 0.0, "xt": None, "yt": None, "zt": None}
+    if t is not None:
+        s = _fin(t, "t")
+        out["xt"] = P[0] + s * D[0] + 0.0
+        out["yt"] = P[1] + s * D[1] + 0.0
+        out["zt"] = P[2] + s * D[2] + 0.0
+    return out
+
+
+def _verify_line3(i, o):
+    P = [float(v) for v in i["point"]]
+    D = [o["dx"], o["dy"], o["dz"]]
+    if i.get("second_point") is not None:
+        want = [float(i["second_point"][k]) - P[k] for k in range(3)]
+    else:
+        want = [float(v) for v in i["direction"]]
+    sc = max(1.0, abs(want[0]), abs(want[1]), abs(want[2]))
+    n = math.sqrt(want[0] * want[0] + want[1] * want[1] + want[2] * want[2])
+    worst = 0.0
+    for k in range(3):
+        worst = max(worst, abs(D[k] - want[k]) / sc, abs([o["x0"], o["y0"], o["z0"]][k] - P[k]) / max(1.0, abs(P[k])),
+                    abs([o["ux"], o["uy"], o["uz"]][k] - want[k] / n))
+    if i.get("t") is None:
+        if o["xt"] is not None or o["yt"] is not None or o["zt"] is not None:
+            return 1.0
+    else:
+        X = [o["xt"], o["yt"], o["zt"]]
+        for k in range(3):
+            w = P[k] + i["t"] * want[k]
+            worst = max(worst, abs(X[k] - w) / max(1.0, abs(w), abs(P[k])))
+    vec, par, sym = _l3_texts([o["x0"], o["y0"], o["z0"]], D)
+    if o["vector_form"] != vec or o["parametric"] != par or o["symmetric"] != sym:
+        return 1.0
+    return worst
+
+
+def _ref_line3(point, second_point=None, direction=None, t=None):
+    import sympy as sp
+    P = sp.Point3D(*[_R(c) for c in point])
+    if second_point is not None:
+        L = sp.Line3D(P, sp.Point3D(*[_R(c) for c in second_point]))
+    else:
+        L = sp.Line3D(P, direction_ratio=[_R(c) for c in direction])
+    d = [sp.nsimplify(c) for c in L.direction_ratio]
+    n = sp.sqrt(sum(c ** 2 for c in d))
+    out = {"x0": _F(P.x), "y0": _F(P.y), "z0": _F(P.z), "dx": _F(d[0]), "dy": _F(d[1]), "dz": _F(d[2]),
+           "ux": _F(d[0] / n), "uy": _F(d[1] / n), "uz": _F(d[2] / n), "xt": None, "yt": None, "zt": None}
+    if t is not None:
+        s = sp.Symbol("s")
+        X = L.arbitrary_point(s).subs(s, _R(t))
+        out.update(xt=_F(X.x), yt=_F(X.y), zt=_F(X.z))
+    return out
+
+
+def _wrong_line3(point, second_point=None, direction=None, t=None):
+    """The second point's position vector taken as the direction (Q instead of Q - P); with a direction given, the point
+    and the direction exchanged."""
+    try:
+        if second_point is not None:
+            return line_in_space(point, None, second_point, t)
+        return line_in_space(direction, None, point, t)
+    except ValueError:
+        return dict(line_in_space(point, second_point, direction, t), dx=1e9)
+
+
+def _rand_line3(rng):
+    P = [_RANDP(rng), _RANDP(rng), _RANDP(rng)]
+    if P == [0.0, 0.0, 0.0]:
+        P[0] = 1.0
+    out = {"point": P}
+    if rng.random() < 0.6:
+        out["second_point"] = [_RANDP(rng), _RANDP(rng), _RANDP(rng)]
+    else:
+        out["direction"] = [float(rng.randint(-9, 9)), float(rng.randint(-9, 9)), float(rng.randint(1, 9)) * rng.choice([1, -1])]
+    if rng.random() < 0.5:
+        out["t"] = round(rng.uniform(-5, 5), 2)
+    return out
+
+
+def parse_line3(q0):
+    q = _norm(q0)
+    if not re.search(r"\bline\b", q) or re.search(r"\b(planes?|distance|intersect\w*|angle|meets?|skew|parallel|perpendicular|lines)\b", q):
+        return None
+    if not re.search(r"\bequations?\b|\bparametri[sz]|\bsymmetric\b|\bvector form\b", q):
+        return None
+    dm = re.search(r"\b(?:with |in the )?direction(?:\s*vector)?\s*(?:of\s*|=\s*)?" + _P3, q)
+    rest = q[:dm.start()] + q[dm.end():] if dm else q
+    tm = re.search(r"\bt\s*=\s*(" + _N + r")", rest)
+    pts = _pts3(rest)
+    out = {}
+    if dm:
+        if len(pts) != 1:
+            return None
+        out["direction"] = [float(dm.group(1)), float(dm.group(2)), float(dm.group(3))]
+    elif len(pts) != 2:
+        return None
+    else:
+        out["second_point"] = list(pts[1])
+    out["point"] = list(pts[0])
+    if tm:
+        out["t"] = float(tm.group(1))
+    return out
+
+
+_add("line_in_space", "intermediate",
+     name="Line in space: vector, parametric and symmetric equations", topic="solid coordinate geometry / lines and planes",
+     purpose="The vector, parametric and symmetric equations of the line in space through two points, or through a point with a "
+             "given direction, its unit direction and the point at a given parameter t.",
+     inputs=[_V("point", "a point P on the line: x y z", 3, 3), _V("second_point", "a second point Q on the line: x y z", 3, 3, required=False),
+             _V("direction", "a direction vector: x y z", 3, 3, required=False), _I("t", "a parameter value t (the point P + t v)", required=False)],
+     outputs=[_O("vector_form", "r = P + t v", "text"), _O("parametric", "x = x0 + a t, y = y0 + b t, z = z0 + c t", "text"),
+              _O("symmetric", "(x - x0)/a = (y - y0)/b = (z - z0)/c (a coordinate whose direction component is 0 stays fixed)", "text"),
+              _O("x0", "x of P"), _O("y0", "y of P"), _O("z0", "z of P"), _O("dx", "x of the direction v"), _O("dy", "y of the direction v"),
+              _O("dz", "z of the direction v"), _O("ux", "x of the unit direction"), _O("uy", "y of the unit direction"), _O("uz", "z of the unit direction"),
+              _O("xt", "x of the point at t"), _O("yt", "y of the point at t"), _O("zt", "z of the point at t")],
+     primary="parametric",
+     conditions=["either a second point or a direction (not both)", "the two points differ / the direction is not zero",
+                 "convention: through two points the direction is Q - P"],
+     method="v = Q - P (or the given direction); r = P + t v; eliminating t gives the symmetric equations",
+     latex=r"\mathbf r = \mathbf P + t\,\mathbf v,\qquad \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}",
+     run=line_in_space, verify=_verify_line3, parse=parse_line3, reference=_ref_line3, wrong=_wrong_line3, random_inputs=_rand_line3,
+     templates=["Find the vector, parametric and symmetric equations of the line through (1, 2, 3) and (4, 6, 9).",
+                "Find the parametric equations of the line through (1, -2, 0) with direction (2, 0, -1) and the point at t = 3."],
+     examples=[{"inputs": {"point": "1 2 3", "second_point": "4 6 9"},
+                "outputs": {"dx": 3.0, "dy": 4.0, "dz": 6.0, "vector_form": "r = (1, 2, 3) + t(3, 4, 6)", "parametric": "x = 1 + 3t, y = 2 + 4t, z = 3 + 6t",
+                            "symmetric": "(x - 1)/3 = (y - 2)/4 = (z - 3)/6", "ux": 3 / math.sqrt(61), "xt": None}},
+               {"inputs": {"point": [1, -2, 0], "direction": [2, 0, -1], "t": 3},
+                "outputs": {"parametric": "x = 1 + 2t, y = -2, z = -t", "symmetric": "(x - 1)/2 = z/(-1); y = -2", "xt": 7.0, "yt": -2.0, "zt": -3.0}},
+               {"inputs": {"point": [0, 0, 0], "second_point": [2, -1, 2]},
+                "outputs": {"symmetric": "x/2 = y/(-1) = z/2", "parametric": "x = 2t, y = -t, z = 2t", "ux": 2 / 3, "uy": -1 / 3, "uz": 2 / 3}}],
+     questions=[{"q": "Find the vector, parametric and symmetric equations of the line through (1, 2, 3) and (4, 6, 9).",
+                 "outputs": {"symmetric": "(x - 1)/3 = (y - 2)/4 = (z - 3)/6", "dx": 3.0}},
+                {"q": "Find the parametric equations of the line through (1, -2, 0) with direction (2, 0, -1) and the point at t = 3.",
+                 "outputs": {"parametric": "x = 1 + 2t, y = -2, z = -t", "xt": 7.0, "zt": -3.0}},
+                {"q": "Find the symmetric equations of the line through (0, 0, 0) and (2, -1, 2).", "outputs": {"symmetric": "x/2 = y/(-1) = z/2"}},
+                {"q": "Find the equations of the line through (1, 2, 3) and (1, 2, 3).", "outcome": "INVALID_INPUT"}])
+
+
+# ==================================================================================================================
 # the reading guard: every parser above is wrapped by the same rules (ask_sweep 2026-10-23: 12 wrong answers, among
 # them a spheroid read as a sphere, a frustum as a cone, a trapezoid as a square ("square millimeters"), an annulus as
 # a circle, a spherical polygon as a sphere and a point-to-segment distance as a path length)
@@ -5604,6 +5943,7 @@ _FOREIGN = {
     "spherical_cap": r"\bspheroid|\bellipso",
     "great_circle_distance": r"\bbearing\b|\bazimuth\b|\bheading\b",
     "initial_bearing": r"\bdistance\b",
+    "dilate_point": r"\bsimilar\b",                     # core gaps 2026-11-12: a scale factor of similar figures
 }
 _FOREIGN_RE = {k: re.compile(v) for k, v in _FOREIGN.items()}
 

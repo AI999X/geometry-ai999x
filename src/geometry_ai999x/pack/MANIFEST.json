@@ -1,5 +1,5 @@
 {
- "package": "1.5.0",
+ "package": "1.6.0",
  "pack": "1.0.0",
  "knowledge_db": null,
  "files": {
@@ -7,8 +7,8 @@
   "dictionary/terms.json": "b2d8da1d78769f517c23c6ea61c20fc6a48166102bca0adc66f36fb5f54d905d",
   "knowledge/relations.json": "cb0d8d63d9e346acb62a098d1426a77ac1c9a28f52a20e3ef60be619dc46f7ac",
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
-  "capabilities/procedures.py": "07fd93a0541c6ce9173940f9ed4baa75d6feabf95cb1d4051434fb9384b8b784",
-  "capabilities/procedures_certified.json": "e442071b97444fec9ba390ee8984f20d9aa8e73c6f6f29dae72ee96d0810ef39",
+  "capabilities/procedures.py": "8abcf2da051bf7c143c62b38c036501a6c5a48c3e940391e650375c145a50e82",
+  "capabilities/procedures_certified.json": "3b5f431256337b01d1d94212ea4fa297b5128933a7928c5722b529bc7335d638",
   "geometry_knowledge_public.sqlite": "e5a432f8feb993976e16cca7d2f8f92dd93b7f18631babcbc9296f21569a8e4d"
  },
  "engine": [

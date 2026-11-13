@@ -1,8 +1,8 @@
 # geometry: the Geometry program, user guide
 
-**geometry-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**geometry-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
-Geometry covers plane and solid geometry, coordinate geometry, conic sections, polygons and polyhedra, computational geometry (convex hulls, Voronoi, triangulation) and curves and surfaces. This guide is about `geometry`, the model as a self-contained program for Windows and Linux: 76 capabilities in 13 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/geometry-ai999x/); the Python package (`pip install geometry-ai999x`) has its own guide. Every command output printed here is what the program printed.
+Geometry covers plane and solid geometry, coordinate geometry, conic sections, polygons and polyhedra, computational geometry (convex hulls, Voronoi, triangulation) and curves and surfaces. This guide is about `geometry`, the model as a self-contained program for Windows and Linux: 78 capabilities in 14 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/geometry-ai999x/); the Python package (`pip install geometry-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
 ## Contents
 
@@ -17,37 +17,37 @@ Geometry covers plane and solid geometry, coordinate geometry, conic sections, p
 
 ## 1. Get it
 
-Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.6.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Geometry | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-windows-x86_64.zip |
-| Desktop app: Geometry | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: Geometry | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-geometry-1.6.0-windows-x86_64.zip |
+| Desktop app: Geometry | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-geometry-1.6.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Geometry in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geometry-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geometry.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Geometry in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-geometry-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-geometry.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-geometry-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-geometry-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-geometry-1.5.0-linux-x86_64.tar.gz
-./ai999x-geometry-1.5.0-linux-x86_64/ai999x-geometry
+tar xzf ai999x-geometry-1.6.0-linux-x86_64.tar.gz
+./ai999x-geometry-1.6.0-linux-x86_64/ai999x-geometry
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
-./ai999x-1.5.0-linux-x86_64/ai999x
+tar xzf ai999x-1.6.0-linux-x86_64.tar.gz
+./ai999x-1.6.0-linux-x86_64/ai999x
 ```
 
 ### Command line: Linux
@@ -55,11 +55,11 @@ tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `geometry` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 geometry --version
 ```
 
@@ -68,12 +68,12 @@ geometry --version
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.6.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 geometry --version
 ```
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ geometry --version
-geometry-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
+geometry-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)
 ```
 
 ### 2.2 Ask in words
@@ -125,8 +125,8 @@ circle_circle_intersection           Intersection of two circles  (coordinate ge
 line_intersection                    Intersection point of two lines  (coordinate geometry / lines)
 segment_intersection                 Intersection of two line segments  (computational geometry / intersections)
 angle_between_lines                  Angle between two lines  (coordinate geometry / lines)
-reflect_point_line                   Reflection of a point in a line  (transformations / reflections)
 convex_polygon_intersection          Area of the intersection of two convex polygons  (computational geometry / polygon clipping)
+reflect_point_line                   Reflection of a point in a line  (transformations / reflections)
 … 12 more
 ```
 
@@ -144,7 +144,7 @@ circle_circle_intersection               Intersection of two circles
 circle_line_intersection                 Intersection of a circle and a line
 circle_measures                          Circle: area, circumference and diameter
 circular_segment                         Circular segment: area, chord, height, arc
-… 68 more
+… 70 more
 ```
 
 ### 2.5 What a capability needs
@@ -1877,7 +1877,53 @@ inradius = 1.511522628
 
 **What the worked example means:** This calculation determines the fundamental geometric properties of a specified Platonic solid based on its edge length. Using the provided edge size 2, it computes the exact counts for vertices 12, edges 30, and faces 20. These integer counts satisfy the topological constraint where the Euler characteristic is always 2. Additionally, the method derives continuous metrics including the volume 17.4536, surface area 34.641, circumradius 1.90211, and inradius 1.51152, providing a complete description of the polyhedron's spatial extent.
 
-### Solid coordinate geometry (8)
+### Similarity (1)
+
+<a id="similar_figures"></a>
+
+#### Similar figures: scale factor, missing lengths, area and volume ratios, `similar_figures`
+
+For two similar figures, the scale factor from corresponding lengths (or areas, or volumes), the ratios of their areas and volumes, and the measurements of the second figure that correspond to a length, area or volume of the first.
+
+$$
+k = \frac{l_2}{l_1},\qquad \frac{A_2}{A_1} = k^2,\qquad \frac{V_2}{V_1} = k^3
+$$
+
+| symbol |  | meaning | SI unit |
+|---|---|---|---|
+| `measure` | in | what the two corresponding values measure: lengths, areas or volumes | - |
+| `m1` | in | the value in the first figure | - |
+| `m2` | in | the corresponding value in the second figure | - |
+| `other_length` | in | another length of the first figure (optional) | - |
+| `other_area` | in | an area of the first figure (optional) | - |
+| `other_volume` | in | a volume of the first figure (optional) | - |
+| `scale_factor` | out | the scale factor k (second : first) | - |
+| `area_ratio` | out | ratio of areas k^2 | - |
+| `volume_ratio` | out | ratio of volumes k^3 | - |
+| `length2` | out | the corresponding length of the second figure | - |
+| `area2` | out | the corresponding area of the second figure | - |
+| `volume2` | out | the corresponding volume of the second figure | - |
+
+**Applies when:** the values are positive; the figures are similar (one is a scaled copy of the other).
+
+```shell
+$ geometry solve similar_figures measure=lengths m1=4 m2=6
+scale_factor = 1.5
+area_ratio = 2.25
+volume_ratio = 3.375
+length2 = null
+area2 = null
+volume2 = null
+  by: Similar figures: scale factor, missing lengths, area and volume ratios  (k = l2/l1 (or sqrt of the area ratio, or cube root of the volume ratio); lengths scale by k, areas by k^2, volumes by k^3)
+  m1 = 4
+  m2 = 6
+  measure = lengths
+  assumes: the values are positive; the figures are similar (one is a scaled copy of the other)
+```
+
+In the worked example, measure = lengths, m1 = 4, m2 = 6 go through the equation above and give scale_factor = 1.5, area_ratio = 2.25, volume_ratio = 3.375, length2 = None. It applies only when the values are positive; the figures are similar (one is a scaled copy of the other): outside that it says what is wrong instead of returning a number.
+
+### Solid coordinate geometry (9)
 
 <a id="angle_between_planes"></a>
 
@@ -2042,6 +2088,63 @@ t = 1
 ```
 
 In the worked example, x0 = 1, y0 = 0, z0 = 0, dx = 1, dy = 2, dz = 3, a = 1, b = 1, c = 1, d = -7 go through the equation above and give x = 2, y = 2, z = 3, t = 1. It applies only when direction not zero; a, b, c not all 0; line not parallel to the plane (exact test): outside that it says what is wrong instead of returning a number.
+
+<a id="line_in_space"></a>
+
+#### Line in space: vector, parametric and symmetric equations, `line_in_space`
+
+The vector, parametric and symmetric equations of the line in space through two points, or through a point with a given direction, its unit direction and the point at a given parameter t.
+
+$$
+\mathbf r = \mathbf P + t\,\mathbf v,\qquad \frac{x - x_0}{a} = \frac{y - y_0}{b} = \frac{z - z_0}{c}
+$$
+
+| symbol |  | meaning | SI unit |
+|---|---|---|---|
+| `point` | in | a point P on the line: x y z | - |
+| `second_point` | in | a second point Q on the line: x y z (optional) | - |
+| `direction` | in | a direction vector: x y z (optional) | - |
+| `t` | in | a parameter value t (the point P + t v) (optional) | - |
+| `vector_form` | out | r = P + t v | - |
+| `parametric` | out | x = x0 + a t, y = y0 + b t, z = z0 + c t | - |
+| `symmetric` | out | (x - x0)/a = (y - y0)/b = (z - z0)/c (a coordinate whose direction component is 0 stays fixed) | - |
+| `x0` | out | x of P | - |
+| `y0` | out | y of P | - |
+| `z0` | out | z of P | - |
+| `dx` | out | x of the direction v | - |
+| `dy` | out | y of the direction v | - |
+| `dz` | out | z of the direction v | - |
+| `ux` | out | x of the unit direction | - |
+| `uy` | out | y of the unit direction | - |
+| `uz` | out | z of the unit direction | - |
+| `xt` | out | x of the point at t | - |
+| `yt` | out | y of the point at t | - |
+| `zt` | out | z of the point at t | - |
+
+**Applies when:** either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P.
+
+```shell
+$ geometry solve line_in_space "second_point=[4, 6, 9]" "point=[1, 2, 3]"
+vector_form = r = (1, 2, 3) + t(3, 4, 6)
+parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t
+symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6
+x0 = 1
+y0 = 2
+z0 = 3
+dx = 3
+dy = 4
+dz = 6
+ux = 0.3841106398
+uy = 0.5121475197
+uz = 0.7682212796
+xt = null
+yt = null
+zt = null
+  by: Line in space: vector, parametric and symmetric equations  (v = Q - P (or the given direction); r = P + t v; eliminating t gives the symmetric equations)
+  assumes: either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P
+```
+
+In the worked example, second_point = [4, 6, 9], point = [1, 2, 3] go through the equation above and give vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1. It applies only when either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P: outside that it says what is wrong instead of returning a number.
 
 <a id="plane_through_points"></a>
 
