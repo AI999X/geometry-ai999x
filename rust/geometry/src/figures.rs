@@ -292,6 +292,8 @@ fn points_fig(s: &Solved) -> Option<Figure> {
     let key = s.key;
     let sym = if key == "convex_polygon_intersection" { "p" } else { "points" };
     let pts = pts2(s, sym)?;
+    // (lat, lon) vertices are drawn as a map: longitude across, latitude up (they were swapped; geometry review)
+    let pts: Vec<(f64, f64)> = if key == "spherical_triangle_area" { pts.iter().map(|p| (p.1, p.0)).collect() } else { pts };
     if pts.len() < 2 || pts.len() > 60 {
         return None;
     }
