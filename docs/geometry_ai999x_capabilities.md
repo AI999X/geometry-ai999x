@@ -835,7 +835,7 @@ $$
 
 ![Type by angles of the triangle with sides a = 3 (as in the worked example), b and c from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-classify-decision)
 
-*Type by angles of the triangle with sides a = 3 (as in the worked example), b and c from 0.2 to 8. Each of the 40 × 40 cells is one run of the package, coloured by the by_angles it returned: acute: 312 cells, obtuse: 539 cells, right: 6 cells; 743 blank cells: inputs the package refuses. Marked: the worked example b = 4, c = 5 → right (scalene).*
+*Type by angles of the triangle with sides a = 3 (as in the worked example), b and c from 0.2 to 8. Each of the 40 × 40 cells is one run of the package, coloured by the by_angles it returned: acute: 312 cells, obtuse: 539 cells, right: 6 cells; 743 blank cells: inputs the package refuses. Marked: the worked example b = 4.0, c = 5.0 → right (scalene).*
 
 ```python
 geometry_ai999x.solve('triangle_classify', a=3, b=4, c=5)
@@ -1601,9 +1601,9 @@ $$
 - **Assumes:** A, B, C not all 0; exact on the written coefficients; 'degenerate' = a point, a pair of lines or a degenerate equation (zero 3x3 determinant); 'empty' = an ellipse with no real points
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B and C from −4 to 4, with A = 1, D = 0, E = 0, F = -4 as in the worked example](https://www.ai999x.com/?ax_fig=geometry-ai999x/conic-classify-decision)
+![Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B and C from −4 to 4, with A = 1, D = 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/conic-classify-decision)
 
-*Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B and C from −4 to 4, with A = 1, D = 0, E = 0, F = -4 as in the worked example. Each of the 41 × 41 cells is one run of the package, coloured by the type it returned: circle: 1 cells, degenerate: 5 cells, ellipse: 545 cells, hyperbola: 1130 cells. Marked: the worked example B = 0, C = 4 → ellipse.*
+*Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B and C from −4 to 4, with A = 1, D = 0.0, E = 0.0, F = -4.0 as in the worked example. Each of the 41 × 41 cells is one run of the package, coloured by the type it returned: circle: 1 cells, degenerate: 5 cells, ellipse: 545 cells, hyperbola: 1130 cells. Marked: the worked example B = 0.0, C = 4.0 → ellipse.*
 
 ```python
 geometry_ai999x.solve('conic_classify', A=1, B=0, C=4, D=0, E=0, F=-4)
