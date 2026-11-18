@@ -4,16 +4,37 @@
 
 Geometry covers plane and solid geometry, coordinate geometry, conic sections, polygons and polyhedra, computational geometry (convex hulls, Voronoi, triangulation) and curves and surfaces: 78 calculations in 14 topics, each with its formula, its steps and its units, and a plain reason instead of a number when an input is missing or out of range. One compiled engine, four ways to use it: the desktop app, the command line, the browser and Python. Everything runs on your own computer, offline.
 
-[![The Geometry desktop app: Area of the intersection of two convex polygons, with its worked example and live scene](https://www.ai999x.com/?ax_shot=geometry-ai999x/hero.webp)](https://www.ai999x.com/models/geometry-ai999x/)
+[![The Geometry desktop app: Circumcircle: the circle through three points, with its worked example and live scene](https://www.ai999x.com/?ax_shot=geometry-ai999x/hero.webp)](https://www.ai999x.com/models/geometry-ai999x/)
 
 ## Four ways to use it
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-geometry-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-geometry-1.6.5-linux-x86_64.tar.gz) |
 | **Command line** `geometry` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
-| **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/geometry-ai999x/#try) |
+| **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/geometry-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install geometry-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
+
+## See it
+
+From the Geometry desktop app: every scene and chart is drawn from the computed answer.
+
+[![Geometry desktop app: a slider moves an input and the answer, the scene and the charts follow](https://www.ai999x.com/?ax_shot=geometry-ai999x/clip-loop.webp)](https://www.ai999x.com/?ax_shot=geometry-ai999x/clip.mp4)
+
+*[Watch the full clip (MP4)](https://www.ai999x.com/?ax_shot=geometry-ai999x/clip.mp4)*
+
+| | |
+|---|---|
+| [![Circumcircle: the circle through three points: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-1.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-triangle_circumcircle)<br>Circumcircle: the circle through three points | [![Convex hull of points in the plane: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-2.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-convex_hull)<br>Convex hull of points in the plane |
+| [![Platonic solids: counts, Euler characteristic, volume, surface, radii: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-3.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-platonic_solid)<br>Platonic solids: counts, Euler characteristic, volume, surface, radii | [![Great-circle distance between two points on a sphere: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-4.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-great_circle_distance)<br>Great-circle distance between two points on a sphere |
+| [![Classify a conic section from its general equation: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-5.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-conic_classify)<br>Classify a conic section from its general equation | [![Area of an annulus (ring): the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-6.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-annulus_area)<br>Area of an annulus (ring) |
+| [![Centroid of a polygon: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-7.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-polygon_centroid)<br>Centroid of a polygon | [![Similar figures: scale factor, missing lengths, area and volume ratios: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/scene-8.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-similar_figures)<br>Similar figures: scale factor, missing lengths, area and volume ratios |
+
+Charts:
+
+|   |   |   |   |
+|---|---|---|---|
+| [![Circumcircle: the circle through three points: a chart in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/chart-1.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-triangle_circumcircle)<br>Circumcircle: the circle through three points | [![Convex hull of points in the plane: a chart in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/chart-2.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-convex_hull)<br>Convex hull of points in the plane | [![Platonic solids: counts, Euler characteristic, volume, surface, radii: a chart in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/chart-3.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-platonic_solid)<br>Platonic solids: counts, Euler characteristic, volume, surface, radii | [![Great-circle distance between two points on a sphere: a chart in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/chart-4.webp)](https://www.ai999x.com/models/geometry-ai999x/#cap-great_circle_distance)<br>Great-circle distance between two points on a sphere |
 
 ## Ask in words: 15 examples
 
@@ -115,21 +136,180 @@ print(a.outcome, a.values)
 # SOLVED {'curvature': 2.0, 'radius_of_curvature': 0.5, 'slope': 0.0}
 ```
 
-## Screenshots
+## Command line: 15 examples
 
-[![The Geometry desktop app: Area of the intersection of two convex polygons, with its worked example and live scene](https://www.ai999x.com/?ax_shot=geometry-ai999x/hero-dark.webp)](https://www.ai999x.com/models/geometry-ai999x/)
+Each command below was run with `geometry` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
 
-[![Length of a polyline (path through points): the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/see-1.webp)](https://www.ai999x.com/models/geometry-ai999x/)
+```text
+$ geometry solve convex_polygon_intersection "p=[0, 0, 2, 0, 2, 2, 0, 2]" "q=[1, 1, 3, 1, 3, 3, 1, 3]"
+area = 1
 
-*Length of a polyline (path through points)*
+$ geometry solve conic_classify A=1 B=0 C=4 D=0 E=0 F=-4
+type = ellipse
 
-[![Area of a triangle from base and height: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/see-2.webp)](https://www.ai999x.com/models/geometry-ai999x/)
+$ geometry solve angle_between_lines a1=-1 b1=1 c1=-1 a2=1 b2=1 c2=-3
+angle = 90
 
-*Area of a triangle from base and height*
+$ geometry solve parabola_arc_length a=1 b=0 c=0 x0=0 x1=1
+length = 1.478942858
 
-[![Right prism on a regular polygon base: volume and surface area: the live scene in the Geometry desktop app](https://www.ai999x.com/?ax_shot=geometry-ai999x/see-3.webp)](https://www.ai999x.com/models/geometry-ai999x/)
+$ geometry solve triangle_area_base_height base=10 height=6
+area = 30
 
-*Right prism on a regular polygon base: volume and surface area*
+$ geometry solve polygon_centroid "points=[0, 0, 4, 0, 4, 2, 0, 2]"
+cx = 2
+cy = 1
+
+$ geometry solve platonic_solid solid=icosahedron edge=2
+vertices = 12
+edges = 30
+faces = 20
+euler_characteristic = 2
+volume = 17.45355993
+surface_area = 34.64101615
+
+$ geometry solve similar_figures measure=lengths m1=4 m2=6
+scale_factor = 1.5
+area_ratio = 2.25
+volume_ratio = 3.375
+length2 = null
+area2 = null
+volume2 = null
+
+$ geometry solve angle_between_planes a1=0 b1=0 c1=1 a2=1 b2=0 c2=1
+angle = 45
+
+$ geometry solve solid_angle_cone half_angle=60
+solid_angle = 3.141592654
+fraction_of_sphere = 0.25
+
+$ geometry solve cone_measures radius=3 height=4
+volume = 37.69911184
+slant_height = 5
+lateral_area = 47.1238898
+total_area = 75.39822369
+
+$ geometry solve spherical_triangle_area radius=1 "points=[0, 0, 0, 90, 90, 0]"
+excess = 90
+area = 1.570796327
+
+$ geometry solve torus_curvature major=3 minor=1 v=0
+gaussian = 0.25
+mean = 0.625
+k1 = 1
+k2 = 0.25
+
+$ geometry solve dilate_point k=3 px=2 py=3
+x = 6
+y = 9
+
+$ geometry solve closest_pair "points=[0, 0, 5, 5, 1, 1, 9, 2, 6, 6.5]"
+distance = 1.414213562
+```
+
+## Rust library: 15 examples
+
+The crate `geometry-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `geometry_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/geometry/examples/readme.rs`: `cd rust && cargo run --release --example readme -p geometry-ai999x`.
+
+```rust
+use serde_json::{json, Value};
+
+fn show(request: Value) {
+    let answer: Value = serde_json::from_str(&geometry_ai999x::solve_json(&request.to_string())).unwrap();
+    println!("{}", answer["outcome"].as_str().unwrap_or(""));
+    for v in answer["values"].as_array().into_iter().flatten() {
+        let unit = v[2].as_str().unwrap_or("");
+        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
+        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
+    }
+}
+
+show(json!({"key": "convex_polygon_intersection", "inputs": {"p": [0, 0, 2, 0, 2, 2, 0, 2], "q": [1, 1, 3, 1, 3, 3, 1, 3]}}));
+// SOLVED
+// area = 1.0
+
+show(json!({"key": "conic_classify", "inputs": {"A": "1", "B": "0", "C": "4", "D": "0", "E": "0", "F": "-4"}}));
+// SOLVED
+// type = "ellipse"
+
+show(json!({"key": "angle_between_lines", "inputs": {"a1": "-1", "b1": "1", "c1": "-1", "a2": "1", "b2": "1", "c2": "-3"}}));
+// SOLVED
+// angle = 90.0
+
+show(json!({"key": "parabola_arc_length", "inputs": {"a": "1", "b": "0", "c": "0", "x0": "0", "x1": "1"}}));
+// SOLVED
+// length = 1.47894285754
+
+show(json!({"key": "triangle_area_base_height", "inputs": {"base": "10", "height": "6"}}));
+// SOLVED
+// area = 30.0
+
+show(json!({"key": "polygon_centroid", "inputs": {"points": [0, 0, 4, 0, 4, 2, 0, 2]}}));
+// SOLVED
+// cx = 2.0
+// cy = 1.0
+
+show(json!({"key": "platonic_solid", "inputs": {"solid": "icosahedron", "edge": "2"}}));
+// SOLVED
+// vertices = 12
+// edges = 30
+// faces = 20
+// euler_characteristic = 2
+// volume = 17.453559925
+// surface_area = 34.6410161514
+
+show(json!({"key": "similar_figures", "inputs": {"measure": "lengths", "m1": "4", "m2": "6"}}));
+// SOLVED
+// scale_factor = 1.5
+// area_ratio = 2.25
+// volume_ratio = 3.375
+// length2 = null
+// area2 = null
+// volume2 = null
+
+show(json!({"key": "angle_between_planes", "inputs": {"a1": "0", "b1": "0", "c1": "1", "a2": "1", "b2": "0", "c2": "1"}}));
+// SOLVED
+// angle = 45.0
+
+show(json!({"key": "solid_angle_cone", "inputs": {"half_angle": "60"}}));
+// SOLVED
+// solid_angle = 3.14159265359
+// fraction_of_sphere = 0.25
+
+show(json!({"key": "cone_measures", "inputs": {"radius": "3", "height": "4"}}));
+// SOLVED
+// volume = 37.6991118431
+// slant_height = 5.0
+// lateral_area = 47.1238898038
+// total_area = 75.3982236862
+
+show(json!({"key": "spherical_triangle_area", "inputs": {"radius": "1", "points": [0, 0, 0, 90, 90, 0]}}));
+// SOLVED
+// excess = 90.0
+// area = 1.57079632679
+
+show(json!({"key": "torus_curvature", "inputs": {"major": "3", "minor": "1", "v": "0"}}));
+// SOLVED
+// gaussian = 0.25
+// mean = 0.625
+// k1 = 1.0
+// k2 = 0.25
+
+show(json!({"key": "dilate_point", "inputs": {"k": "3", "px": "2", "py": "3"}}));
+// SOLVED
+// x = 6.0
+// y = 9.0
+
+show(json!({"key": "closest_pair", "inputs": {"points": [0, 0, 5, 5, 1, 1, 9, 2, 6, 6.5]}}));
+// SOLVED
+// distance = 1.41421356237
+```
+
+## Guides
+
+- Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.md)
+- Python guide: every calculation with a Python example: [PDF](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_capabilities.pdf) · [HTML](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_capabilities.html) · [Markdown](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_capabilities.md)
+- Command-line guide: every calculation with the command and what it printed: [PDF](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_rust_guide.pdf) · [HTML](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_rust_guide.html) · [Markdown](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_rust_guide.md)
 
 Every calculation, with its formula, a worked example and its figures: **[Geometry on ai999x.com](https://www.ai999x.com/models/geometry-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
