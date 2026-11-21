@@ -10,8 +10,8 @@ Geometry covers plane and solid geometry, coordinate geometry, conic sections, p
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-geometry-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-geometry-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `geometry` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-geometry-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-geometry-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `geometry` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/geometry-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install geometry-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -207,104 +207,6 @@ $ geometry solve closest_pair "points=[0, 0, 5, 5, 1, 1, 9, 2, 6, 6.5]"
 distance = 1.414213562
 ```
 
-## Rust library: 15 examples
-
-The crate `geometry-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `geometry_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/geometry/examples/readme.rs`: `cd rust && cargo run --release --example readme -p geometry-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&geometry_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "convex_polygon_intersection", "inputs": {"p": [0, 0, 2, 0, 2, 2, 0, 2], "q": [1, 1, 3, 1, 3, 3, 1, 3]}}));
-// SOLVED
-// area = 1.0
-
-show(json!({"key": "conic_classify", "inputs": {"A": "1", "B": "0", "C": "4", "D": "0", "E": "0", "F": "-4"}}));
-// SOLVED
-// type = "ellipse"
-
-show(json!({"key": "angle_between_lines", "inputs": {"a1": "-1", "b1": "1", "c1": "-1", "a2": "1", "b2": "1", "c2": "-3"}}));
-// SOLVED
-// angle = 90.0
-
-show(json!({"key": "parabola_arc_length", "inputs": {"a": "1", "b": "0", "c": "0", "x0": "0", "x1": "1"}}));
-// SOLVED
-// length = 1.47894285754
-
-show(json!({"key": "triangle_area_base_height", "inputs": {"base": "10", "height": "6"}}));
-// SOLVED
-// area = 30.0
-
-show(json!({"key": "polygon_centroid", "inputs": {"points": [0, 0, 4, 0, 4, 2, 0, 2]}}));
-// SOLVED
-// cx = 2.0
-// cy = 1.0
-
-show(json!({"key": "platonic_solid", "inputs": {"solid": "icosahedron", "edge": "2"}}));
-// SOLVED
-// vertices = 12
-// edges = 30
-// faces = 20
-// euler_characteristic = 2
-// volume = 17.453559925
-// surface_area = 34.6410161514
-
-show(json!({"key": "similar_figures", "inputs": {"measure": "lengths", "m1": "4", "m2": "6"}}));
-// SOLVED
-// scale_factor = 1.5
-// area_ratio = 2.25
-// volume_ratio = 3.375
-// length2 = null
-// area2 = null
-// volume2 = null
-
-show(json!({"key": "angle_between_planes", "inputs": {"a1": "0", "b1": "0", "c1": "1", "a2": "1", "b2": "0", "c2": "1"}}));
-// SOLVED
-// angle = 45.0
-
-show(json!({"key": "solid_angle_cone", "inputs": {"half_angle": "60"}}));
-// SOLVED
-// solid_angle = 3.14159265359
-// fraction_of_sphere = 0.25
-
-show(json!({"key": "cone_measures", "inputs": {"radius": "3", "height": "4"}}));
-// SOLVED
-// volume = 37.6991118431
-// slant_height = 5.0
-// lateral_area = 47.1238898038
-// total_area = 75.3982236862
-
-show(json!({"key": "spherical_triangle_area", "inputs": {"radius": "1", "points": [0, 0, 0, 90, 90, 0]}}));
-// SOLVED
-// excess = 90.0
-// area = 1.57079632679
-
-show(json!({"key": "torus_curvature", "inputs": {"major": "3", "minor": "1", "v": "0"}}));
-// SOLVED
-// gaussian = 0.25
-// mean = 0.625
-// k1 = 1.0
-// k2 = 0.25
-
-show(json!({"key": "dilate_point", "inputs": {"k": "3", "px": "2", "py": "3"}}));
-// SOLVED
-// x = 6.0
-// y = 9.0
-
-show(json!({"key": "closest_pair", "inputs": {"points": [0, 0, 5, 5, 1, 1, 9, 2, 6, 6.5]}}));
-// SOLVED
-// distance = 1.41421356237
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.md)
@@ -313,7 +215,7 @@ show(json!({"key": "closest_pair", "inputs": {"points": [0, 0, 5, 5, 1, 1, 9, 2,
 
 Every calculation, with its formula, a worked example and its figures: **[Geometry on ai999x.com](https://www.ai999x.com/models/geometry-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
