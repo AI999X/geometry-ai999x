@@ -1,6 +1,6 @@
 # geometry: the Geometry program, user guide
 
-**geometry-ai999x 1.6.4**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**geometry-ai999x 1.6.6**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Geometry covers plane and solid geometry, coordinate geometry, conic sections, polygons and polyhedra, computational geometry (convex hulls, Voronoi, triangulation) and curves and surfaces. This guide is about `geometry`, the model as a self-contained program for Windows and Linux: 78 capabilities in 14 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/geometry-ai999x/); the Python package (`pip install geometry-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ geometry --version
-geometry-ai999x 1.6.4 (Rust build, ax-engine 1.6.4)
+geometry-ai999x 1.6.6 (Rust build, ax-engine 1.6.6)
 ```
 
 ### 2.2 Ask in words
