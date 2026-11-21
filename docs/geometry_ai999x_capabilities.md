@@ -210,13 +210,17 @@ $$
 - **Assumes:** length > 0; width > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area (area l*w) against length (length of the rectangle) from 4 to 12](https://www.ai999x.com/?ax_fig=geometry-ai999x/rectangle-measures-curve)
+![area over length from 4 to 12 and width from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/rectangle-measures-field)
 
-*area (area l*w) against length (length of the rectangle) from 4 to 12. One curve for each value of width (width of the rectangle): 5, 2.5, 10. 31 points per curve computed by geometry-ai999x; marked: the worked example, length = 8, area = 40.*
+*area over length from 4 to 12 and width from 2.5 to 7.5: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 10 to 90). Marked: length = 8, width = 5, area = 40. Your inputs: length = 8, width = 5.*
 
-![area (area l*w) over length (length of the rectangle) from 4 to 12 and width (width of the rectangle) from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/rectangle-measures-field)
+![Area as length runs from 2 to 14, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/rectangle-measures-live-1)
 
-*area (area l*w) over length (length of the rectangle) from 4 to 12 and width (width of the rectangle) from 2.5 to 7.5: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 10 to dark 90); iso-lines at area = 20, 40, 60, 80. Marked: the worked example, length = 8, width = 5, area = 40.*
+*Area as length runs from 2 to 14, every other input as you entered it (41 solutions). Marked: your length = 8 gives area = 40. Your inputs: length = 8, width = 5.*
+
+![Area as width runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/rectangle-measures-live-2)
+
+*Area as width runs from 1.25 to 8.75, every other input as you entered it (29 solutions). Marked: your width = 5 gives area = 40. Your inputs: length = 8, width = 5.*
 
 ```python
 geometry_ai999x.solve('rectangle_measures', length=8, width=5)
@@ -268,13 +272,17 @@ $$
 - **Assumes:** base > 0; height > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area (area b*h/2) against base (length of the base) from 5 to 15](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-base-height-curve)
+![area over base from 5 to 15 and height from 3 to 9: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 7](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-base-height-field)
 
-*area (area b*h/2) against base (length of the base) from 5 to 15. One curve for each value of height (height perpendicular to the base): 6, 3, 12. 31 points per curve computed by geometry-ai999x; marked: the worked example, base = 10, area = 30.*
+*area over base from 5 to 15 and height from 3 to 9: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 7.5 to 67.5). Marked: base = 10, height = 6, area = 30. Your inputs: base = 10, height = 6.*
 
-![area (area b*h/2) over base (length of the base) from 5 to 15 and height (height perpendicular to the base) from 3 to 9: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 7](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-base-height-field)
+![Area as base runs from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-base-height-live-1)
 
-*area (area b*h/2) over base (length of the base) from 5 to 15 and height (height perpendicular to the base) from 3 to 9: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 7.5 to dark 67.5); iso-lines at area = 10, 20, 30, 40, 50, 60. Marked: the worked example, base = 10, height = 6, area = 30.*
+*Area as base runs from 2.5 to 17.5, every other input as you entered it (41 solutions). Marked: your base = 10 gives area = 30. Your inputs: base = 10, height = 6.*
+
+![Area as height runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-base-height-live-2)
+
+*Area as height runs from 1.5 to 10.5, every other input as you entered it (29 solutions). Marked: your height = 6 gives area = 30. Your inputs: base = 10, height = 6.*
 
 ```python
 geometry_ai999x.solve('triangle_area_base_height', base=10, height=6)
@@ -319,9 +327,9 @@ $$
 - **Assumes:** radius > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area (area pi r^2) against radius (radius of the circle) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-measures-curve)
+![Area as radius runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-measures-live-1)
 
-*area (area pi r^2) against radius (radius of the circle) from 1.5 to 4.5. 31 points computed by geometry-ai999x; marked: the worked example, radius = 3, area = 28.2743.*
+*Area as radius runs from 0.75 to 5.25, every other input as you entered it (41 solutions). Marked: your radius = 3 gives area = 28.27. Your inputs: radius = 3.*
 
 ```python
 geometry_ai999x.solve('circle_measures', radius=3)
@@ -368,9 +376,13 @@ $$
 - **Assumes:** a, b, height > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area ((a + b) h / 2) against a (first parallel side) from 3 to 9](https://www.ai999x.com/?ax_fig=geometry-ai999x/trapezoid-measures-curve)
+![Area as height runs from 1 to 7, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/trapezoid-measures-live-1)
 
-*area ((a + b) h / 2) against a (first parallel side) from 3 to 9. One curve for each value of height (distance between the parallel sides): 4, 2, 8. Other inputs as in the worked example: b = 10.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, a = 6, area = 32.*
+*Area as height runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your height = 4 gives area = 32. Your inputs: a = 6, b = 10, height = 4.*
+
+![Area as b runs from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/trapezoid-measures-live-2)
+
+*Area as b runs from 2.5 to 17.5, every other input as you entered it (29 solutions). Marked: your b = 10 gives area = 32. Your inputs: a = 6, b = 10, height = 4.*
 
 ```python
 geometry_ai999x.solve('trapezoid_measures', a=6, b=10, height=4)
@@ -415,13 +427,17 @@ $$
 - **Assumes:** d1, $d_{2} > 0$ (the diagonals of a rhombus bisect each other at right angles)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area (d1 d2 / 2) against d1 (first diagonal) from 3 to 9](https://www.ai999x.com/?ax_fig=geometry-ai999x/rhombus-measures-curve)
+![area over d1 from 3 to 9 and d2 from 4 to 12: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 6 to 54)](https://www.ai999x.com/?ax_fig=geometry-ai999x/rhombus-measures-field)
 
-*area (d1 d2 / 2) against d1 (first diagonal) from 3 to 9. One curve for each value of d2 (second diagonal): 8, 4, 16. 31 points per curve computed by geometry-ai999x; marked: the worked example, d1 = 6, area = 24.*
+*area over d1 from 3 to 9 and d2 from 4 to 12: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 6 to 54). Marked: d1 = 6, d2 = 8, area = 24. Your inputs: d1 = 6, d2 = 8.*
 
-![area (d1 d2 / 2) over d1 (first diagonal) from 3 to 9 and d2 (second diagonal) from 4 to 12: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 6 to dark 54); iso-lines at area = 10, 20, 30, 40, 50](https://www.ai999x.com/?ax_fig=geometry-ai999x/rhombus-measures-field)
+![Area as d1 runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/rhombus-measures-live-1)
 
-*area (d1 d2 / 2) over d1 (first diagonal) from 3 to 9 and d2 (second diagonal) from 4 to 12: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 6 to dark 54); iso-lines at area = 10, 20, 30, 40, 50. Marked: the worked example, d1 = 6, d2 = 8, area = 24.*
+*Area as d1 runs from 1.5 to 10.5, every other input as you entered it (41 solutions). Marked: your d1 = 6 gives area = 24. Your inputs: d1 = 6, d2 = 8.*
+
+![Area as d2 runs from 2 to 14, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/rhombus-measures-live-2)
+
+*Area as d2 runs from 2 to 14, every other input as you entered it (29 solutions). Marked: your d2 = 8 gives area = 24. Your inputs: d1 = 6, d2 = 8.*
 
 ```python
 geometry_ai999x.solve('rhombus_measures', d1=6, d2=8)
@@ -466,13 +482,17 @@ $$
 - **Assumes:** radius > 0; 0 < angle <= 360 degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![arc_length (r theta (theta in radians)) against radius (radius) from 3 to 9](https://www.ai999x.com/?ax_fig=geometry-ai999x/sector-measures-curve)
+![arc_length over radius from 3 to 9 and angle from 30 to 90: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/sector-measures-field)
 
-*arc_length (r theta (theta in radians)) against radius (radius) from 3 to 9. One curve for each value of angle (central angle in degrees): 60, 22.5, 67.5. 31 points per curve computed by geometry-ai999x; marked: the worked example, radius = 6, arc_length = 6.28319.*
+*arc_length over radius from 3 to 9 and angle from 30 to 90: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 1.571 to 14.14). Marked: radius = 6, angle = 60, arc_length = 6.283. Your inputs: radius = 6, angle = 60.*
 
-![arc_length (r theta (theta in radians)) over radius (radius) from 3 to 9 and angle (central angle in degrees) from 0 to 90: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/sector-measures-field)
+![R theta as radius runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/sector-measures-live-1)
 
-*arc_length (r theta (theta in radians)) over radius (radius) from 3 to 9 and angle (central angle in degrees) from 0 to 90: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0.336599 to dark 14.1372); iso-lines at arc_length = 2.5, 5, 7.5, 10, 12.5; blank cells: inputs the capability refuses. Marked: the worked example, radius = 6, angle = 60, arc_length = 6.28319.*
+*R theta as radius runs from 1.5 to 10.5, every other input as you entered it (41 solutions). Marked: your radius = 6 gives arc_length = 6.283. Your inputs: radius = 6, angle = 60.*
+
+![R theta as angle runs from 15 to 105, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/sector-measures-live-2)
+
+*R theta as angle runs from 15 to 105, every other input as you entered it (29 solutions). Marked: your angle = 60 gives arc_length = 6.283. Your inputs: radius = 6, angle = 60.*
 
 ```python
 geometry_ai999x.solve('sector_measures', radius=6, angle=60)
@@ -519,13 +539,13 @@ $$
 - **Assumes:** $3  \leq  n  \leq  1000$ (whole number); each single angle assumes a regular polygon
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Interior and exterior angles of the regular polygons with 3 to 20 sides, each computed by the package: the interior angle climbs towards 180° (triangle 60°, 20-gon 162°) while the exterior angle 360°/n falls; marked: n = 6, interior angle = 120°](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/regular-polygon-angles-stems.svg)
+![Interior and exterior angles of the regular polygons with 3 to 20 sides, each computed by the model: the interior angle climbs towards 180° (3 sides 60°, 20 sides 162°) while the exterior angle falls; marked: n = 6, interior angle 120°, exterior 60°](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-angles-stems)
 
-*Interior and exterior angles of the regular polygons with 3 to 20 sides, each computed by the package: the interior angle climbs towards 180° (triangle 60°, 20-gon 162°) while the exterior angle 360°/n falls; marked: n = 6, interior angle = 120°.*
+*Interior and exterior angles of the regular polygons with 3 to 20 sides, each computed by the model: the interior angle climbs towards 180° (3 sides 60°, 20 sides 162°) while the exterior angle falls; marked: n = 6, interior angle 120°, exterior 60°. Your inputs: n = 6.*
 
-![interior_angle (each interior angle of the regular polygon, degrees) against n (number of sides) from 1 to 14](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-angles-curve)
+![Each interior angle of the regular polygon](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-angles-live-1)
 
-*interior_angle (each interior angle of the regular polygon, degrees) against n (number of sides) from 1 to 14. 12 points computed by geometry-ai999x; marked: the worked example, n = 6, interior_angle = 120.*
+*Each interior angle of the regular polygon... as n runs from 3 to 11, every other input as you entered it (9 solutions). Marked: your n = 6 gives interior_angle = 120. Your inputs: n = 6.*
 
 ```python
 geometry_ai999x.solve('regular_polygon_angles', n=6)
@@ -579,13 +599,17 @@ $$
 - **Assumes:** $3  \leq  n  \leq  200$; side > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area (n s a / 2) against n (number of sides) from 1 to 14](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-measures-curve)
+![area over side from 2 to 6 and n from 3 to 11: each of the 13 × 9 cells is one run of the model, shaded by the logarithm of its value (darker is larger; values from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-measures-field)
 
-*area (n s a / 2) against n (number of sides) from 1 to 14. One curve for each value of side (side length): 4, 2, 8. 12 points per curve computed by geometry-ai999x; marked: the worked example, n = 6, area = 41.5692.*
+*area over side from 2 to 6 and n from 3 to 11: each of the 13 × 9 cells is one run of the model, shaded by the logarithm of its value (darker is larger; values from 1.732 to 337.2). Marked: side = 4, n = 6, area = 41.57. Your inputs: n = 6, side = 4.*
 
-![area (n s a / 2) over side (side length) from 2 to 6 and n (number of sides) from 1 to 14: each of the 21 × 14 cells is one run of geometry-ai999x, shaded by its value (light 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-measures-field)
+![Area as side runs from 1 to 7, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-measures-live-1)
 
-*area (n s a / 2) over side (side length) from 2 to 6 and n (number of sides) from 1 to 14: each of the 21 × 14 cells is one run of geometry-ai999x, shaded by its value (light 1.73205 to dark 552.042); iso-lines at area = 100, 200, 300, 400, 500; blank cells: inputs the capability refuses. Marked: the worked example, side = 4, n = 6, area = 41.5692.*
+*Area as side runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your side = 4 gives area = 41.57. Your inputs: n = 6, side = 4.*
+
+![Area as n runs from 3 to 11, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-polygon-measures-live-2)
+
+*Area as n runs from 3 to 11, every other input as you entered it (9 solutions). Marked: your n = 6 gives area = 41.57. Your inputs: n = 6, side = 4.*
 
 ```python
 geometry_ai999x.solve('regular_polygon_measures', n=6, side=4)
@@ -633,9 +657,13 @@ $$
 - **Assumes:** length, width, height > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (l w h) against length (length) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cuboid-measures-curve)
+![L w h as length runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/cuboid-measures-live-1)
 
-*volume (l w h) against length (length) from 1.5 to 4.5. One curve for each value of width (width): 4, 2, 8. Other inputs as in the worked example: height = 12.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, length = 3, volume = 144.*
+*L w h as length runs from 0.75 to 5.25, every other input as you entered it (41 solutions). Marked: your length = 3 gives volume = 144. Your inputs: length = 3, width = 4, height = 12.*
+
+![L w h as width runs from 1 to 7, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/cuboid-measures-live-2)
+
+*L w h as width runs from 1 to 7, every other input as you entered it (29 solutions). Marked: your width = 4 gives volume = 144. Your inputs: length = 3, width = 4, height = 12.*
 
 ```python
 geometry_ai999x.solve('cuboid_measures', length=3, width=4, height=12)
@@ -682,13 +710,17 @@ $$
 - **Assumes:** radius, height > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (pi r^2 h) against radius (radius of the base) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cylinder-measures-curve)
+![volume over radius from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cylinder-measures-field)
 
-*volume (pi r^2 h) against radius (radius of the base) from 1.5 to 4.5. One curve for each value of height (height): 5, 2.5, 10. 31 points per curve computed by geometry-ai999x; marked: the worked example, radius = 3, volume = 141.372.*
+*volume over radius from 1.5 to 4.5 and height from 2.5 to 7.5: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 17.67 to 477.1). Marked: radius = 3, height = 5, volume = 141.4. Your inputs: radius = 3, height = 5.*
 
-![volume (pi r^2 h) over radius (radius of the base) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cylinder-measures-field)
+![Volume as radius runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/cylinder-measures-live-1)
 
-*volume (pi r^2 h) over radius (radius of the base) from 1.5 to 4.5 and height (height) from 2.5 to 7.5: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 17.6715 to dark 477.129); iso-lines at volume = 100, 200, 300, 400. Marked: the worked example, radius = 3, height = 5, volume = 141.372.*
+*Volume as radius runs from 0.75 to 5.25, every other input as you entered it (41 solutions). Marked: your radius = 3 gives volume = 141.4. Your inputs: radius = 3, height = 5.*
+
+![Volume as height runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cylinder-measures-live-2)
+
+*Volume as height runs from 1.25 to 8.75, every other input as you entered it (29 solutions). Marked: your height = 5 gives volume = 141.4. Your inputs: radius = 3, height = 5.*
 
 ```python
 geometry_ai999x.solve('cylinder_measures', radius=3, height=5)
@@ -735,13 +767,17 @@ $$
 - **Assumes:** radius, height > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (pi r^2 h / 3) against radius (radius of the base) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cone-measures-curve)
+![volume over radius from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cone-measures-field)
 
-*volume (pi r^2 h / 3) against radius (radius of the base) from 1.5 to 4.5. One curve for each value of height (perpendicular height): 4, 2, 8. 31 points per curve computed by geometry-ai999x; marked: the worked example, radius = 3, volume = 37.6991.*
+*volume over radius from 1.5 to 4.5 and height from 2 to 6: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 4.712 to 127.2). Marked: radius = 3, height = 4, volume = 37.7. Your inputs: radius = 3, height = 4.*
 
-![volume (pi r^2 h / 3) over radius (radius of the base) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/cone-measures-field)
+![Volume as radius runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/cone-measures-live-1)
 
-*volume (pi r^2 h / 3) over radius (radius of the base) from 1.5 to 4.5 and height (perpendicular height) from 2 to 6: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 4.71239 to dark 127.235); iso-lines at volume = 25, 50, 75, 100. Marked: the worked example, radius = 3, height = 4, volume = 37.6991.*
+*Volume as radius runs from 0.75 to 5.25, every other input as you entered it (41 solutions). Marked: your radius = 3 gives volume = 37.7. Your inputs: radius = 3, height = 4.*
+
+![Volume as height runs from 1 to 7, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/cone-measures-live-2)
+
+*Volume as height runs from 1 to 7, every other input as you entered it (29 solutions). Marked: your height = 4 gives volume = 37.7. Your inputs: radius = 3, height = 4.*
 
 ```python
 geometry_ai999x.solve('cone_measures', radius=3, height=4)
@@ -785,9 +821,9 @@ $$
 - **Assumes:** radius > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (4/3 pi r^3) against radius (radius) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/sphere-measures-curve)
+![Volume as radius runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/sphere-measures-live-1)
 
-*volume (4/3 pi r^3) against radius (radius) from 1.5 to 4.5. 31 points computed by geometry-ai999x; marked: the worked example, radius = 3, volume = 113.097.*
+*Volume as radius runs from 0.75 to 5.25, every other input as you entered it (41 solutions). Marked: your radius = 3 gives volume = 113.1. Your inputs: radius = 3.*
 
 ```python
 geometry_ai999x.solve('sphere_measures', radius=3)
@@ -833,9 +869,17 @@ $$
 - **Assumes:** a, b, $c > 0$; triangle inequality; the sides are compared exactly as written
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Type by angles of the triangle with sides a = 3 (as in the worked example), b and c from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-classify-decision)
+![Acute / right / obtuse as a runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-classify-live-1)
 
-*Type by angles of the triangle with sides a = 3 (as in the worked example), b and c from 0.2 to 8. Each of the 40 × 40 cells is one run of the package, coloured by the by_angles it returned: acute: 312 cells, obtuse: 539 cells, right: 6 cells; 743 blank cells: inputs the package refuses. Marked: the worked example b = 4.0, c = 5.0 → right (scalene).*
+*Acute / right / obtuse as a runs from 1.087 to 5.25, every other input as you entered it (38 solutions). Shaded by acute / right / obtuse: obtuse, right, acute. Your inputs: a = 3, b = 4, c = 5.*
+
+![Acute / right / obtuse for 17 5 x 5 combinations of a and b around your inputs (the other inputs as entered); the ring marks your inputs, which give right](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-classify-live-2)
+
+*Acute / right / obtuse for 17 5 x 5 combinations of a and b around your inputs (the other inputs as entered); the ring marks your inputs, which give right. Blank cells admit no answer. Your inputs: a = 3, b = 4, c = 5.*
+
+![Acute / right / obtuse as b runs from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-classify-live-3)
+
+*Acute / right / obtuse as b runs from 2.071 to 7, every other input as you entered it (24 solutions). Shaded by acute / right / obtuse: obtuse, right, acute. Your inputs: a = 3, b = 4, c = 5.*
 
 ```python
 geometry_ai999x.solve('triangle_classify', a=3, b=4, c=5)
@@ -890,9 +934,17 @@ $$
 - **Assumes:** at least 3 vertices, in order; the polygon is simple (its edges do not cross)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-area-points)
+![The 4 points as given, numbered in order and joined as a polygon, drawn to scale: area 12, perimeter 14, the vertices run counterclockwise (arrows: the order as given)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-area-points)
 
-*The rows of points (vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon. Returned: area = 12, perimeter = 14.*
+*The 4 points as given, numbered in order and joined as a polygon, drawn to scale: area 12, perimeter 14, the vertices run counterclockwise (arrows: the order as given). Your inputs: points = 0 0, 4 0, 4 3, 0 3.*
+
+![Enclosed area as points[3] runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-area-live-1)
+
+*Enclosed area as points[3] runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your points[3] = 4 gives area = 12. Your inputs: points = 0 0, 4 0, 4 3, 0 3.*
+
+![Enclosed area as points[5] runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-area-live-2)
+
+*Enclosed area as points[5] runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your points[5] = 4 gives area = 12. Your inputs: points = 0 0, 4 0, 4 3, 0 3.*
 
 ```python
 geometry_ai999x.solve('polygon_area', points='0 0, 4 0, 4 3, 0 3')
@@ -940,13 +992,21 @@ $$
 - **Assumes:** at least 3 vertices, in order; simple polygon
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The L-shaped polygon 0 0, 6 0, 6 2, 2 2, 2 5, 0 5, with the interior angle at each vertex (sum 720°, 1 reflex), area 18 and perimeter 22; marked: the centroid x = 2](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/polygon-centroid-shape.svg)
+![The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the centroid is (2, 1)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-centroid-points)
 
-*The L-shaped polygon 0 0, 6 0, 6 2, 2 2, 2 5, 0 5, with the interior angle at each vertex (sum 720°, 1 reflex), area 18 and perimeter 22; marked: the centroid x = 2.33333, y = 1.83333, all computed by the package. The centroid of a non-convex shape need not be its middle.*
+*The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the centroid is (2, 1). Your inputs: points = 0 0, 4 0, 4 2, 0 2.*
 
-![The rows of points (vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-centroid-points)
+![The polygon 0 0, 4 0, 4 2, 0 2 with the interior angle at each vertex (sum 360°, 0 reflex), area 8 and perimeter 12; marked: the centroid (2, 1)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-centroid-shape)
 
-*The rows of points (vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked. Returned: cx = 2, cy = 1.*
+*The polygon 0 0, 4 0, 4 2, 0 2 with the interior angle at each vertex (sum 360°, 0 reflex), area 8 and perimeter 12; marked: the centroid (2, 1). All computed by the model; the centroid of a non-convex shape need not lie inside it. Your inputs: points = 0 0, 4 0, 4 2, 0 2.*
+
+![X of the centroid as points[6] runs from 1 to 6, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-centroid-live-1)
+
+*X of the centroid as points[6] runs from 1 to 6, every other input as you entered it (6 solutions). Marked: your points[6] = 2 gives cx = 2. Your inputs: points = 0 0, 4 0, 4 2, 0 2.*
+
+![X of the centroid as points[3] runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-centroid-live-2)
+
+*X of the centroid as points[3] runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your points[3] = 4 gives cx = 2. Your inputs: points = 0 0, 4 0, 4 2, 0 2.*
 
 ```python
 geometry_ai999x.solve('polygon_centroid', points='0 0, 4 0, 4 2, 0 2')
@@ -993,9 +1053,17 @@ $$
 - **Assumes:** exactly 3 vertices; not collinear
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the vertices A, B, C: xA yA, xB yB, xC yC) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-coordinates-points)
+![The 3 points as given, numbered in order and joined as a polygon, drawn to scale: area 6, perimeter 12, centroid (1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-coordinates-points)
 
-*The rows of points (the vertices A, B, C: xA yA, xB yB, xC yC) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked. Returned: area = 6, perimeter = 12, gx = 1.33333, gy = 1, angle_A = 90, angle_B = 36.8699, angle_C = 53.1301.*
+*The 3 points as given, numbered in order and joined as a polygon, drawn to scale: area 6, perimeter 12, centroid (1.333, 1), angles A = 90°, B = 36.87°, C = 53.13°. Your inputs: points = 0 0, 4 0, 0 3.*
+
+![Area as points[3] runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-coordinates-live-1)
+
+*Area as points[3] runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your points[3] = 4 gives area = 6. Your inputs: points = 0 0, 4 0, 0 3.*
+
+![Area as points[2] runs from 0 to 4, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-coordinates-live-2)
+
+*Area as points[2] runs from 0 to 4, every other input as you entered it (4 solutions). Values in this range where the inputs admit no answer (1 of 5) are left out. Marked: your points[2] = 0 gives area = 6. Your inputs: points = 0 0, 4 0, 0 3.*
 
 ```python
 geometry_ai999x.solve('triangle_coordinates', points='0 0, 4 0, 0 3')
@@ -1039,13 +1107,21 @@ $$
 - **Assumes:** exactly 3 points; not collinear
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The triangle with vertices 0 0, 4 0, 1 3: circumcircle (centre O = (2, 1), radius 2](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/triangle-circumcircle-shape.svg)
+![The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the returned circle has centre (2, 1](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/triangle-circumcircle-points.svg)
 
-*The triangle with vertices 0 0, 4 0, 1 3: circumcircle (centre O = (2, 1), radius 2.23607), incircle (centre I = (1.45982, 1.05218), radius 1.05218), orthocentre H = (1, 1) and centroid G = (1.66667, 1), each computed by the package; O, G and H lie on the Euler line.*
+*The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the returned circle has centre (2, 1.5) and radius 2.5. Your inputs: points = 0 0, 4 0, 0 3.*
 
-![The rows of points (the three points: x1 y1, x2 y2, x3 y3) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-circumcircle-points)
+![The triangle 0 0, 4 0, 0 3: circumcircle (centre O = (2, 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-circumcircle-shape)
 
-*The rows of points (the three points: x1 y1, x2 y2, x3 y3) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked. Returned: cx = 2, cy = 1.5, radius = 2.5.*
+*The triangle 0 0, 4 0, 0 3: circumcircle (centre O = (2, 1.5), radius 2.5), incircle (centre I = (1, 1), radius 1), orthocentre H = (0, 0) and centroid G = (1.333, 1), each computed by the model; O, G and H lie on the Euler line (dashed). Your inputs: points = 0 0, 4 0, 0 3.*
+
+![Circumradius as points[3] runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-circumcircle-live-1)
+
+*Circumradius as points[3] runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your points[3] = 4 gives radius = 2.5. Your inputs: points = 0 0, 4 0, 0 3.*
+
+![Circumradius as points[5] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-circumcircle-live-2)
+
+*Circumradius as points[5] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[5] = 0 gives radius = 2.5. Your inputs: points = 0 0, 4 0, 0 3.*
 
 ```python
 geometry_ai999x.solve('triangle_circumcircle', points='0 0, 4 0, 0 3')
@@ -1089,9 +1165,17 @@ $$
 - **Assumes:** exactly 3 points; not collinear
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the vertices: xA yA, xB yB, xC yC) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-incircle-points)
+![The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the returned circle has centre (1, 1) and radius 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-incircle-points)
 
-*The rows of points (the vertices: xA yA, xB yB, xC yC) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked. Returned: ix = 1, iy = 1, radius = 1.*
+*The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the returned circle has centre (1, 1) and radius 1. Your inputs: points = 0 0, 4 0, 0 3.*
+
+![Inradius as points[1] runs from 0 to 3, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-incircle-live-1)
+
+*Inradius as points[1] runs from 0 to 3, every other input as you entered it (4 solutions). Marked: your points[1] = 0 gives radius = 1. Your inputs: points = 0 0, 4 0, 0 3.*
+
+![Inradius as points[2] runs from 0 to 4, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-incircle-live-2)
+
+*Inradius as points[2] runs from 0 to 4, every other input as you entered it (4 solutions). Values in this range where the inputs admit no answer (1 of 5) are left out. Marked: your points[2] = 0 gives radius = 1. Your inputs: points = 0 0, 4 0, 0 3.*
 
 ```python
 geometry_ai999x.solve('triangle_incircle', points='0 0, 4 0, 0 3')
@@ -1133,9 +1217,17 @@ $$
 - **Assumes:** exactly 3 points; not collinear
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the vertices: xA yA, xB yB, xC yC) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-orthocenter-points)
+![The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the orthocentre H = (1, 1), where the altitudes meet (dashed: each vertex joined to H, along its altitude)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-orthocenter-points)
 
-*The rows of points (the vertices: xA yA, xB yB, xC yC) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked. Returned: hx = 1, hy = 1.*
+*The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the orthocentre H = (1, 1), where the altitudes meet (dashed: each vertex joined to H, along its altitude). Your inputs: points = 0 0, 4 0, 1 3.*
+
+![Y of the orthocentre as points[1] runs from 0 to 3, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-orthocenter-live-1)
+
+*Y of the orthocentre as points[1] runs from 0 to 3, every other input as you entered it (4 solutions). Marked: your points[1] = 0 gives hy = 1. Your inputs: points = 0 0, 4 0, 1 3.*
+
+![X of the orthocentre as points[5] runs from 0 to 5, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-orthocenter-live-2)
+
+*X of the orthocentre as points[5] runs from 0 to 5, every other input as you entered it (6 solutions). Marked: your points[5] = 1 gives hx = 1. Your inputs: points = 0 0, 4 0, 1 3.*
 
 ```python
 geometry_ai999x.solve('triangle_orthocenter', points='0 0, 4 0, 1 3')
@@ -1182,9 +1274,13 @@ $$
 - **Assumes:** each line has a or b nonzero; the lines are not parallel (exact test on the written coefficients)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![x (x of the intersection) against a1 (coefficient of x in line 1 (a1 x + b1 y + c1 = 0)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-intersection-curve)
+![X of the intersection as c1 runs from -8](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-intersection-live-1)
 
-*x (x of the intersection) against a1 (coefficient of x in line 1 (a1 x + b1 y + c1 = 0)) from 0.2 to 20 on a logarithmic axis. One curve for each value of a2 (coefficient of x in line 2 (a2 x + b2 y + c2 = 0)): 1, 0.5, 2. Other inputs as in the worked example: b1 = 1.0, c1 = -5.0, b2 = -1.0, c2 = -1.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, a1 = 2, x = 2.*
+*X of the intersection as c1 runs from -8.75 to -1.25, every other input as you entered it (41 solutions). Marked: your c1 = -5 gives x = 2. Your inputs: a1 = 2, b1 = 1, c1 = -5, a2 = 1, b2 = -1, c2 = -1.*
+
+![X of the intersection as a2 runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-intersection-live-2)
+
+*X of the intersection as a2 runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your a2 = 1 gives x = 2. Your inputs: a1 = 2, b1 = 1, c1 = -5, a2 = 1, b2 = -1, c2 = -1.*
 
 ```python
 geometry_ai999x.solve('line_intersection', a1=2, b1=1, c1=-5, a2=1, b2=-1, c2=-1)
@@ -1231,9 +1327,13 @@ $$
 - **Assumes:** each line has a or b nonzero; the acute angle is reported (parallel lines: 0)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![angle (angle between the lines, degrees, 0 to 90) against b1 (coefficient of y in line 1) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-lines-curve)
+![Angle between the lines, degrees, 0 to 90 as a1 runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-lines-live-1)
 
-*angle (angle between the lines, degrees, 0 to 90) against b1 (coefficient of y in line 1) from 0.1 to 10 on a logarithmic axis. One curve for each value of a2 (coefficient of x in line 2 (a2 x + b2 y + c2 = 0)): 1, 0.5, 2. Other inputs as in the worked example: a1 = -1.0, c1 = -1.0, b2 = 1.0, c2 = -3.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, b1 = 1, angle = 90.*
+*Angle between the lines, degrees, 0 to 90 as a1 runs from 0.25 to 1.75, every other input as you entered it (33 solutions). Marked: your a1 = 1 gives angle = 90. Your inputs: a1 = 1, b1 = -1, c1 = 1, a2 = 1, b2 = 1, c2 = -3.*
+
+![Angle between the lines, degrees, 0 to 90 as b1 runs from -1](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-lines-live-2)
+
+*Angle between the lines, degrees, 0 to 90 as b1 runs from -1.75 to -0.25, every other input as you entered it (29 solutions). Marked: your b1 = -1 gives angle = 90. Your inputs: a1 = 1, b1 = -1, c1 = 1, a2 = 1, b2 = 1, c2 = -3.*
 
 ```python
 geometry_ai999x.solve('angle_between_lines', a1=1, b1=-1, c1=1, a2=1, b2=1, c2=-3)
@@ -1280,9 +1380,13 @@ $$
 - **Assumes:** a and b not both 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![x (x of the image) against b (coefficient of y of the line) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/reflect-point-line-curve)
+![X of the image as a runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/reflect-point-line-live-1)
 
-*x (x of the image) against b (coefficient of y of the line) from 0.1 to 10 on a logarithmic axis. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: px = 3.0, a = -1.0, c = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, b = 1, x = 4.*
+*X of the image as a runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your a = 1 gives x = 4. Your inputs: px = 3, py = 4, a = 1, b = -1, c = 0.*
+
+![X of the image as b runs from -1](https://www.ai999x.com/?ax_fig=geometry-ai999x/reflect-point-line-live-2)
+
+*X of the image as b runs from -1.75 to -0.25, every other input as you entered it (29 solutions). Marked: your b = -1 gives x = 4. Your inputs: px = 3, py = 4, a = 1, b = -1, c = 0.*
 
 ```python
 geometry_ai999x.solve('reflect_point_line', px=3, py=4, a=1, b=-1, c=0)
@@ -1330,13 +1434,17 @@ $$
 - **Assumes:** angle in degrees, counterclockwise positive ('clockwise' in a question makes it negative); centre defaults to the origin
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The triangle (1, 1), (4, 1), (2, 3) and three images, each vertex mapped by the package: rotated 90° about the origin ((-1, 1), (-1, 4), (-3, 2)), reflected in the line x + y = 0 ((-1, -1), (-1, -4), (-3, -2)) and dilated about the origin by −0](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/rotate-point-shape.svg)
+![A triangle with the given point P = (3, 4) as its first vertex ((3, 4), (5](https://www.ai999x.com/?ax_fig=geometry-ai999x/rotate-point-shape)
 
-*The triangle (1, 1), (4, 1), (2, 3) and three images, each vertex mapped by the package: rotated 90° about the origin ((-1, 1), (-1, 4), (-3, 2)), reflected in the line x + y = 0 ((-1, -1), (-1, -4), (-3, -2)) and dilated about the origin by −0.5 ((-0.5, -0.5), (-2, -0.5), (-1, -1.5)).*
+*A triangle with the given point P = (3, 4) as its first vertex ((3, 4), (5.5, 4), (4, 6)) and three images, each vertex mapped by the model: rotated 90° about (0, 0) ((-4, 3), (-4, 5.5), (-6, 4)), reflected in the line x + y = 0 through the centre ((-4, -3), (-4, -5.5), (-6, -4)) and dilated about the centre by -0.5 ((-1.5, -2), (-2.75, -2), (-2, -3)). Marked: the image of P, (-4, 3). Your inputs: px = 3, py = 4, angle = 90.*
 
-![x (x of the image) against angle (rotation angle in degrees, counterclockwise positive) from 0 to 90](https://www.ai999x.com/?ax_fig=geometry-ai999x/rotate-point-curve)
+![X of the image as angle runs from 22](https://www.ai999x.com/?ax_fig=geometry-ai999x/rotate-point-live-1)
 
-*x (x of the image) against angle (rotation angle in degrees, counterclockwise positive) from 0 to 90. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: px = 3.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, angle = 90, x = -4.*
+*X of the image as angle runs from 22.5 to 157.5, every other input as you entered it (41 solutions). Marked: your angle = 90 gives x = -4. Your inputs: px = 3, py = 4, angle = 90.*
+
+![Y of the image as px runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/rotate-point-live-2)
+
+*Y of the image as px runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your px = 3 gives y = 3. Your inputs: px = 3, py = 4, angle = 90.*
 
 ```python
 geometry_ai999x.solve('rotate_point', px=3, py=4, angle=90)
@@ -1384,9 +1492,13 @@ $$
 - **Assumes:** $k  \neq  0$; centre defaults to the origin
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![x (x of the image) against px (x of the point) from 1 to 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/dilate-point-curve)
+![X of the image as px runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/dilate-point-live-1)
 
-*x (x of the image) against px (x of the point) from 1 to 3. One curve for each value of k (scale factor (negative: through the centre)): 3, 1.5, 6. Other inputs as in the worked example: py = 3.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, px = 2, x = 6.*
+*X of the image as px runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your px = 2 gives x = 6. Your inputs: px = 2, py = 3, k = 3.*
+
+![X of the image as k runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/dilate-point-live-2)
+
+*X of the image as k runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your k = 3 gives x = 6. Your inputs: px = 2, py = 3, k = 3.*
 
 ```python
 geometry_ai999x.solve('dilate_point', px=2, py=3, k=3)
@@ -1437,9 +1549,13 @@ $$
 - **Assumes:** $r > 0$; a and b not both 0; tangency is decided exactly on the written values; points ordered by x, then y; absent points are empty
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The worked example of Intersection of a circle and a line as inputs and results: stated cx = 0, cy = 0, r = 5, a = -1, b = 1, c = -1; returned by geometry-ai999x: count = 2, x1 = -4, y1 = -3, x2 = 3, y2 = 4](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-line-intersection-io)
+![X of the second point as r runs from 1](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/circle-line-intersection-live-1.svg)
 
-*The worked example of Intersection of a circle and a line as inputs and results: stated cx = 0, cy = 0, r = 5, a = -1, b = 1, c = -1; returned by geometry-ai999x: count = 2, x1 = -4, y1 = -3, x2 = 3, y2 = 4.*
+*X of the second point as r runs from 1.25 to 8.75, every other input as you entered it (41 solutions). Marked: your r = 5 gives x2 = 3. Your inputs: cx = 0, cy = 0, r = 5, a = 1, b = -1, c = 1.*
+
+![Y of the first point as a runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-line-intersection-live-2)
+
+*Y of the first point as a runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your a = 1 gives y1 = -3. Your inputs: cx = 0, cy = 0, r = 5, a = 1, b = -1, c = 1.*
 
 ```python
 geometry_ai999x.solve('circle_line_intersection', cx=0, cy=0, r=5, a=1, b=-1, c=1)
@@ -1496,9 +1612,13 @@ $$
 - **Assumes:** r1, $r_{2} > 0$; the circles are not identical; tangency decided exactly on the written values; points ordered by x, then y
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![count (number of intersection points (0, 1 or 2)) against r1 (first radius) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-circle-intersection-curve)
+![Y of the second point as y1 runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-circle-intersection-live-1)
 
-*count (number of intersection points (0, 1 or 2)) against r1 (first radius) from 0.5 to 50 on a logarithmic axis. One curve for each value of x2 (x of the second centre): 6, 3, 12. Other inputs as in the worked example: x1 = 0.0, y1 = 0.0, y2 = 0.0, r2 = 5.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, r1 = 5, count = 2.*
+*Y of the second point as y1 runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your y1 = 0 gives y2 = 4. Your inputs: x1 = 0, y1 = 0, r1 = 5, x2 = 6, y2 = 0, r2 = 5.*
+
+![Y of the second point as y2 runs from -1 to 1, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/circle-circle-intersection-live-2)
+
+*Y of the second point as y2 runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your y2 (given) = 0 gives y2 (computed) = 4. Your inputs: x1 = 0, y1 = 0, r1 = 5, x2 = 6, y2 = 0, r2 = 5.*
 
 ```python
 geometry_ai999x.solve('circle_circle_intersection', x1=0, y1=0, r1=5, x2=6, y2=0, r2=5)
@@ -1548,13 +1668,17 @@ $$
 - **Assumes:** $r > 0$; the point is not inside the circle (on the circle: length 0, both points at the point)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Tangents from P = (5, 0) to the circle of centre C = (0, 0) and radius 3: the package gives the touching points (1](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/tangent-from-point-shape.svg)
+![Tangents from P = (5, 0) to the circle of centre C = (0, 0) and radius 3: the model gives the touching points (1](https://www.ai999x.com/?ax_fig=geometry-ai999x/tangent-from-point-shape)
 
-*Tangents from P = (5, 0) to the circle of centre C = (0, 0) and radius 3: the package gives the touching points (1.8, -2.4) and (1.8, 2.4) and the tangent length 4. The circle on the diameter CP meets the circle at the same two points (its intersection, also computed by the package: (1.8, -2.4) and (1.8, 2.4)).*
+*Tangents from P = (5, 0) to the circle of centre C = (0, 0) and radius 3: the model gives the touching points (1.8, -2.4) and (1.8, 2.4) and the tangent length 4. The circle on the diameter CP (dashed) meets the circle at (1.8, -2.4) and (1.8, 2.4) (a second run of the model). Your inputs: cx = 0, cy = 0, r = 3, px = 5, py = 0.*
 
-![length (tangent length sqrt(d^2 - r^2)) against cy (y of the centre) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/tangent-from-point-curve)
+![Length as cy runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/tangent-from-point-live-1)
 
-*length (tangent length sqrt(d^2 - r^2)) against cy (y of the centre) from -1 to 1. One curve for each value of px (x of the external point): 5, 10. Other inputs as in the worked example: cx = 0.0, r = 3.0, py = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, cy = 0, length = 4.*
+*Length as cy runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your cy = 0 gives length = 4. Your inputs: cx = 0, cy = 0, r = 3, px = 5, py = 0.*
+
+![Length as px runs from 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/tangent-from-point-live-2)
+
+*Length as px runs from 3.125 to 8.75, every other input as you entered it (22 solutions). Marked: your px = 5 gives length = 4. Your inputs: cx = 0, cy = 0, r = 3, px = 5, py = 0.*
 
 ```python
 geometry_ai999x.solve('tangent_from_point', cx=0, cy=0, r=3, px=5, py=0)
@@ -1601,9 +1725,21 @@ $$
 - **Assumes:** A, B, C not all 0; exact on the written coefficients; 'degenerate' = a point, a pair of lines or a degenerate equation (zero 3x3 determinant); 'empty' = an ellipse with no real points
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B and C from −4 to 4, with A = 1, D = 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/conic-classify-decision)
+![Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B from -4 to 4 and C from 0 to 8, with A = 1, D = 0, E = 0, F = -4 as given](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/conic-classify-decision.svg)
 
-*Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B and C from −4 to 4, with A = 1, D = 0.0, E = 0.0, F = -4.0 as in the worked example. Each of the 41 × 41 cells is one run of the package, coloured by the type it returned: circle: 1 cells, degenerate: 5 cells, ellipse: 545 cells, hyperbola: 1130 cells. Marked: the worked example B = 0.0, C = 4.0 → ellipse.*
+*Type of the conic A x² + B xy + C y² + D x + E y + F = 0 over B from -4 to 4 and C from 0 to 8, with A = 1, D = 0, E = 0, F = -4 as given. Each of the 15 × 15 cells is one run of the model, coloured by the type it returned: hyperbola 48 cells, degenerate 3 cells, ellipse 174 cells. Marked: B = 0, C = 4, ellipse. Your inputs: A = 1, B = 0, C = 4, D = 0, E = 0, F = -4.*
+
+![Circle / ellipse / parabola / hyperbola / degenerate / empty as A runs from -7 to 9, every other input as you entered it (17 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/conic-classify-live-1)
+
+*Circle / ellipse / parabola / hyperbola / degenerate / empty as A runs from -7 to 9, every other input as you entered it (17 solutions). Shaded by circle / ellipse / parabola / hyperbola / degenerate / empty: hyperbola, degenerate, ellipse, circle. Your inputs: A = 1, B = 0, C = 4, D = 0, E = 0, F = -4.*
+
+![Circle / ellipse / parabola / hyperbola / degenerate / empty for 25 5 x 5 combinations of A and C around your inputs (the other inputs as entered); the ring marks your inputs, which give ellipse](https://www.ai999x.com/?ax_fig=geometry-ai999x/conic-classify-live-2)
+
+*Circle / ellipse / parabola / hyperbola / degenerate / empty for 25 5 x 5 combinations of A and C around your inputs (the other inputs as entered); the ring marks your inputs, which give ellipse. Blank cells admit no answer. Your inputs: A = 1, B = 0, C = 4, D = 0, E = 0, F = -4.*
+
+![Circle / ellipse / parabola / hyperbola / degenerate / empty as C runs from -4 to 12, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/conic-classify-live-3)
+
+*Circle / ellipse / parabola / hyperbola / degenerate / empty as C runs from -4 to 12, every other input as you entered it (9 solutions). Shaded by circle / ellipse / parabola / hyperbola / degenerate / empty: hyperbola, degenerate, ellipse. Your inputs: A = 1, B = 0, C = 4, D = 0, E = 0, F = -4.*
 
 ```python
 geometry_ai999x.solve('conic_classify', A=1, B=0, C=4, D=0, E=0, F=-4)
@@ -1664,13 +1800,21 @@ $$
 - **Assumes:** simple polygon with at least 3 vertices; decided exactly on the written coordinates
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![inside / outside / boundary (location) over px (x of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-decision)
+![The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the point (2, 3) is inside](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-points)
 
-*inside / outside / boundary (location) over px (x of the point) from 0.2 to 20 and py (y of the point) from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of geometry-ai999x, coloured by the verdict it returned, inside: 273 cells, outside: 378 cells. Other inputs as in the worked example: points = 0 0, 5 0, 5 5, 0 5. Marked: the worked example, px = 2, py = 3 → inside.*
+*The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the point (2, 3) is inside. Your inputs: px = 2, py = 3, points = 0 0, 5 0, 5 5, 0 5.*
 
-![The rows of points (polygon vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-points)
+![Inside / outside / boundary as px runs from -2 to 6, every other input as you entered it (21 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-live-1)
 
-*The rows of points (polygon vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon. Other inputs: px = 2.0, py = 3.0.*
+*Inside / outside / boundary as px runs from -2 to 6, every other input as you entered it (21 solutions). Shaded by inside / outside / boundary: outside, inside. Your inputs: px = 2, py = 3, points = 0 0, 5 0, 5 5, 0 5.*
+
+![Inside / outside / boundary for 25 5 x 5 combinations of px and py around your inputs (the other inputs as entered); the ring marks your inputs, which give inside](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-live-2)
+
+*Inside / outside / boundary for 25 5 x 5 combinations of px and py around your inputs (the other inputs as entered); the ring marks your inputs, which give inside. Blank cells admit no answer. Your inputs: px = 2, py = 3, points = 0 0, 5 0, 5 5, 0 5.*
+
+![Inside / outside / boundary as py runs from -3 to 9, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-in-polygon-live-3)
+
+*Inside / outside / boundary as py runs from -3 to 9, every other input as you entered it (7 solutions). Shaded by inside / outside / boundary: outside, inside. Your inputs: px = 2, py = 3, points = 0 0, 5 0, 5 5, 0 5.*
 
 ```python
 geometry_ai999x.solve('point_in_polygon', px=2, py=3, points='0 0, 5 0, 5 5, 0 5')
@@ -1721,13 +1865,25 @@ $$
 - **Assumes:** at least 3 points, not all collinear, at most 5000; points on a hull edge between two vertices are not vertices; repeated points count once
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Ten points (0 0, 5 5, 1 1, 9 2, 6 6](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/convex-hull-shape.svg)
+![The 6 points as given, numbered in order, drawn to scale: the returned hull has 4 vertices (0, 0), (4, 0), (3, 3), (2, 4), area 9 and perimeter 13](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/convex-hull-points.svg)
 
-*Ten points (0 0, 5 5, 1 1, 9 2, 6 6.5, 3 7, 7 3, 2 4, 8 6, 4 1.5), their convex hull as returned by the package (5 vertices, area 38.25, perimeter 26.0614), and the smallest circle enclosing them; marked: its centre x = 4.07895, y = 2.89474, radius 5.00173.*
+*The 6 points as given, numbered in order, drawn to scale: the returned hull has 4 vertices (0, 0), (4, 0), (3, 3), (2, 4), area 9 and perimeter 13.05. Your inputs: points = 0 0, 2 1, 4 0, 3 3, 1 2, 2 4.*
 
-![The rows of points (the points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-hull-points)
+![The 6 points, their convex hull as returned (4 vertices, area 9, perimeter 13](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-hull-shape)
 
-*The rows of points (the points: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon, returned (x, y) pairs marked; marked: the returned hull (0, 0), (4, 0), (3, 3), (2, 4). Returned: n_vertices = 4, area = 9, perimeter = 13.0486.*
+*The 6 points, their convex hull as returned (4 vertices, area 9, perimeter 13.05) and the smallest circle enclosing them, from a second run of the model: centre (2, 1.5), radius 2.5. Your inputs: points = 0 0, 2 1, 4 0, 3 3, 1 2, 2 4.*
+
+![Area of the hull as points[5] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-hull-live-1)
+
+*Area of the hull as points[5] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your points[5] = 4 gives area = 9. Your inputs: points = 0 0, 2 1, 4 0, 3 3, 1 2, 2 4.*
+
+![Hull vertices [x, y], counterclockwise from the smallest](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-hull-live-2)
+
+*Hull vertices [x, y], counterclockwise from the smallest... for your inputs, one bar per pair (first entry under the bar, second its height): 0 → 0, 4 → 0, 3 → 3, 2 → 4. Your inputs: points = 0 0, 2 1, 4 0, 3 3, 1 2, 2 4.*
+
+![Area of the hull as points[1] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-hull-live-3)
+
+*Area of the hull as points[1] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[1] = 0 gives area = 9. Your inputs: points = 0 0, 2 1, 4 0, 3 3, 1 2, 2 4.*
 
 ```python
 geometry_ai999x.solve('convex_hull', points='0 0, 2 1, 4 0, 3 3, 1 2, 2 4')
@@ -1769,9 +1925,17 @@ $$
 - **Assumes:** at least 2 points, at most 2000; a repeated point gives distance 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/closest-pair-points)
+![The 5 points as given, numbered in order, drawn to scale: the closest pair is points 1 and 3, at distance 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/closest-pair-points)
 
-*The rows of points (the points: x1 y1, x2 y2, ...) drawn as points (numbered in order). Returned: distance = 1.41421.*
+*The 5 points as given, numbered in order, drawn to scale: the closest pair is points 1 and 3, at distance 1.414 (each pair measured by the model). Your inputs: points = 0 0, 5 5, 1 1, 9 2, 6 6.5.*
+
+![Smallest pairwise distance as points[1] runs from -1 to 1, every other input as you entered it (39 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/closest-pair-live-1)
+
+*Smallest pairwise distance as points[1] runs from -1 to 1, every other input as you entered it (39 solutions). Marked: your points[1] = 0 gives distance = 1.414. Your inputs: points = 0 0, 5 5, 1 1, 9 2, 6 6.5.*
+
+![Smallest pairwise distance as points[2] runs from -1 to 1, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/closest-pair-live-2)
+
+*Smallest pairwise distance as points[2] runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your points[2] = 0 gives distance = 1.414. Your inputs: points = 0 0, 5 5, 1 1, 9 2, 6 6.5.*
 
 ```python
 geometry_ai999x.solve('closest_pair', points='0 0, 5 5, 1 1, 9 2, 6 6.5')
@@ -1812,9 +1976,17 @@ $$
 - **Assumes:** at least 2 points, at most 5000
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/farthest-pair-points)
+![The 4 points as given, numbered in order, drawn to scale: the farthest pair is points 1 and 2, at distance 5 (each pair measured by the model)](https://www.ai999x.com/?ax_fig=geometry-ai999x/farthest-pair-points)
 
-*The rows of points (the points: x1 y1, x2 y2, ...) drawn as points (numbered in order). Returned: distance = 5.*
+*The 4 points as given, numbered in order, drawn to scale: the farthest pair is points 1 and 2, at distance 5 (each pair measured by the model). Your inputs: points = 0 0, 3 4, 1 1, 2 2.*
+
+![Largest pairwise distance as points[4] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/farthest-pair-live-1)
+
+*Largest pairwise distance as points[4] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your points[4] = 4 gives distance = 5. Your inputs: points = 0 0, 3 4, 1 1, 2 2.*
+
+![Largest pairwise distance as points[2] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/farthest-pair-live-2)
+
+*Largest pairwise distance as points[2] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[2] = 0 gives distance = 5. Your inputs: points = 0 0, 3 4, 1 1, 2 2.*
 
 ```python
 geometry_ai999x.solve('farthest_pair', points='0 0, 3 4, 1 1, 2 2')
@@ -1857,9 +2029,17 @@ $$
 - **Assumes:** each segment has distinct endpoints; decided exactly on the written coordinates (touching counts as meeting)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the endpoints A, B, C, D: xA yA, xB yB, xC yC, xD yD) drawn as points (numbered in order), returned (x, y) pairs marked](https://www.ai999x.com/?ax_fig=geometry-ai999x/segment-intersection-points)
+![The 4 points as given, numbered in order, drawn to scale: the segments AB (points 1, 2) and CD (points 3, 4) meet at (2, 2) (point)](https://www.ai999x.com/?ax_fig=geometry-ai999x/segment-intersection-points)
 
-*The rows of points (the endpoints A, B, C, D: xA yA, xB yB, xC yC, xD yD) drawn as points (numbered in order), returned (x, y) pairs marked. Returned: x = 2, y = 2.*
+*The 4 points as given, numbered in order, drawn to scale: the segments AB (points 1, 2) and CD (points 3, 4) meet at (2, 2) (point). Your inputs: points = 0 0, 4 4, 0 4, 4 0.*
+
+![X of the common point as points[3] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/segment-intersection-live-1)
+
+*X of the common point as points[3] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your points[3] = 4 gives x = 2. Your inputs: points = 0 0, 4 4, 0 4, 4 0.*
+
+![X of the common point as points[4] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/segment-intersection-live-2)
+
+*X of the common point as points[4] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your points[4] = 4 gives x = 2. Your inputs: points = 0 0, 4 4, 0 4, 4 0.*
 
 ```python
 geometry_ai999x.solve('segment_intersection', points='0 0, 4 4, 0 4, 4 0')
@@ -1918,9 +2098,13 @@ $$
 - **Assumes:** $A  \neq  B$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![distance (shortest distance) against px (x of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-segment-distance-curve)
+![Shortest distance as y1 runs from -1 to 1, every other input as you entered it (37 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-segment-distance-live-1)
 
-*distance (shortest distance) against px (x of the point) from 0.3 to 30 on a logarithmic axis. One curve for each value of py (y of the point): 4, 2, 8. Other inputs as in the worked example: x1 = 0.0, y1 = 0.0, x2 = 6.0, y2 = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, px = 3, distance = 4.*
+*Shortest distance as y1 runs from -1 to 1, every other input as you entered it (37 solutions). Marked: your y1 = 0 gives distance = 4. Your inputs: px = 3, py = 4, x1 = 0, y1 = 0, x2 = 6, y2 = 0.*
+
+![Shortest distance as x2 runs from -6 to 18, every other input as you entered it (25 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-segment-distance-live-2)
+
+*Shortest distance as x2 runs from -6 to 18, every other input as you entered it (25 solutions). Values in this range where the inputs admit no answer (4 of 29) are left out. Marked: your x2 = 6 gives distance = 4. Your inputs: px = 3, py = 4, x1 = 0, y1 = 0, x2 = 6, y2 = 0.*
 
 ```python
 geometry_ai999x.solve('point_segment_distance', px=3, py=4, x1=0, y1=0, x2=6, y2=0)
@@ -1962,9 +2146,17 @@ $$
 - **Assumes:** at least 2 points; the path is open (not closed back to the start)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the points in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/polyline-length-points)
+![The 3 points as given, numbered in order, drawn to scale: length 11 over 2 segments](https://www.ai999x.com/?ax_fig=geometry-ai999x/polyline-length-points)
 
-*The rows of points (the points in order: x1 y1, x2 y2, ...) drawn as points (numbered in order). Returned: length = 11, segments = 2.*
+*The 3 points as given, numbered in order, drawn to scale: length 11 over 2 segments. Your inputs: points = 0 0, 3 4, 3 10.*
+
+![Sum of the segment lengths as points[6] runs from 0 to 30, every other input as you entered it (31 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polyline-length-live-1)
+
+*Sum of the segment lengths as points[6] runs from 0 to 30, every other input as you entered it (31 solutions). Marked: your points[6] = 10 gives length = 11. Your inputs: points = 0 0, 3 4, 3 10.*
+
+![Sum of the segment lengths as points[2] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polyline-length-live-2)
+
+*Sum of the segment lengths as points[2] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[2] = 0 gives length = 11. Your inputs: points = 0 0, 3 4, 3 10.*
 
 ```python
 geometry_ai999x.solve('polyline_length', points='0 0, 3 4, 3 10')
@@ -2005,9 +2197,9 @@ $$
 - **Assumes:** simple polygon; a vertex on a straight edge (180 degrees) does not make it non-convex; exact on the written coordinates
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-is-convex-points)
+![The 5 points as given, numbered in order and joined as a polygon, drawn to scale: convex: no; interior angles from the model 90°, 90°, 33](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-is-convex-points)
 
-*The rows of points (vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon.*
+*The 5 points as given, numbered in order and joined as a polygon, drawn to scale: convex: no; interior angles from the model 90°, 90°, 33.69°, 292.6°, 33.69°, 1 reflex (over 180°, marked). Your inputs: points = 0 0, 4 0, 4 4, 2 1, 0 4.*
 
 ```python
 geometry_ai999x.solve('polygon_is_convex', points='0 0, 4 0, 4 4, 2 1, 0 4')
@@ -2055,9 +2247,17 @@ $$
 - **Assumes:** integer coordinates; simple polygon
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (integer vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/pick-lattice-points-points)
+![The 4 points as given, numbered in order and joined as a polygon, drawn to scale: area 12, 14 lattice points on the boundary and 6 inside (Pick: A = I + B/2 - 1); dots: each lattice point tested by the model's point-in-polygon test (14 boundary, 6 inside)](https://www.ai999x.com/?ax_fig=geometry-ai999x/pick-lattice-points-points)
 
-*The rows of points (integer vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon. Returned: area = 12, boundary_points = 14, interior_points = 6.*
+*The 4 points as given, numbered in order and joined as a polygon, drawn to scale: area 12, 14 lattice points on the boundary and 6 inside (Pick: A = I + B/2 - 1); dots: each lattice point tested by the model's point-in-polygon test (14 boundary, 6 inside). Your inputs: points = 0 0, 4 0, 4 3, 0 3.*
+
+![Area as points[3] runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/pick-lattice-points-live-1)
+
+*Area as points[3] runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your points[3] = 4 gives area = 12. Your inputs: points = 0 0, 4 0, 4 3, 0 3.*
+
+![Area as points[5] runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/pick-lattice-points-live-2)
+
+*Area as points[5] runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your points[5] = 4 gives area = 12. Your inputs: points = 0 0, 4 0, 4 3, 0 3.*
 
 ```python
 geometry_ai999x.solve('pick_lattice_points', points='0 0, 4 0, 4 3, 0 3')
@@ -2109,9 +2309,13 @@ $$
 - **Assumes:** a, b, $c > 0$; triangle inequality
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![median_a (median from vertex A (to side a)) against a (side a (opposite A)) from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-cevians-curve)
+![Median from vertex A as b runs from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-cevians-live-1)
 
-*median_a (median from vertex A (to side a)) against a (side a (opposite A)) from 1.5 to 4.5. One curve for each value of b (side b (opposite B)): 4, 2, 8. Other inputs as in the worked example: c = 5.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, a = 3, median_a = 4.272.*
+*Median from vertex A as b runs from 2.05 to 7, every other input as you entered it (34 solutions). Marked: your b = 4 gives median_a = 4.272. Your inputs: a = 3, b = 4, c = 5.*
+
+![Median from vertex A as a runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-cevians-live-2)
+
+*Median from vertex A as a runs from 1.071 to 5.25, every other input as you entered it (27 solutions). Marked: your a = 3 gives median_a = 4.272. Your inputs: a = 3, b = 4, c = 5.*
 
 ```python
 geometry_ai999x.solve('triangle_cevians', a=3, b=4, c=5)
@@ -2154,13 +2358,17 @@ $$
 - **Assumes:** 0 < inner < outer
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area (pi (R^2 - r^2)) against outer (outer radius) from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/annulus-area-curve)
+![area over outer from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/annulus-area-field)
 
-*area (pi (R^2 - r^2)) against outer (outer radius) from 2.5 to 7.5. One curve for each value of inner (inner radius): 3, 1.5, 6. 27 points per curve computed by geometry-ai999x; marked: the worked example, outer = 5, area = 50.2655.*
+*area over outer from 2.5 to 7.5 and inner from 1.5 to 4.5: each of the 13 × 9 cells is one run of the model, shaded by the logarithm of its value (darker is larger; values from 1.085 to 169.6); 19 blank cells are inputs the model refuses. Marked: outer = 5, inner = 3, area = 50.27. Your inputs: outer = 5, inner = 3.*
 
-![area (pi (R^2 - r^2)) over outer (outer radius) from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/annulus-area-field)
+![Area as outer runs from 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/annulus-area-live-1)
 
-*area (pi (R^2 - r^2)) over outer (outer radius) from 2.5 to 7.5 and inner (inner radius) from 1.5 to 4.5: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0.725291 to dark 169.646); iso-lines at area = 50, 100, 150; blank cells: inputs the capability refuses. Marked: the worked example, outer = 5, inner = 3, area = 50.2655.*
+*Area as outer runs from 3.125 to 8.75, every other input as you entered it (31 solutions). Marked: your outer = 5 gives area = 50.27. Your inputs: outer = 5, inner = 3.*
+
+![Area as inner runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/annulus-area-live-2)
+
+*Area as inner runs from 0.75 to 4.929, every other input as you entered it (27 solutions). Marked: your inner = 3 gives area = 50.27. Your inputs: outer = 5, inner = 3.*
 
 ```python
 geometry_ai999x.solve('annulus_area', outer=5, inner=3)
@@ -2201,13 +2409,17 @@ $$
 - **Assumes:** radius > 0; 0 < angle < 360 degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![area (r^2 (theta - sin theta)/2) against angle (central angle in degrees) from 0 to 90](https://www.ai999x.com/?ax_fig=geometry-ai999x/circular-segment-curve)
+![area over radius from 5 to 15 and angle from 30 to 90: each of the 13 × 9 cells is one run of the model, shaded by the logarithm of its value (darker is larger; values from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/circular-segment-field)
 
-*area (r^2 (theta - sin theta)/2) against angle (central angle in degrees) from 0 to 90. One curve for each value of radius (radius): 10, 5, 20. 40 points per curve computed by geometry-ai999x; marked: the worked example, angle = 60, area = 9.05861.*
+*area over radius from 5 to 15 and angle from 30 to 90: each of the 13 × 9 cells is one run of the model, shaded by the logarithm of its value (darker is larger; values from 0.295 to 64.21). Marked: radius = 10, angle = 60, area = 9.059. Your inputs: radius = 10, angle = 60.*
 
-![area (r^2 (theta - sin theta)/2) over radius (radius) from 5 to 15 and angle (central angle in degrees) from 0 to 90: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/circular-segment-field)
+![Area as angle runs from 15 to 105, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/circular-segment-live-1)
 
-*area (r^2 (theta - sin theta)/2) over radius (radius) from 5 to 15 and angle (central angle in degrees) from 0 to 90: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0.00294077 to dark 64.2146, logarithmic shading); iso-lines at area = 0.01, 0.1, 1, 10; blank cells: inputs the capability refuses. Marked: the worked example, radius = 10, angle = 60, area = 9.05861.*
+*Area as angle runs from 15 to 105, every other input as you entered it (41 solutions). Marked: your angle = 60 gives area = 9.059. Your inputs: radius = 10, angle = 60.*
+
+![Area as radius runs from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/circular-segment-live-2)
+
+*Area as radius runs from 2.5 to 17.5, every other input as you entered it (29 solutions). Marked: your radius = 10 gives area = 9.059. Your inputs: radius = 10, angle = 60.*
 
 ```python
 geometry_ai999x.solve('circular_segment', radius=10, angle=60)
@@ -2254,9 +2466,13 @@ $$
 - **Assumes:** r1, r2, height > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (pi h (R^2 + R r + r^2)/3) against r2 (radius of the other base) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/frustum-measures-curve)
+![Volume as r1 runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/frustum-measures-live-1)
 
-*volume (pi h (R^2 + R r + r^2)/3) against r2 (radius of the other base) from 0.6 to 60 on a logarithmic axis. Other inputs as in the worked example: r1 = 3.0, height = 4.0. 41 points computed by geometry-ai999x; marked: the worked example, r2 = 6, volume = 263.894.*
+*Volume as r1 runs from 1.5 to 10.5, every other input as you entered it (41 solutions). Marked: your r1 = 6 gives volume = 263.9. Your inputs: r1 = 6, r2 = 3, height = 4.*
+
+![Volume as height runs from 1 to 7, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/frustum-measures-live-2)
+
+*Volume as height runs from 1 to 7, every other input as you entered it (29 solutions). Marked: your height = 4 gives volume = 263.9. Your inputs: r1 = 6, r2 = 3, height = 4.*
 
 ```python
 geometry_ai999x.solve('frustum_measures', r1=6, r2=3, height=4)
@@ -2297,9 +2513,13 @@ $$
 - **Assumes:** length, width, height > 0; the apex is directly above the centre of the base
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (l w h / 3) against length (base length) from 3 to 9](https://www.ai999x.com/?ax_fig=geometry-ai999x/pyramid-measures-curve)
+![Volume as length runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/pyramid-measures-live-1)
 
-*volume (l w h / 3) against length (base length) from 3 to 9. One curve for each value of width (base width): 6, 3, 12. Other inputs as in the worked example: height = 4.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, length = 6, volume = 48.*
+*Volume as length runs from 1.5 to 10.5, every other input as you entered it (41 solutions). Marked: your length = 6 gives volume = 48. Your inputs: length = 6, width = 6, height = 4.*
+
+![Volume as width runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/pyramid-measures-live-2)
+
+*Volume as width runs from 1.5 to 10.5, every other input as you entered it (29 solutions). Marked: your width = 6 gives volume = 48. Your inputs: length = 6, width = 6, height = 4.*
 
 ```python
 geometry_ai999x.solve('pyramid_measures', length=6, width=6, height=4)
@@ -2346,9 +2566,13 @@ $$
 - **Assumes:** $3  \leq  n  \leq  200$; side, height > 0; a triangular prism is read only when 'regular' or 'equilateral' is said
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (base area * height) against n (number of sides of the base) from 1 to 14](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-prism-curve)
+![Volume as side runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-prism-live-1)
 
-*volume (base area * height) against n (number of sides of the base) from 1 to 14. One curve for each value of side (side length of the base): 2, 1, 4. Other inputs as in the worked example: height = 10.0. 12 points per curve computed by geometry-ai999x; marked: the worked example, n = 6, volume = 103.923.*
+*Volume as side runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your side = 2 gives volume = 103.9. Your inputs: n = 6, side = 2, height = 10.*
+
+![Volume as n runs from 3 to 11, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/regular-prism-live-2)
+
+*Volume as n runs from 3 to 11, every other input as you entered it (9 solutions). Marked: your n = 6 gives volume = 103.9. Your inputs: n = 6, side = 2, height = 10.*
 
 ```python
 geometry_ai999x.solve('regular_prism', n=6, side=2, height=10)
@@ -2397,9 +2621,13 @@ $$
 - **Assumes:** edge > 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (volume) against edge (edge length a) from 1 to 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/platonic-solid-curve)
+![Volume as edge runs from 0](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/platonic-solid-live-1.svg)
 
-*volume (volume) against edge (edge length a) from 1 to 3. One curve for each value of solid (which Platonic solid): cube, tetrahedron, octahedron, dodecahedron. 31 points per curve computed by geometry-ai999x; marked: the worked example, edge = 2, volume = 8.*
+*Volume as edge runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your edge = 2 gives volume = 8. Your inputs: solid = cube, edge = 2.*
+
+![Volume for every choice of solid, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=geometry-ai999x/platonic-solid-live-2)
+
+*Volume for every choice of solid, every other input as you entered it (highlighted: your choice). tetrahedron: 0.9428; cube: 8; octahedron: 3.771; dodecahedron: 61.3; icosahedron: 17.45. Your inputs: solid = cube, edge = 2.*
 
 ```python
 geometry_ai999x.solve('platonic_solid', solid='cube', edge=2)
@@ -2450,13 +2678,17 @@ $$
 - **Assumes:** $R > 0$; $0 < h  \leq  2R$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (pi h^2 (3R - h)/3) against height (height h of the cap) from 1 to 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-cap-curve)
+![volume over radius from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-cap-field)
 
-*volume (pi h^2 (3R - h)/3) against height (height h of the cap) from 1 to 3. One curve for each value of radius (radius R of the sphere): 5, 2.5, 10. 31 points per curve computed by geometry-ai999x; marked: the worked example, height = 2, volume = 54.4543.*
+*volume over radius from 2.5 to 7.5 and height from 1 to 3: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 6.807 to 183.8). Marked: radius = 5, height = 2, volume = 54.45. Your inputs: radius = 5, height = 2.*
 
-![volume (pi h^2 (3R - h)/3) over radius (radius R of the sphere) from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-cap-field)
+![Volume as height runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-cap-live-1)
 
-*volume (pi h^2 (3R - h)/3) over radius (radius R of the sphere) from 2.5 to 7.5 and height (height h of the cap) from 1 to 3: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 6.80678 to dark 183.783); iso-lines at volume = 50, 100, 150. Marked: the worked example, radius = 5, height = 2, volume = 54.4543.*
+*Volume as height runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your height = 2 gives volume = 54.45. Your inputs: radius = 5, height = 2.*
+
+![Volume as radius runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-cap-live-2)
+
+*Volume as radius runs from 1.25 to 8.75, every other input as you entered it (29 solutions). Marked: your radius = 5 gives volume = 54.45. Your inputs: radius = 5, height = 2.*
 
 ```python
 geometry_ai999x.solve('spherical_cap', radius=5, height=2)
@@ -2499,13 +2731,17 @@ $$
 - **Assumes:** $0 < r < R$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![volume (2 pi^2 R r^2) against minor (tube (minor) radius r) from 1 to 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-measures-curve)
+![volume over major from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-measures-field)
 
-*volume (2 pi^2 R r^2) against minor (tube (minor) radius r) from 1 to 3. One curve for each value of major (major radius R): 5, 2.5, 10. 31 points per curve computed by geometry-ai999x; marked: the worked example, minor = 2, volume = 394.784.*
+*volume over major from 2.5 to 7.5 and minor from 1 to 3: each of the 13 × 9 cells is one run of the model, shaded by its value (darker is larger; values from 49.35 to 1332); 4 blank cells are inputs the model refuses. Marked: major = 5, minor = 2, volume = 394.8. Your inputs: major = 5, minor = 2.*
 
-![volume (2 pi^2 R r^2) over major (major radius R) from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-measures-field)
+![Volume as minor runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-measures-live-1)
 
-*volume (2 pi^2 R r^2) over major (major radius R) from 2.5 to 7.5 and minor (tube (minor) radius r) from 1 to 3: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 49.348 to dark 1332.4); iso-lines at volume = 250, 500, 750, 1000, 1250; blank cells: inputs the capability refuses. Marked: the worked example, major = 5, minor = 2, volume = 394.784.*
+*Volume as minor runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your minor = 2 gives volume = 394.8. Your inputs: major = 5, minor = 2.*
+
+![Volume as major runs from 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-measures-live-2)
+
+*Volume as major runs from 2.054 to 8.75, every other input as you entered it (26 solutions). Marked: your major = 5 gives volume = 394.8. Your inputs: major = 5, minor = 2.*
 
 ```python
 geometry_ai999x.solve('torus_measures', major=5, minor=2)
@@ -2545,9 +2781,17 @@ $$
 - **Assumes:** a, $c > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![oblate / prolate / sphere (shape) over a (equatorial radius (semi-axis in the equator)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spheroid-measures-decision)
+![Surface area as a runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spheroid-measures-live-1)
 
-*oblate / prolate / sphere (shape) over a (equatorial radius (semi-axis in the equator)) from 0.1 to 10 and c (polar radius (semi-axis along the axis)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of geometry-ai999x, coloured by the verdict it returned, oblate: 234 cells, prolate: 417 cells. Marked: the worked example, a = 1, c = 2 → prolate.*
+*Surface area as a runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your a = 1 gives surface_area = 21.48. Your inputs: a = 1, c = 2.*
+
+![Oblate / prolate / sphere for 25 5 x 5 combinations of a and c around your inputs (the other inputs as entered); the ring marks your inputs, which give prolate](https://www.ai999x.com/?ax_fig=geometry-ai999x/spheroid-measures-live-2)
+
+*Oblate / prolate / sphere for 25 5 x 5 combinations of a and c around your inputs (the other inputs as entered); the ring marks your inputs, which give prolate. Blank cells admit no answer. Your inputs: a = 1, c = 2.*
+
+![Surface area as c runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spheroid-measures-live-3)
+
+*Surface area as c runs from 0.5 to 3.5, every other input as you entered it (29 solutions). Marked: your c = 2 gives surface_area = 21.48. Shaded by oblate / prolate / sphere: oblate, prolate. Your inputs: a = 1, c = 2.*
 
 ```python
 geometry_ai999x.solve('spheroid_measures', a=1, c=2)
@@ -2590,9 +2834,13 @@ $$
 - **Assumes:** a, $b > 0$; axis ratio at least 0.001
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![perimeter (4 a E(e^2), a the larger semi-axis) against b (the other semi-axis) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-perimeter-curve)
+![Perimeter as a runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-perimeter-live-1)
 
-*perimeter (4 a E(e^2), a the larger semi-axis) against b (the other semi-axis) from 0.3 to 30 on a logarithmic axis. One curve for each value of a (one semi-axis): 5, 2.5, 10. 41 points per curve computed by geometry-ai999x; marked: the worked example, b = 3, perimeter = 25.527.*
+*Perimeter as a runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your a = 2 gives perimeter = 12.57. Your inputs: a = 2, b = 2.*
+
+![Perimeter as b runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-perimeter-live-2)
+
+*Perimeter as b runs from 0.5 to 3.5, every other input as you entered it (29 solutions). Marked: your b = 2 gives perimeter = 12.57. Your inputs: a = 2, b = 2.*
 
 ```python
 geometry_ai999x.solve('ellipse_perimeter', a=2, b=2)
@@ -2634,9 +2882,17 @@ $$
 - **Assumes:** exactly 3 points, not collinear
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-3d-matrix)
+![The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-3d-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input). Returned with them by geometry-ai999x: area = 3.5, perimeter = 9.0039.*
+*The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour). Returned by the model: area = 3.5, perimeter = 9.004. Your inputs: points = 1 0 0, 0 2 0, 0 0 3.*
+
+![Area as points[5] runs from 0 to 6, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-3d-live-1)
+
+*Area as points[5] runs from 0 to 6, every other input as you entered it (7 solutions). Marked: your points[5] = 2 gives area = 3.5. Your inputs: points = 1 0 0, 0 2 0, 0 0 3.*
+
+![Area as points[2] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/triangle-area-3d-live-2)
+
+*Area as points[2] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[2] = 0 gives area = 3.5. Your inputs: points = 1 0 0, 0 2 0, 0 0 3.*
 
 ```python
 geometry_ai999x.solve('triangle_area_3d', points='1 0 0, 0 2 0, 0 0 3')
@@ -2678,9 +2934,17 @@ $$
 - **Assumes:** exactly 4 points; not coplanar
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input)](https://www.ai999x.com/?ax_fig=geometry-ai999x/tetrahedron-measures-matrix)
+![The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour)](https://www.ai999x.com/?ax_fig=geometry-ai999x/tetrahedron-measures-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input). Returned with them by geometry-ai999x: volume = 0.166667, surface_area = 2.36603.*
+*The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour). Returned by the model: volume = 0.1667, surface_area = 2.366. Your inputs: points = 0 0 0, 1 0 0, 0 1 0, 0 0 1.*
+
+![Volume as points[4] runs from 1 to 5, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/tetrahedron-measures-live-1)
+
+*Volume as points[4] runs from 1 to 5, every other input as you entered it (5 solutions). Marked: your points[4] = 1 gives volume = 0.1667. Your inputs: points = 0 0 0, 1 0 0, 0 1 0, 0 0 1.*
+
+![Sum of the four face areas as points[1] runs from 0 to 4, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/tetrahedron-measures-live-2)
+
+*Sum of the four face areas as points[1] runs from 0 to 4, every other input as you entered it (4 solutions). Values in this range where the inputs admit no answer (1 of 5) are left out. Marked: your points[1] = 0 gives surface_area = 2.366. Your inputs: points = 0 0 0, 1 0 0, 0 1 0, 0 0 1.*
 
 ```python
 geometry_ai999x.solve('tetrahedron_measures', points='0 0 0, 1 0 0, 0 1 0, 0 0 1')
@@ -2724,9 +2988,17 @@ $$
 - **Assumes:** exactly 3 points, not collinear; convention: (a, b, c) has length 1 and its first nonzero component is positive
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input)](https://www.ai999x.com/?ax_fig=geometry-ai999x/plane-through-points-matrix)
+![The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour)](https://www.ai999x.com/?ax_fig=geometry-ai999x/plane-through-points-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input). Returned with them by geometry-ai999x: a = 0.57735, b = 0.57735, c = 0.57735, d = -0.57735.*
+*The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour). Returned by the model: a = 0.5774, b = 0.5774, c = 0.5774, d = -0.5774. Your inputs: points = 1 0 0, 0 1 0, 0 0 1.*
+
+![Constant term as points[1] runs from 0 to 5, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/plane-through-points-live-1)
+
+*Constant term as points[1] runs from 0 to 5, every other input as you entered it (6 solutions). Marked: your points[1] = 1 gives d = -0.5774. Your inputs: points = 1 0 0, 0 1 0, 0 0 1.*
+
+![Constant term as points[2] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/plane-through-points-live-2)
+
+*Constant term as points[2] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[2] = 0 gives d = -0.5774. Your inputs: points = 1 0 0, 0 1 0, 0 0 1.*
 
 ```python
 geometry_ai999x.solve('plane_through_points', points='1 0 0, 0 1 0, 0 0 1')
@@ -2777,9 +3049,13 @@ $$
 - **Assumes:** a, b, c not all 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![distance (|a px + b py + c pz + d| / sqrt(a^2 + b^2 + c^2)) against py (y of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-plane-distance-curve)
+![Distance as pz runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-plane-distance-live-1)
 
-*distance (|a px + b py + c pz + d| / sqrt(a^2 + b^2 + c^2)) against py (y of the point) from 0.2 to 20 on a logarithmic axis. One curve for each value of pz (z of the point): 3, 1.5, 6. Other inputs as in the worked example: px = 1.0, a = 2.0, b = -1.0, c = 2.0, d = -3.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, py = 2, distance = 1.*
+*Distance as pz runs from 0.75 to 5.25, every other input as you entered it (41 solutions). Marked: your pz = 3 gives distance = 1. Your inputs: px = 1, py = 2, pz = 3, a = 2, b = -1, c = 2, d = -3.*
+
+![Distance as d runs from -5](https://www.ai999x.com/?ax_fig=geometry-ai999x/point-plane-distance-live-2)
+
+*Distance as d runs from -5.25 to -0.75, every other input as you entered it (29 solutions). Marked: your d = -3 gives distance = 1. Your inputs: px = 1, py = 2, pz = 3, a = 2, b = -1, c = 2, d = -3.*
 
 ```python
 geometry_ai999x.solve('point_plane_distance', px=1, py=2, pz=3, a=2, b=-1, c=2, d=-3)
@@ -2827,9 +3103,13 @@ $$
 - **Assumes:** direction not zero; a, b, c not all 0; line not parallel to the plane (exact test)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![x (x of the intersection) against dx (x of the direction) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-plane-intersection-curve)
+![X of the intersection as d runs from -12](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-plane-intersection-live-1)
 
-*x (x of the intersection) against dx (x of the direction) from 0.1 to 10 on a logarithmic axis. One curve for each value of x0 (x of a point on the line): 1, 0.5, 2. Other inputs as in the worked example: y0 = 0.0, z0 = 0.0, dy = 2.0, dz = 3.0, a = 1.0, b = 1.0, c = 1.0, d = -7.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, dx = 1, x = 2.*
+*X of the intersection as d runs from -12.25 to -1.75, every other input as you entered it (41 solutions). Marked: your d = -7 gives x = 2. Your inputs: x0 = 1, y0 = 0, z0 = 0, dx = 1, dy = 2, dz = 3, a = 1, b = 1.*
+
+![X of the intersection as dy runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-plane-intersection-live-2)
+
+*X of the intersection as dy runs from 0.5 to 3.5, every other input as you entered it (29 solutions). Marked: your dy = 2 gives x = 2. Your inputs: x0 = 1, y0 = 0, z0 = 0, dx = 1, dy = 2, dz = 3, a = 1, b = 1.*
 
 ```python
 geometry_ai999x.solve('line_plane_intersection', x0=1, y0=0, z0=0, dx=1, dy=2, dz=3, a=1, b=1, c=1, d=-7)
@@ -2869,9 +3149,9 @@ $$
 - **Assumes:** nonzero directions
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The two stated lines in an oblique 3-D view: line 1 through (0 0 0) along (1 0 0), line 2 through (0 1 1) along (0 1 0)](https://www.ai999x.com/?ax_fig=geometry-ai999x/skew-lines-distance-geometry)
+![The two stated lines in an oblique view (z drawn receding at 30°): line 1 through (0 0 0) along (1 0 0), line 2 through (0 1 1) along (0 1 0)](https://www.ai999x.com/?ax_fig=geometry-ai999x/skew-lines-distance-geometry)
 
-*The two stated lines in an oblique 3-D view: line 1 through (0 0 0) along (1 0 0), line 2 through (0 1 1) along (0 1 0). The package returned their shortest distance 1 (parallel: no). Marked: the stated points of each line.*
+*The two stated lines in an oblique view (z drawn receding at 30°): line 1 through (0 0 0) along (1 0 0), line 2 through (0 1 1) along (0 1 0). The model returned their shortest distance 1 (parallel: no). Marked: the stated point of each line. Your inputs: p1 = 0 0 0, d1 = 1 0 0, p2 = 0 1 1, d2 = 0 1 0.*
 
 ```python
 geometry_ai999x.solve('skew_lines_distance', p1='0 0 0', d1='1 0 0', p2='0 1 1', d2='0 1 0')
@@ -2917,9 +3197,13 @@ $$
 - **Assumes:** nonzero normals; the constants do not affect the angle
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![angle (angle between the planes, degrees, 0 to 90) against b1 (y-coefficient of plane 1) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-planes-curve)
+![Angle between the planes, degrees, 0 to 90 as a1 runs from -1 to 1, every other input as you entered it (37 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-planes-live-1)
 
-*angle (angle between the planes, degrees, 0 to 90) against b1 (y-coefficient of plane 1) from -1 to 1. One curve for each value of a1 (x-coefficient of plane 1): 0, -0.5, 0.5. Other inputs as in the worked example: c1 = 1.0, a2 = 1.0, b2 = 0.0, c2 = 1.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, b1 = 0, angle = 45.*
+*Angle between the planes, degrees, 0 to 90 as a1 runs from -1 to 1, every other input as you entered it (37 solutions). Marked: your a1 = 0 gives angle = 45. Your inputs: a1 = 0, b1 = 0, c1 = 1, a2 = 1, b2 = 0, c2 = 1.*
+
+![Angle between the planes, degrees, 0 to 90 as a2 runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/angle-between-planes-live-2)
+
+*Angle between the planes, degrees, 0 to 90 as a2 runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your a2 = 1 gives angle = 45. Your inputs: a1 = 0, b1 = 0, c1 = 1, a2 = 1, b2 = 0, c2 = 1.*
 
 ```python
 geometry_ai999x.solve('angle_between_planes', a1=0, b1=0, c1=1, a2=1, b2=0, c2=1)
@@ -2959,9 +3243,9 @@ $$
 - **Assumes:** axis not zero; it passes through the origin; positive angle: counterclockwise looking from the axis tip toward the origin
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![x (x of the image) against angle (angle in degrees (right-hand rule)) from 0 to 90](https://www.ai999x.com/?ax_fig=geometry-ai999x/rotate-point-3d-curve)
+![X of the image as angle runs from 22](https://www.ai999x.com/?ax_fig=geometry-ai999x/rotate-point-3d-live-1)
 
-*x (x of the image) against angle (angle in degrees (right-hand rule)) from 0 to 90. Other inputs as in the worked example: point = 1 0 0, axis = 0 0 1. 41 points computed by geometry-ai999x; marked: the worked example, angle = 90, x = 0.*
+*X of the image as angle runs from 22.5 to 157.5, every other input as you entered it (41 solutions). Marked: your angle = 90 gives x = 0. Your inputs: point = 1 0 0, axis = 0 0 1, angle = 90.*
 
 ```python
 geometry_ai999x.solve('rotate_point_3d', point='1 0 0', axis='0 0 1', angle=90)
@@ -3005,9 +3289,17 @@ $$
 - **Assumes:** exactly 4 points, not coplanar
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input)](https://www.ai999x.com/?ax_fig=geometry-ai999x/sphere-four-points-matrix)
+![The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour)](https://www.ai999x.com/?ax_fig=geometry-ai999x/sphere-four-points-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input). Returned with them by geometry-ai999x: cx = 0.5, cy = 0.5, cz = 0.5, radius = 0.866025.*
+*The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour). Returned by the model: cx = 0.5, cy = 0.5, cz = 0.5, radius = 0.866. Your inputs: points = 1 0 0, 0 1 0, 0 0 1, 0 0 0.*
+
+![Radius as points[2] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/sphere-four-points-live-1)
+
+*Radius as points[2] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[2] = 0 gives radius = 0.866. Your inputs: points = 1 0 0, 0 1 0, 0 0 1, 0 0 0.*
+
+![Radius as points[3] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/sphere-four-points-live-2)
+
+*Radius as points[3] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[3] = 0 gives radius = 0.866. Your inputs: points = 1 0 0, 0 1 0, 0 0 1, 0 0 0.*
 
 ```python
 geometry_ai999x.solve('sphere_four_points', points='1 0 0, 0 1 0, 0 0 1, 0 0 0')
@@ -3053,9 +3345,13 @@ $$
 - **Assumes:** points written (latitude, longitude) in signed decimal degrees; radius defaults to 6371 km (mean Earth radius; the Earth is treated as a sphere)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![distance (great-circle distance (radius units)) against lon2 (longitude of point 2) from 9 to 900 on a logarithmic axis](https://www.ai999x.com/?ax_fig=geometry-ai999x/great-circle-distance-curve)
+![Great-circle distance as lon2 runs from 22](https://huggingface.co/AI999X/geometry-ai999x/resolve/main/figures/great-circle-distance-live-1.svg)
 
-*distance (great-circle distance (radius units)) against lon2 (longitude of point 2) from 9 to 900 on a logarithmic axis. One curve for each value of radius (sphere radius (default 6371, the mean Earth radius in km)): 1, 0.5, 2. Other inputs as in the worked example: lat1 = 0.0, lon1 = 0.0, lat2 = 0.0. 33 points per curve computed by geometry-ai999x; marked: the worked example, lon2 = 90, distance = 1.5708.*
+*Great-circle distance as lon2 runs from 22.5 to 157.5, every other input as you entered it (37 solutions). Marked: your lon2 = 90 gives distance = 1.571. Your inputs: lat1 = 0, lon1 = 0, lat2 = 0, lon2 = 90, radius = 1.*
+
+![Great-circle distance as radius runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/great-circle-distance-live-2)
+
+*Great-circle distance as radius runs from 0.25 to 1.75, every other input as you entered it (29 solutions). Marked: your radius = 1 gives distance = 1.571. Your inputs: lat1 = 0, lon1 = 0, lat2 = 0, lon2 = 90, radius = 1.*
 
 ```python
 geometry_ai999x.solve('great_circle_distance', lat1=0, lon1=0, lat2=0, lon2=90, radius=1)
@@ -3100,9 +3396,13 @@ $$
 - **Assumes:** (latitude, longitude) in signed decimal degrees; the start is not a pole; the points are neither equal nor antipodal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![bearing (initial bearing, degrees in [0, 360), clockwise from north) against lon2 (longitude of the destination) from 9 to 900 on a logarithmic axis](https://www.ai999x.com/?ax_fig=geometry-ai999x/initial-bearing-curve)
+![Initial bearing, degrees in [0, 360)](https://www.ai999x.com/?ax_fig=geometry-ai999x/initial-bearing-live-1)
 
-*bearing (initial bearing, degrees in [0, 360), clockwise from north) against lon2 (longitude of the destination) from 9 to 900 on a logarithmic axis. One curve for each value of lat2 (latitude of the destination): 0, 22.5, 67.5. Other inputs as in the worked example: lat1 = 0.0, lon1 = 0.0. 33 points per curve computed by geometry-ai999x; marked: the worked example, lon2 = 90, bearing = 90.*
+*Initial bearing, degrees in [0, 360)... as lon2 runs from -90 to 172.3, every other input as you entered it (36 solutions). Marked: your lon2 = 90 gives bearing = 90. Your inputs: lat1 = 0, lon1 = 0, lat2 = 0, lon2 = 90.*
+
+![Initial bearing, degrees in [0, 360)](https://www.ai999x.com/?ax_fig=geometry-ai999x/initial-bearing-live-2)
+
+*Initial bearing, degrees in [0, 360)... as lat2 runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your lat2 = 0 gives bearing = 90. Your inputs: lat1 = 0, lon1 = 0, lat2 = 0, lon2 = 90.*
 
 ```python
 geometry_ai999x.solve('initial_bearing', lat1=0, lon1=0, lat2=0, lon2=90)
@@ -3145,13 +3445,17 @@ $$
 - **Assumes:** the smaller triangle (each side less than 180 degrees); vertices not on one great circle; radius defaults to 1
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the vertices (lat lon): lat1 lon1, lat2 lon2, lat3 lon3, degrees) drawn as points (numbered in order), joined in order as a polygon](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-triangle-area-points)
+![The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the vertices as latitude and longitude in degrees (a flat map, not to scale on the sphere): spherical excess 90°, area 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-triangle-area-points)
 
-*The rows of points (the vertices (lat lon): lat1 lon1, lat2 lon2, lat3 lon3, degrees) drawn as points (numbered in order), joined in order as a polygon. Returned: excess = 90, area = 1.5708. Other inputs: radius = 1.0.*
+*The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the vertices as latitude and longitude in degrees (a flat map, not to scale on the sphere): spherical excess 90°, area 1.571. Your inputs: points = 0 0, 0 90, 90 0, radius = 1.*
 
-![area (area E R^2 (E in radians)) against radius (sphere radius (default 1; 'Earth' means 6371 km)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-triangle-area-curve)
+![Area as radius runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-triangle-area-live-1)
 
-*area (area E R^2 (E in radians)) against radius (sphere radius (default 1; 'Earth' means 6371 km)) from 0.5 to 1.5. Other inputs as in the worked example: points = 0 0, 0 90, 90 0. 31 points computed by geometry-ai999x; marked: the worked example, radius = 1, area = 1.5708.*
+*Area as radius runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your radius = 1 gives area = 1.571. Your inputs: points = 0 0, 0 90, 90 0, radius = 1.*
+
+![Area as points[4] runs from 45 to 133, every other input as you entered it (24 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/spherical-triangle-area-live-2)
+
+*Area as points[4] runs from 45 to 133, every other input as you entered it (24 solutions). Marked: your points[4] = 90 gives area = 1.571. Your inputs: points = 0 0, 0 90, 90 0, radius = 1.*
 
 ```python
 geometry_ai999x.solve('spherical_triangle_area', points='0 0, 0 90, 90 0', radius=1)
@@ -3193,9 +3497,9 @@ $$
 - **Assumes:** 0 < half-angle <= 180 degrees; an apex (full opening) angle in the question is halved
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![solid_angle (2 pi (1 - cos a) steradians) against half_angle (half-angle of the cone (axis to side), degrees) from 0 to 90](https://www.ai999x.com/?ax_fig=geometry-ai999x/solid-angle-cone-curve)
+![Solid angle as half_angle runs from 15 to 105, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/solid-angle-cone-live-1)
 
-*solid_angle (2 pi (1 - cos a) steradians) against half_angle (half-angle of the cone (axis to side), degrees) from 0 to 90. 40 points computed by geometry-ai999x; marked: the worked example, half_angle = 60, solid_angle = 3.14159.*
+*Solid angle as half_angle runs from 15 to 105, every other input as you entered it (41 solutions). Marked: your half_angle = 60 gives solid_angle = 3.142. Your inputs: half_angle = 60.*
 
 ```python
 geometry_ai999x.solve('solid_angle_cone', half_angle=60)
@@ -3237,9 +3541,17 @@ $$
 - **Assumes:** no vertex at the origin; the triangle's plane does not pass through the origin; observer at the origin
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input)](https://www.ai999x.com/?ax_fig=geometry-ai999x/solid-angle-triangle-matrix)
+![The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour)](https://www.ai999x.com/?ax_fig=geometry-ai999x/solid-angle-triangle-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): points (input). Returned with them by geometry-ai999x: solid_angle = 1.5708.*
+*The coordinates of the points (one row each: x, y, z) as read, each cell shaded by its size (negative values in the second colour). Returned by the model: solid_angle = 1.571. Your inputs: points = 1 0 0, 0 1 0, 0 0 1.*
+
+![Solid angle, steradians as points[2] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/solid-angle-triangle-live-1)
+
+*Solid angle, steradians as points[2] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[2] = 0 gives solid_angle = 1.571. Your inputs: points = 1 0 0, 0 1 0, 0 0 1.*
+
+![Solid angle, steradians as points[3] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/solid-angle-triangle-live-2)
+
+*Solid angle, steradians as points[3] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[3] = 0 gives solid_angle = 1.571. Your inputs: points = 1 0 0, 0 1 0, 0 0 1.*
 
 ```python
 geometry_ai999x.solve('solid_angle_triangle', points='1 0 0, 0 1 0, 0 0 1')
@@ -3283,9 +3595,13 @@ $$
 - **Assumes:** polynomial of degree at most 10
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![curvature (|y''| / (1 + y'^2)^(3/2)) against x0 (the x-coordinate of the point) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/curvature-of-graph-curve)
+![Curvature as x0 runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/curvature-of-graph-live-1)
 
-*curvature (|y''| / (1 + y'^2)^(3/2)) against x0 (the x-coordinate of the point) from -1 to 1. Other inputs as in the worked example: coefficients = 1 0 0. 41 points computed by geometry-ai999x; marked: the worked example, x0 = 0, curvature = 2.*
+*Curvature as x0 runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your x0 = 0 gives curvature = 2. Your inputs: coefficients = 1 0 0, x0 = 0.*
+
+![Curvature as coefficients[0] runs from 0 to 5, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/curvature-of-graph-live-2)
+
+*Curvature as coefficients[0] runs from 0 to 5, every other input as you entered it (6 solutions). Marked: your coefficients[0] = 1 gives curvature = 2. Your inputs: coefficients = 1 0 0, x0 = 0.*
 
 ```python
 geometry_ai999x.solve('curvature_of_graph', coefficients='1 0 0', x0=0)
@@ -3330,13 +3646,17 @@ $$
 - **Assumes:** radius > 0; parametrised (r cos t, r sin t, c t)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![curvature (r / (r^2 + c^2), c = p / (2 pi)) against radius (radius r of the helix) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/helix-measures-curve)
+![curvature over pitch from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/helix-measures-field)
 
-*curvature (r / (r^2 + c^2), c = p / (2 pi)) against radius (radius r of the helix) from 0.1 to 10 on a logarithmic axis. One curve for each value of pitch (pitch p: rise per full turn (negative: left-handed)): 6.28319, 3.14159, 12.5664. 41 points per curve computed by geometry-ai999x; marked: the worked example, radius = 1, curvature = 0.5.*
+*curvature over pitch from 0.6283 to 62.83 and radius from 0.1 to 10 (logarithmic axes): each of the 13 × 9 cells is one run of the model, shaded by the logarithm of its value (darker is larger; values from 0.0009999 to 5). Marked: pitch = 6.283, radius = 1, curvature = 0.5. Your inputs: radius = 1, pitch = 6.283185307179586.*
 
-![curvature (r / (r^2 + c^2), c = p / (2 pi)) over pitch (pitch p: rise per full turn (negative: left-handed)) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/helix-measures-field)
+![Curvature as radius runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/helix-measures-live-1)
 
-*curvature (r / (r^2 + c^2), c = p / (2 pi)) over pitch (pitch p: rise per full turn (negative: left-handed)) from 0.628319 to 62.8319 and radius (radius r of the helix) from 0.1 to 10 (logarithmic axes): each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0.0009999 to dark 5); iso-lines at curvature = 1, 2, 3, 4. Marked: the worked example, pitch = 6.28319, radius = 1, curvature = 0.5.*
+*Curvature as radius runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your radius = 1 gives curvature = 0.5. Your inputs: radius = 1, pitch = 6.283185307179586.*
+
+![Curvature as pitch runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/helix-measures-live-2)
+
+*Curvature as pitch runs from 1.571 to 11, every other input as you entered it (29 solutions). Marked: your pitch = 6.283 gives curvature = 0.5. Your inputs: radius = 1, pitch = 6.283185307179586.*
 
 ```python
 geometry_ai999x.solve('helix_measures', radius=1, pitch=6.283185307179586)
@@ -3383,9 +3703,13 @@ $$
 - **Assumes:** a, $b > 0$; the point is (a cos t, b sin t); 'end of the major/minor axis' means $t = 0 / 90$ degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![curvature (ab / (a^2 sin^2 t + b^2 cos^2 t)^(3/2)) against t (parameter t (eccentric anomaly), degrees) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-curvature-curve)
+![Curvature as t runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-curvature-live-1)
 
-*curvature (ab / (a^2 sin^2 t + b^2 cos^2 t)^(3/2)) against t (parameter t (eccentric anomaly), degrees) from -1 to 1. One curve for each value of b (semi-axis along y): 3, 1.5, 6. Other inputs as in the worked example: a = 5.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, t = 0, curvature = 0.555556.*
+*Curvature as t runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your t = 0 gives curvature = 0.5556. Your inputs: a = 5, b = 3, t = 0.*
+
+![Curvature as b runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/ellipse-curvature-live-2)
+
+*Curvature as b runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your b = 3 gives curvature = 0.5556. Your inputs: a = 5, b = 3, t = 0.*
 
 ```python
 geometry_ai999x.solve('ellipse_curvature', a=5, b=3, t=0)
@@ -3434,9 +3758,13 @@ $$
 - **Assumes:** the unit normal points upward, (-f_x, -f_y, 1)/|...|
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![gaussian (Gaussian curvature K) against x0 (x of the point) from -1 to 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/surface-curvature-curve)
+![Gaussian curvature K as x0 runs from -1 to 1, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/surface-curvature-live-1)
 
-*gaussian (Gaussian curvature K) against x0 (x of the point) from -1 to 1. One curve for each value of A (coefficient of x^2): 1, 0.5, 2. Other inputs as in the worked example: B = 0.0, C = 1.0, D = 0.0, E = 0.0, y0 = 0.0, F = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, x0 = 0, gaussian = 4.*
+*Gaussian curvature K as x0 runs from -1 to 1, every other input as you entered it (41 solutions). Marked: your x0 = 0 gives gaussian = 4. Your inputs: A = 1, B = 0, C = 1, D = 0, E = 0, x0 = 0, y0 = 0.*
+
+![Gaussian curvature K as y0 runs from -1 to 1, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/surface-curvature-live-2)
+
+*Gaussian curvature K as y0 runs from -1 to 1, every other input as you entered it (29 solutions). Marked: your y0 = 0 gives gaussian = 4. Your inputs: A = 1, B = 0, C = 1, D = 0, E = 0, x0 = 0, y0 = 0.*
 
 ```python
 geometry_ai999x.solve('surface_curvature', A=1, B=0, C=1, D=0, E=0, x0=0, y0=0)
@@ -3483,9 +3811,13 @@ $$
 - **Assumes:** $0 < r < R$; signs: curvatures positive where the surface bends away from the outward normal (a sphere is positive)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![gaussian (K = cos v / (r (R + r cos v))) against minor (tube radius r) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-curvature-curve)
+![Gaussian as minor runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-curvature-live-1)
 
-*gaussian (K = cos v / (r (R + r cos v))) against minor (tube radius r) from 0.5 to 1.5. One curve for each value of major (major radius R): 3, 1.5, 6. Other inputs as in the worked example: v = 0.0. 31 points per curve computed by geometry-ai999x; marked: the worked example, minor = 1, gaussian = 0.25.*
+*Gaussian as minor runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your minor = 1 gives gaussian = 0.25. Your inputs: major = 3, minor = 1, v = 0.*
+
+![Gaussian as major runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/torus-curvature-live-2)
+
+*Gaussian as major runs from 1.071 to 5.25, every other input as you entered it (27 solutions). Marked: your major = 3 gives gaussian = 0.25. Your inputs: major = 3, minor = 1, v = 0.*
 
 ```python
 geometry_ai999x.solve('torus_curvature', major=3, minor=1, v=0)
@@ -3535,9 +3867,13 @@ $$
 - **Assumes:** $x_{0}  \neq  x_{1}$ (either order)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![length (arc length) against a (coefficient of x^2) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/parabola-arc-length-curve)
+![Arc length as x1 runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/parabola-arc-length-live-1)
 
-*length (arc length) against a (coefficient of x^2) from 0.1 to 10 on a logarithmic axis. One curve for each value of x1 (end x): 1, 0.5, 2. Other inputs as in the worked example: b = 0.0, x0 = 0.0, c = 0.0. 41 points per curve computed by geometry-ai999x; marked: the worked example, a = 1, length = 1.47894.*
+*Arc length as x1 runs from 0.25 to 1.75, every other input as you entered it (41 solutions). Marked: your x1 = 1 gives length = 1.479. Your inputs: a = 1, b = 0, x0 = 0, x1 = 1.*
+
+![Arc length as x0 runs from -1 to 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/parabola-arc-length-live-2)
+
+*Arc length as x0 runs from -1 to 0.9286, every other input as you entered it (28 solutions). Marked: your x0 = 0 gives length = 1.479. Your inputs: a = 1, b = 0, x0 = 0, x1 = 1.*
 
 ```python
 geometry_ai999x.solve('parabola_arc_length', a=1, b=0, x0=0, x1=1)
@@ -3580,9 +3916,17 @@ $$
 - **Assumes:** 1 to 2000 points; the smallest enclosing circle is unique
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-enclosing-circle-points)
+![The 3 points as given, numbered in order, drawn to scale: the returned circle has centre (2, 0) and radius 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-enclosing-circle-points)
 
-*The rows of points (the points: x1 y1, x2 y2, ...) drawn as points (numbered in order), returned (x, y) pairs marked. Returned: cx = 2, cy = 0, radius = 2.*
+*The 3 points as given, numbered in order, drawn to scale: the returned circle has centre (2, 0) and radius 2. Your inputs: points = 0 0, 4 0, 2 1.*
+
+![Radius as points[2] runs from 0 to 4, every other input as you entered it (5 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-enclosing-circle-live-1)
+
+*Radius as points[2] runs from 0 to 4, every other input as you entered it (5 solutions). Marked: your points[2] = 0 gives radius = 2. Your inputs: points = 0 0, 4 0, 2 1.*
+
+![Radius as points[3] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-enclosing-circle-live-2)
+
+*Radius as points[3] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your points[3] = 4 gives radius = 2. Your inputs: points = 0 0, 4 0, 2 1.*
 
 ```python
 geometry_ai999x.solve('min_enclosing_circle', points='0 0, 4 0, 2 1')
@@ -3625,9 +3969,17 @@ $$
 - **Assumes:** at least 3 points, not all collinear; when two orientations tie in area, the sides of the first found are reported
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-area-rectangle-points)
+![The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the smallest rectangle enclosing them has area 8, width 2](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-area-rectangle-points)
 
-*The rows of points (the points: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon. Returned: area = 8, width = 2.82843, length = 2.82843.*
+*The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the smallest rectangle enclosing them has area 8, width 2.828 and length 2.828 (outlined: the convex hull from the model). Your inputs: points = 0 0, 2 2, 4 0, 2 -2.*
+
+![Minimum area as points[5] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-area-rectangle-live-1)
+
+*Minimum area as points[5] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your points[5] = 4 gives area = 8. Your inputs: points = 0 0, 2 2, 4 0, 2 -2.*
+
+![Minimum area as points[4] runs from 0 to 6, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/min-area-rectangle-live-2)
+
+*Minimum area as points[4] runs from 0 to 6, every other input as you entered it (7 solutions). Marked: your points[4] = 2 gives area = 8. Your inputs: points = 0 0, 2 2, 4 0, 2 -2.*
 
 ```python
 geometry_ai999x.solve('min_area_rectangle', points='0 0, 2 2, 4 0, 2 -2')
@@ -3672,9 +4024,13 @@ $$
 - **Assumes:** 3 to 25 distinct points; general position: no three collinear, no four concyclic (checked exactly)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/delaunay-voronoi-counts-points)
+![The 5 points as given, numbered in order, drawn to scale: the Delaunay triangulation has 4 triangles and 8 edges, 4 points on the hull (grey outline: the hull from the model); the Voronoi diagram has 4 vertices and 4 unbounded cells](https://www.ai999x.com/?ax_fig=geometry-ai999x/delaunay-voronoi-counts-points)
 
-*The rows of points (the points: x1 y1, x2 y2, ... (3 to 25)) drawn as points (numbered in order). Returned: triangles = 4, edges = 8, hull_vertices = 4, voronoi_vertices = 4, unbounded_cells = 4.*
+*The 5 points as given, numbered in order, drawn to scale: the Delaunay triangulation has 4 triangles and 8 edges, 4 points on the hull (grey outline: the hull from the model); the Voronoi diagram has 4 vertices and 4 unbounded cells. Your inputs: points = 0 0, 4 0, 0 3, 5 4, 2 1.*
+
+![Delaunay triangles 2n - 2 - h as points[4] runs from 0 to 4, every other input as you entered it (3 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/delaunay-voronoi-counts-live-1)
+
+*Delaunay triangles 2n - 2 - h as points[4] runs from 0 to 4, every other input as you entered it (3 solutions). Values in this range where the inputs admit no answer (2 of 5) are left out. Marked: your points[4] = 0 gives triangles = 4. Your inputs: points = 0 0, 4 0, 0 3, 5 4, 2 1.*
 
 ```python
 geometry_ai999x.solve('delaunay_voronoi_counts', points='0 0, 4 0, 0 3, 5 4, 2 1')
@@ -3716,9 +4072,9 @@ $$
 - **Assumes:** both polygons simple and convex
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of p (first convex polygon's vertices in order) drawn as points (numbered in order), joined in order as a polygon](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-polygon-intersection-points)
+![The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the polygons p and q overlap where both shades meet; the model returns the area of their intersection, 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/convex-polygon-intersection-points)
 
-*The rows of p (first convex polygon's vertices in order) drawn as points (numbered in order), joined in order as a polygon. Returned: area = 1. Other inputs: q = 1 1, 3 1, 3 3, 1 3.*
+*The 4 points as given, numbered in order and joined as a polygon, drawn to scale: the polygons p and q overlap where both shades meet; the model returns the area of their intersection, 1. Your inputs: p = 0 0, 2 0, 2 2, 0 2, q = 1 1, 3 1, 3 3, 1 3.*
 
 ```python
 geometry_ai999x.solve('convex_polygon_intersection', p='0 0, 2 0, 2 2, 0 2', q='1 1, 3 1, 3 3, 1 3')
@@ -3762,9 +4118,9 @@ $$
 - **Assumes:** 1 to 1000 points per set
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): a (input); b (input)](https://www.ai999x.com/?ax_fig=geometry-ai999x/hausdorff-distance-matrix)
+![The coordinates of the two point sets a (left) and b (right) as read, each cell shaded by its size (negative values in the second colour)](https://www.ai999x.com/?ax_fig=geometry-ai999x/hausdorff-distance-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): a (input); b (input). Returned with them by geometry-ai999x: distance = 4.47214, from_a = 1, from_b = 4.47214.*
+*The coordinates of the two point sets a (left) and b (right) as read, each cell shaded by its size (negative values in the second colour). Returned by the model: distance = 4.472, from_a = 1, from_b = 4.472. Your inputs: a = 0 0, 1 0, b = 0 0, 3 4.*
 
 ```python
 geometry_ai999x.solve('hausdorff_distance', a='0 0, 1 0', b='0 0, 3 4')
@@ -3804,13 +4160,17 @@ $$
 - **Assumes:** ties go to the earliest point in the list
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the candidate points: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/nearest-neighbor-points)
+![The 3 points as given, numbered in order, drawn to scale: the nearest point to (3, 3) is point 3 at (2, 3), distance 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/nearest-neighbor-points)
 
-*The rows of points (the candidate points: x1 y1, x2 y2, ...) drawn as points (numbered in order), returned (x, y) pairs marked. Returned: index = 3, distance = 1, nx = 2, ny = 3. Other inputs: px = 3.0, py = 3.0.*
+*The 3 points as given, numbered in order, drawn to scale: the nearest point to (3, 3) is point 3 at (2, 3), distance 1. Your inputs: px = 3, py = 3, points = 0 0, 5 5, 2 3.*
 
-![distance (its distance) against py (y of the query point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/nearest-neighbor-curve)
+![Its distance as points[5] runs from 0 to 6, every other input as you entered it (7 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/nearest-neighbor-live-1)
 
-*distance (its distance) against py (y of the query point) from 0.3 to 30 on a logarithmic axis. One curve for each value of px (x of the query point): 3, 6. Other inputs as in the worked example: points = 0 0, 5 5, 2 3. 41 points per curve computed by geometry-ai999x; marked: the worked example, py = 3, distance = 1.*
+*Its distance as points[5] runs from 0 to 6, every other input as you entered it (7 solutions). Marked: your points[5] = 2 gives distance = 1. Your inputs: px = 3, py = 3, points = 0 0, 5 5, 2 3.*
+
+![Its distance as px runs from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/nearest-neighbor-live-2)
+
+*Its distance as px runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your px = 3 gives distance = 1. Your inputs: px = 3, py = 3, points = 0 0, 5 5, 2 3.*
 
 ```python
 geometry_ai999x.solve('nearest_neighbor', px=3, py=3, points='0 0, 5 5, 2 3')
@@ -3849,13 +4209,17 @@ $$
 - **Assumes:** A, B, C not collinear; all weights positive exactly when P is inside
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The rows of points (the triangle's vertices A, B, C) drawn as points (numbered in order), joined in order as a polygon](https://www.ai999x.com/?ax_fig=geometry-ai999x/barycentric-coordinates-points)
+![The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the point P = (1, 1) has barycentric coordinates l1 = 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/barycentric-coordinates-points)
 
-*The rows of points (the triangle's vertices A, B, C) drawn as points (numbered in order), joined in order as a polygon. Returned: l1 = 0.5, l2 = 0.25, l3 = 0.25. Other inputs: px = 1.0, py = 1.0.*
+*The 3 points as given, numbered in order and joined as a polygon, drawn to scale: the point P = (1, 1) has barycentric coordinates l1 = 0.5, l2 = 0.25, l3 = 0.25 (weights of the vertices 1, 2, 3). Your inputs: px = 1, py = 1, points = 0 0, 4 0, 0 4.*
 
-![l1 (weight of A) against px (x of the point) from 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/barycentric-coordinates-curve)
+![Weight of A as points[1] runs from 0 to 3, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/barycentric-coordinates-live-1)
 
-*l1 (weight of A) against px (x of the point) from 0.5 to 1.5. One curve for each value of py (y of the point): 1, 0.5, 2. Other inputs as in the worked example: points = 0 0, 4 0, 0 4. 31 points per curve computed by geometry-ai999x; marked: the worked example, px = 1, l1 = 0.5.*
+*Weight of A as points[1] runs from 0 to 3, every other input as you entered it (4 solutions). Marked: your points[1] = 0 gives l1 = 0.5. Your inputs: px = 1, py = 1, points = 0 0, 4 0, 0 4.*
+
+![Weight of A as points[2] runs from 0 to 3, every other input as you entered it (4 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/barycentric-coordinates-live-2)
+
+*Weight of A as points[2] runs from 0 to 3, every other input as you entered it (4 solutions). Marked: your points[2] = 0 gives l1 = 0.5. Your inputs: px = 1, py = 1, points = 0 0, 4 0, 0 4.*
 
 ```python
 geometry_ai999x.solve('barycentric_coordinates', px=1, py=1, points='0 0, 4 0, 0 4')
@@ -3892,13 +4256,13 @@ $$
 - **Assumes:** simple polygon; either orientation
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![interior angle at each vertex, degrees, in the order given (angles) returned by geometry-ai999x for the worked example, one value for each position in the list (4 values, first 90, last 90, largest 90)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-interior-angles-series)
+![The 4 points as given, numbered in order and joined as a polygon, drawn to scale: interior angles 90°, 90°, 90°, 90° (sum 360°, 0 reflex)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-interior-angles-points)
 
-*interior angle at each vertex, degrees, in the order given (angles) returned by geometry-ai999x for the worked example, one value for each position in the list (4 values, first 90, last 90, largest 90). Inputs: points = 0 0, 4 0, 4 4, 0 4.*
+*The 4 points as given, numbered in order and joined as a polygon, drawn to scale: interior angles 90°, 90°, 90°, 90° (sum 360°, 0 reflex). Your inputs: points = 0 0, 4 0, 4 4, 0 4.*
 
-![The rows of points (vertices in order: x1 y1, x2 y2, ](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-interior-angles-points)
+![Every entry of angles as computed for your inputs (4 entries: 90, 90, 90, 90)](https://www.ai999x.com/?ax_fig=geometry-ai999x/polygon-interior-angles-live-1)
 
-*The rows of points (vertices in order: x1 y1, x2 y2, ...) drawn as points (numbered in order), joined in order as a polygon. Returned: angle_sum = 360, reflex_vertices = 0.*
+*Every entry of angles as computed for your inputs (4 entries: 90, 90, 90, 90). Your inputs: points = 0 0, 4 0, 4 4, 0 4.*
 
 ```python
 geometry_ai999x.solve('polygon_interior_angles', points='0 0, 4 0, 4 4, 0 4')
@@ -3948,13 +4312,17 @@ $$
 - **Assumes:** the values are positive; the figures are similar (one is a scaled copy of the other)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![scale_factor (the scale factor k (second : first)) against m1 (the value in the first figure) from 2 to 6](https://www.ai999x.com/?ax_fig=geometry-ai999x/similar-figures-curve)
+![The scale factor k as m1 runs from 1 to 7, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/similar-figures-live-1)
 
-*scale_factor (the scale factor k (second : first)) against m1 (the value in the first figure) from 2 to 6. One curve for each value of m2 (the corresponding value in the second figure): 6, 3, 12. Other inputs as in the worked example: measure = lengths. 31 points per curve computed by geometry-ai999x; marked: the worked example, m1 = 4, scale_factor = 1.5.*
+*The scale factor k as m1 runs from 1 to 7, every other input as you entered it (41 solutions). Marked: your m1 = 4 gives scale_factor = 1.5. Your inputs: measure = lengths, m1 = 4, m2 = 6.*
 
-![scale_factor (the scale factor k (second : first)) over m1 (the value in the first figure) from 2 to 6 and m2 (the corresponding value in the second figure) from 3 to 9: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0](https://www.ai999x.com/?ax_fig=geometry-ai999x/similar-figures-field)
+![The scale factor k for every choice of measure, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=geometry-ai999x/similar-figures-live-2)
 
-*scale_factor (the scale factor k (second : first)) over m1 (the value in the first figure) from 2 to 6 and m2 (the corresponding value in the second figure) from 3 to 9: each of the 21 × 15 cells is one run of geometry-ai999x, shaded by its value (light 0.5 to dark 4.5); iso-lines at scale_factor = 1, 2, 3, 4. Other inputs as in the worked example: measure = lengths. Marked: the worked example, m1 = 4, m2 = 6, scale_factor = 1.5.*
+*The scale factor k for every choice of measure, every other input as you entered it (highlighted: your choice). lengths: 1.5; areas: 1.225; volumes: 1.145. Your inputs: measure = lengths, m1 = 4, m2 = 6.*
+
+![The scale factor k as m2 runs from 1](https://www.ai999x.com/?ax_fig=geometry-ai999x/similar-figures-live-3)
+
+*The scale factor k as m2 runs from 1.5 to 10.5, every other input as you entered it (29 solutions). Marked: your m2 = 6 gives scale_factor = 1.5. Your inputs: measure = lengths, m1 = 4, m2 = 6.*
 
 ```python
 geometry_ai999x.solve('similar_figures', measure='lengths', m1=4, m2=6)
@@ -4025,9 +4393,13 @@ $$
 - **Assumes:** either a second point or a direction (not both); the two points differ / the direction is not zero; convention: through two points the direction is Q - P
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The worked example of Line in space: vector, parametric and symmetric equations as inputs and results: stated point = 1 2 3, second_point = 4 6 9; returned by geometry-ai999x: vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1, y0 = 2, z0 = 3](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-in-space-io)
+![X of P as point[1] runs from 0 to 5, every other input as you entered it (6 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-in-space-live-1)
 
-*The worked example of Line in space: vector, parametric and symmetric equations as inputs and results: stated point = 1 2 3, second_point = 4 6 9; returned by geometry-ai999x: vector_form = r = (1, 2, 3) + t(3, 4, 6), parametric = x = 1 + 3t, y = 2 + 4t, z = 3 + 6t, symmetric = (x - 1)/3 = (y - 2)/4 = (z - 3)/6, x0 = 1, y0 = 2, z0 = 3.*
+*X of P as point[1] runs from 0 to 5, every other input as you entered it (6 solutions). Marked: your point[1] = 1 gives x0 = 1. Your inputs: point = 1 2 3, second_point = 4 6 9.*
+
+![X of the direction v as second_point[1] runs from 0 to 8, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=geometry-ai999x/line-in-space-live-2)
+
+*X of the direction v as second_point[1] runs from 0 to 8, every other input as you entered it (9 solutions). Marked: your second_point[1] = 4 gives dx = 3. Your inputs: point = 1 2 3, second_point = 4 6 9.*
 
 ```python
 geometry_ai999x.solve('line_in_space', point='1 2 3', second_point='4 6 9')
