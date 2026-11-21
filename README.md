@@ -10,8 +10,8 @@ Geometry covers plane and solid geometry, coordinate geometry, conic sections, p
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-geometry-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-geometry-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `geometry` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-geometry-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-geometry-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `geometry` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/geometry-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install geometry-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -136,77 +136,6 @@ print(a.outcome, a.values)
 # SOLVED {'curvature': 2.0, 'radius_of_curvature': 0.5, 'slope': 0.0}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `geometry` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ geometry solve convex_polygon_intersection "p=[0, 0, 2, 0, 2, 2, 0, 2]" "q=[1, 1, 3, 1, 3, 3, 1, 3]"
-area = 1
-
-$ geometry solve conic_classify A=1 B=0 C=4 D=0 E=0 F=-4
-type = ellipse
-
-$ geometry solve angle_between_lines a1=-1 b1=1 c1=-1 a2=1 b2=1 c2=-3
-angle = 90
-
-$ geometry solve parabola_arc_length a=1 b=0 c=0 x0=0 x1=1
-length = 1.478942858
-
-$ geometry solve triangle_area_base_height base=10 height=6
-area = 30
-
-$ geometry solve polygon_centroid "points=[0, 0, 4, 0, 4, 2, 0, 2]"
-cx = 2
-cy = 1
-
-$ geometry solve platonic_solid solid=icosahedron edge=2
-vertices = 12
-edges = 30
-faces = 20
-euler_characteristic = 2
-volume = 17.45355993
-surface_area = 34.64101615
-
-$ geometry solve similar_figures measure=lengths m1=4 m2=6
-scale_factor = 1.5
-area_ratio = 2.25
-volume_ratio = 3.375
-length2 = null
-area2 = null
-volume2 = null
-
-$ geometry solve angle_between_planes a1=0 b1=0 c1=1 a2=1 b2=0 c2=1
-angle = 45
-
-$ geometry solve solid_angle_cone half_angle=60
-solid_angle = 3.141592654
-fraction_of_sphere = 0.25
-
-$ geometry solve cone_measures radius=3 height=4
-volume = 37.69911184
-slant_height = 5
-lateral_area = 47.1238898
-total_area = 75.39822369
-
-$ geometry solve spherical_triangle_area radius=1 "points=[0, 0, 0, 90, 90, 0]"
-excess = 90
-area = 1.570796327
-
-$ geometry solve torus_curvature major=3 minor=1 v=0
-gaussian = 0.25
-mean = 0.625
-k1 = 1
-k2 = 0.25
-
-$ geometry solve dilate_point k=3 px=2 py=3
-x = 6
-y = 9
-
-$ geometry solve closest_pair "points=[0, 0, 5, 5, 1, 1, 9, 2, 6, 6.5]"
-distance = 1.414213562
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/geometry-ai999x/blob/main/docs/geometry_ai999x_desktop_guide.md)
@@ -215,13 +144,13 @@ distance = 1.414213562
 
 Every calculation, with its formula, a worked example and its figures: **[Geometry on ai999x.com](https://www.ai999x.com/models/geometry-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/geometry-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/geometry-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/geometry-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/geometry-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
